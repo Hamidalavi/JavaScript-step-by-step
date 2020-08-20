@@ -2,7 +2,7 @@
 
 ## What is JavaScript?
 
-**JavaScript** is **dynamic, weakly type** programming language which is **compiled at runtime**. It can be executed as part of a webpage in a browser or directly on any machine (**host environment**).
+**JavaScript** is **dynamic, weakly type** programming language which is **compiled at runtime** (interpreted compiled language). It can be executed as part of a webpage in a browser or directly on any machine (**host environment**).
 
 **JavaScript** was created **to make webpages more dynamic** (e.g. change content on a page directly from inside the browser). Orginally, it was called **LiveScript** but due to the popularity of **Java**, it was renamed to **JavaScript**.
 
