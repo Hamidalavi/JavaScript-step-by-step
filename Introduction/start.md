@@ -12,4 +12,4 @@
 
 ![webpage work](https://media.geeksforgeeks.org/wp-content/uploads/Web_Servers_work_1.png)
 
-When someone visit and interact the **Client** (browser), HTML get the user's **requst** and send **reponse** to the server (if user doing something like clicking a button). In this way, **JavaScript** makes this more **reactive**.
+When someone (user) visit and interact the **Client** (browser), a **request** is sent to the server, where HTML file is hosted and send back **reponse** to the client (if user doing something like clicking a button or loading a web page). In this way, **JavaScript** makes this more **reactive**.
