@@ -16,6 +16,16 @@
 // let ali = `Hello, I'm backticks`;
 // console.log(ali); // "Hello, I'm backticks"
 
-// let value = "modern backticks";
-// let reza = `Hello, I'm ${value}`;
+// let lt = "literal template";
+// let reza = `Hello, I'm ${lt}`;
 // console.log(reza); // "Hello, I'm modern backticks"
+
+// let majid = ` Hello, I'm also
+// can be multiline.
+
+// it's great for everyone :)`;
+// console.log(majid);
+// /* Hello, I'm also
+// can be multiline.
+
+// it's great for everyone :) */
