@@ -74,42 +74,18 @@ What is it mean? It means that we can use **JavaScript** in **Browser-side** and
 
 There are **three** levels of learning in this course:
 
-> Core Basics:
-
-- Language Basics
-- Base Syntax
-- Efficient Development & Debugging
-- Control Structures (conditions, loops and etc.)
-- Compiling in **JavaScript**
-- Fuctions
-- **D**ocument **O**bject **M**odel (DOM) Bascics
-- Arrays & Iterables
-- Objects
-
-> Building a Strong Foundation:
-
-- Classes & **O**bject-**O**riented **P**rogramming (OOP)
-- Constructor Functions & Prototypes
-- More about DOM & Browser
-- APIs
-- Events (like mouse click, hover and etc.)
-- More about Functions
-- More about Numbers & Strings
-- Asynchronous Code
-- Background Http (Ajax)
-
-> Advanced Concepts:
-
-- Third Party Libraries
-- **JavaScript** Modules Tooling (Webpack, Babel and etc.)
-- Working with Browser Storage
-- Browser Support
-- **JavaScript** Frameworks
-- Meta-programming
-- NodeJS Introduction
-- Security
-- Deployment
-- Performance Optimizations & Memory Leaks
+|Core Basics|Building a Strong Foundation|Advanced Concepts|
+|:-:|:-:|:-:|
+|Language Basics|Classes & **O**bject-**O**riented **P**rogramming (OOP)|Third Party Libraries|
+|Base Syntax|Constructor Functions & Prototypes|**JavaScript** Modules Tooling (Webpack, Babel and etc.)|
+|Efficient Development & Debugging|More about DOM & Browser|Working with Browser Storage|
+|Control Structures (conditions, loops and etc.)|APIs|Browser Support|
+|Compiling in **JavaScript**|Events (like mouse click, hover and etc.)|**JavaScript** Frameworks|
+|Fuctions|More about Functions|Meta-programming|
+|**D**ocument **O**bject **M**odel (DOM) Bascics|More about Numbers & Strings|NodeJS Introduction|
+|Arrays & Iterables|Asynchronous Code|Security|
+|Objects|Background Http (Ajax)|Deployment|
+|-|-|Performance Optimizations & Memory Leaks|
 
 ## History of JavaScript
 
