@@ -18,14 +18,33 @@
 
 // let lt = "literal template";
 // let reza = `Hello, I'm ${lt}`;
-// console.log(reza); // "Hello, I'm modern backticks"
+// console.log(reza); // "Hello, I'm literal template"
 
 // let majid = ` Hello, I'm also
 // can be multiline.
 
 // it's great for everyone :)`;
 // console.log(majid);
-// /* Hello, I'm also
+// /*" Hello, I'm also
 // can be multiline.
+
+// it's great for everyone :)" */
+
+
+// let majid = " Hello, I'm also\n can be multiline. it's\n\n great for everyone :)"
+// console.log(majid);
+// /**" Hello, I'm also
+//  can be multiline. it's
+
+//  great for everyone :)" */
+
+
+// let majid = ` Hello, I'm also
+//                 can be multiline.
+
+// it's great for everyone :)`;
+// console.log(majid);
+// /** Hello, I'm also
+//                 can be multiline.
 
 // it's great for everyone :) */
