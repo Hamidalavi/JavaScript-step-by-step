@@ -79,3 +79,28 @@ There are **three** levels of learning in this course:
 - **D**ocument **O**bject **M**odel (DOM) Bascics
 - Arrays & Iterables
 - Objects
+
+> Building a Strong Foundation:
+
+- Classes & **O**bject-**O**riented **P**rogramming (OOP)
+- Constructor Functions & Prototypes
+- More about DOM & Browser
+- APIs
+- Events (like mouse click, hover and etc.)
+- More about Functions
+- More about Numbers & Strings
+- Asynchronous Code
+- Background Http (Ajax)
+
+> Advanced Concepts:
+
+- Third Party Libraries
+- **JavaScript** Modules Tooling (Webpack, Babel and etc.)
+- Working with Browser Storage
+- Browser Support
+- **JavaScript** Frameworks
+- Meta-programming
+- NodeJS Introduction
+- Security
+- Deployment
+- Performance Optimizations & Memory Leaks
