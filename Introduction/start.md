@@ -114,7 +114,7 @@ There are **three** levels of learning in this course:
 ## History of JavaScript
 
 |Year|Description|
-|:-:|:-:|:-:|
+|:-:|:-:|
 |1995|Netscape introduces **LiveScript** / **JavaScript**|
 |1996|Microsoft releases its own version for IE|
 |Late 1996|**JavaScript** submitted to ECMA International to start standardization|
