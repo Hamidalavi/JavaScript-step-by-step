@@ -16,9 +16,9 @@
 // let ali = `Hello, I'm backticks`;
 // console.log(ali); // "Hello, I'm backticks"
 
-// let lt = "literal template";
+// let lt = "template literal";
 // let reza = `Hello, I'm ${lt}`;
-// console.log(reza); // "Hello, I'm literal template"
+// console.log(reza); // "Hello, I'm template literal"
 
 // let majid = ` Hello, I'm also
 // can be multiline.
