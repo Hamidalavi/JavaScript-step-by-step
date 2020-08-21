@@ -30,19 +30,19 @@ The browser built-in tool do some jobs: takes our code, compile it, optimize it 
 
 > Dynamic, interpreted Programming Language:
 
-1. Not pre-compiled, instead parsed and compiled **on the fly** (e.g. in the browser)
+1. Not pre-compiled, instead parsed and compiled **on the fly** (e.g. in the browser).
 
-2. Code evaluated and executed at runtime
+2. Code evaluated and executed at runtime.
 
-3. Code can change at runtime (e.g. type of a variable)
+3. Code can change at runtime (e.g. type of a variable).
 
 > Weakly Typed Programming Language:
 
-1. Data types are assumed (e.g. assigned to variables) automatically
+1. Data types are assumed (e.g. assigned to variables) automatically.
 
-2. You don’t define that some variable has to hold a certain value (e.g. a number)
+2. You don’t define that some variable has to hold a certain value (e.g. a number).
 
-3. Data types are not set in stone but can change
+3. Data types are not set in stone but can change.
 
 ## JavaScript Runs On A Host Environment
 
@@ -51,5 +51,31 @@ What is it mean? It means that we can use **JavaScript** in **Browser-side** and
 > in browser-id:
 
 - **JavaScript** was invented to create more dynamic websites by executing in the browser!
-- **JavaScript** can manipulate the HTML code, CSS, send background Http requests & much more
-- **JavaScript** can't access the local filesystem (interact with the operating system etc.)
+
+- **JavaScript** can manipulate the HTML code, CSS, send background Http requests & much more.
+
+- **JavaScript** can't access the local filesystem (interact with the operating system etc.).
+
+> in other-side (e.g. server-side like Node.js):
+
+- Google’s **JavaScript** Engine (V8) extracted to run **JavaScript** anywhere (called **Node.js**).
+
+- **Node.js** can be executed on any machine and is therefore often used to build web backends (server-side **JavaScript**).
+
+- **Node.js** **can** access the local filesystem, interact with the operating system etc. It **can't** manipulate HTML or CSS.
+
+## What will you learn in this course?
+
+There are **three** levels of learning in this course:
+
+> Core Basics:
+
+- Language Basics
+- Base Syntax
+- Efficient Development & Debugging
+- Control Structures (conditions, loops and etc.)
+- Compiling in **JavaScript**
+- Fuctions
+- **D**ocument **O**bject **M**odel (DOM) Bascics
+- Arrays & Iterables
+- Objects
