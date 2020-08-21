@@ -48,3 +48,12 @@
 //                 can be multiline.
 
 // it's great for everyone :) */
+
+// -----------------------------------------------
+
+// function
+// function hamid() {
+//     console.log("Call me!");
+// }
+
+// hamid(); // "Call me!"
