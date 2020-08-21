@@ -43,3 +43,13 @@ The browser built-in tool do some jobs: takes our code, compile it, optimize it 
 2. You don’t define that some variable has to hold a certain value (e.g. a number)
 
 3. Data types are not set in stone but can change
+
+## JavaScript Runs On A Host Environment
+
+What is it mean? It means that we can use **JavaScript** in **Browser-side** and **Other-side** (e.g.server-side).
+
+> in browser-id:
+
+- **JavaScript** was invented to create more dynamic websites by executing in the browser!
+- **JavaScript** can manipulate the HTML code, CSS, send background Http requests & much more
+- **JavaScript** can't access the local filesystem (interact with the operating system etc.)
