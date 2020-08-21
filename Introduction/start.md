@@ -48,11 +48,11 @@ The browser built-in tool do some jobs: takes our code, compile it, optimize it 
 
 What is it mean? It means that we can use **JavaScript** in **Browser-side** and **Other-side** (e.g.server-side).
 
-> in browser-id:
+> in browser-side:
 
-- **JavaScript** was invented to create more dynamic websites by executing in the browser!
+- **JavaScript** was invented to create more dynamic websites by executing in the browser! That's the origin of **JavaScript**.
 
-- **JavaScript** can manipulate the HTML code, CSS, send background Http requests & much more.
+- **JavaScript** can manipulate the HTML code, CSS, send background Http requests and allows interaction with web page and browser APIs (e.g. get user location) & much more.
 
 - **JavaScript** can't access the local filesystem (interact with the operating system etc.).
 
