@@ -104,3 +104,15 @@ There are **three** levels of learning in this course:
 - Security
 - Deployment
 - Performance Optimizations & Memory Leaks
+
+## History of JavaScript
+
+|Year|Description|
+|:-:|:-:|:-:|
+|1995|Netscape introduces **LiveScript** / **JavaScript**|
+|1996|Microsoft releases its own version for IE|
+|Late 1996|**JavaScript** submitted to ECMA International to start standardization|
+|1997 - 2005|Standardization efforts, Microsoft didn’t really join and support the standardized **JavaScript** version though|
+|2006 - 2011|Huge progress in JavaScript ecosystem, Microsoft eventually joined forces|
+
+> **Note**: ECMA = European Computer Manufacturers Association
