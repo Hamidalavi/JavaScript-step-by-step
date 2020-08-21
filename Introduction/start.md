@@ -6,7 +6,13 @@
 
 **JavaScript** was created **to make webpages more dynamic** (e.g. change content on a page directly from inside the browser). Orginally, it was called **LiveScript** but due to the popularity of **Java**, it was renamed to **JavaScript**.
 
-> **Warning**: **JavaScript** is totally independent from **Java** and has nothing in common with **Java**!
+> **Warning**: **JavaScript** is totally independent from **Java** and has nothing in common with **Java**! Because:
+
+- **Java** doesn't (can't) run in a browser.
+
+- **Java** is an object-oriented and strongly type language.
+
+- All syntax, concepts, core features, and etc in **JavaScript** environments are same.
 
 ## How Do Webpages Work?
 
