@@ -59,8 +59,10 @@
 // hamid(); // "Call me!"
 
 
-// function add(num1, num2) {
-//     console.log(num1 + num2);
-// }
+function add(num1, num2) {
+    const result = (num1 + num2);
+    return result;
+}
 
-// add(15,8); // 23
+let result = add(15, 8);
+console.log(result); // 23
