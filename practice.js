@@ -102,7 +102,7 @@
 // add(); // 46
 
 
-let input = prompt("input a value");
+let input = prompt("input a value"); // "23"
 let number = 23;
 
 function add() {
