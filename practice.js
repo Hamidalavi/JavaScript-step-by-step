@@ -66,3 +66,15 @@
 
 // let result = add(15, 8);
 // console.log(result); // 23
+
+// -----------------------------------------------
+
+// shadow variable
+// let userName = "Hamid";
+// function User(name) {
+//     let userName = name;
+//     console.log(name);
+// }
+
+// userName = 'Hamed';
+// User('Hamid'); // "Hamid"
