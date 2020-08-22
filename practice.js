@@ -78,3 +78,35 @@
 
 // userName = 'Hamed';
 // User('Hamid'); // "Hamid"
+
+// -----------------------------------------------
+
+// convert data types
+// let input = prompt("input a value");
+// let number = 23;
+
+// function add() {
+//     return console.log(input + number);
+// }
+
+// add(); // 2323
+
+
+// let input = prompt("input a value");
+// let number = 23;
+
+// function add() {
+//     return console.log(parseInt(input) + number);
+// }
+
+// add(); // 46
+
+
+let input = prompt("input a value");
+let number = 23;
+
+function add() {
+    return console.log(+input + number);
+}
+
+add(); // 46
