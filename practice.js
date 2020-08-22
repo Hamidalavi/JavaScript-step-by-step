@@ -57,3 +57,10 @@
 // }
 
 // hamid(); // "Call me!"
+
+
+// function add(num1, num2) {
+//     console.log(num1 + num2);
+// }
+
+// add(15,8); // 23
