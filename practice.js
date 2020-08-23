@@ -102,11 +102,20 @@
 // add(); // 46
 
 
-let input = prompt("input a value"); // "23"
-let number = 23;
+// let input = prompt("input a value"); // "23"
+// let number = 23;
 
-function add() {
-    return console.log(+input + number);
-}
+// function add() {
+//     return console.log(+input + number);
+// }
 
-add(); // 46
+// add(); // 46
+
+// -----------------------------------------------
+
+// array and object
+let array = [2, 3, 4];
+let object = { name1: "Hamid", age: 23, name2: "Hamed", age: 23 };
+
+console.log(array);
+console.log(object); // { name1: 'Hamid', age: 23, name2: 'Hamed' }
