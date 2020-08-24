@@ -122,3 +122,20 @@
 
 
 // let obj = { love: love };
+
+// -----------------------------------------------
+
+// typeof
+// let n = 23;
+// let s = "Hamid";
+// let a = [2, 3, 5];
+// let o = { name: "hamid", age: 23 };
+
+// console.log(typeof n); // "number"
+// console.log(typeof s); // "string"
+// console.log(typeof a); // "object"
+// console.log(typeof o); // "object"
+// console.log("-----------");
+// console.log(typeof null); // "object"
+// console.log(typeof undefined); // "undefined"
+// console.log(typeof NaN); // "number"
