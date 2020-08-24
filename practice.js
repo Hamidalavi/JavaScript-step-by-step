@@ -169,3 +169,8 @@
 // } else {
 //     // This would execute because isTrue is true and hence !== true yields false
 // }
+
+
+// console.log('ab' > 'aa'); // true
+// console.log('a' > 'B'); // true
+// console.log('a' > 'b'); // false
