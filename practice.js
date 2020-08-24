@@ -204,3 +204,13 @@
 
 // console.log(array1 != array2); // true
 // console.log(array1 !== array2); // true
+
+
+// let array1 = [1, 2, 3];
+// let array2 = [1, 2, 3];
+
+// console.log(array1[0] == array2[0]); // true
+// console.log(array1[0] === array2[0]); // true
+
+// console.log(array1[0] != array2[0]); // false
+// console.log(array1[0] !== array2[0]); // false
