@@ -193,4 +193,14 @@
 // console.log(obj1.name === obj2.name); // true
 
 // console.log(obj1.name != obj2.name); // false
-// console.log(obj1.name !== obj2.name); // false
+// console.log(obj1.name !== obj2.name); // false1
+
+
+// let array1 = [1, 2, 3];
+// let array2 = [1, 2, 3];
+
+// console.log(array1 == array2); // false
+// console.log(array1 === array2); // false
+
+// console.log(array1 != array2); // true
+// console.log(array1 !== array2); // true
