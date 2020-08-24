@@ -174,3 +174,23 @@
 // console.log('ab' > 'aa'); // true
 // console.log('a' > 'B'); // true
 // console.log('a' > 'b'); // false
+
+
+// let obj1 = {name: "Hamid"};
+// let obj2 = {name: "Hamid"};
+
+// console.log(obj1 == obj2); // false
+// console.log(obj1 === obj2); // false
+
+// console.log(obj1 != obj2); // true
+// console.log(obj1 !== obj2); // true
+
+
+// let obj1 = {name: "Hamid"};
+// let obj2 = {name: "Hamid"};
+
+// console.log(obj1.name == obj2.name); // true
+// console.log(obj1.name === obj2.name); // true
+
+// console.log(obj1.name != obj2.name); // false
+// console.log(obj1.name !== obj2.name); // false
