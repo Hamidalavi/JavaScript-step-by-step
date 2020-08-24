@@ -214,3 +214,16 @@
 
 // console.log(array1[0] != array2[0]); // false
 // console.log(array1[0] !== array2[0]); // false
+
+// -----------------------------------------------
+
+// trthy and falsy
+// let name = "Hamid";
+// if (name) {
+//     console.log("Works"); // truthy -- "Works"
+// }
+
+// let name = "";
+// if (name) {
+//     console.log("Works"); // falsy -- not shown
+// }
