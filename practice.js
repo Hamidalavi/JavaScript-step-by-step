@@ -155,9 +155,17 @@
 // }
 
 
-const isTrue = true;
-if (!isTrue) {
-    // This code will NOT execute because isTrue is true but ! inverts it (in this check)
-} else {
-    // This would execute because !isTrue yields false => else block executes
-}
+// const isTrue = true;
+// if (!isTrue) {
+//     // This code will NOT execute because isTrue is true but ! inverts it (in this check)
+// } else {
+//     // This would execute because !isTrue yields false => else block executes
+// }
+
+
+// const isTrue = true;
+// if (isTrue !== true) {
+//     // This would NOT execute
+// } else {
+//     // This would execute because isTrue is true and hence !== true yields false
+// }
