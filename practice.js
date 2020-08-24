@@ -139,3 +139,25 @@
 // console.log(typeof null); // "object"
 // console.log(typeof undefined); // "undefined"
 // console.log(typeof NaN); // "number"
+
+// -----------------------------------------------
+
+// condition
+// const isTrue = true;
+// if (isTrue) {
+//     console.log("OK!"); // "OK!"
+// }
+
+
+// const isTrue = true;
+// if (isTrue === true) {
+//     console.log("OK!"); // "OK!"
+// }
+
+
+const isTrue = true;
+if (!isTrue) {
+    // This code will NOT execute because isTrue is true but ! inverts it (in this check)
+} else {
+    // This would execute because !isTrue yields false => else block executes
+}
