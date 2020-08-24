@@ -114,8 +114,11 @@
 // -----------------------------------------------
 
 // array and object
-let array = [2, 3, 4];
-let object = { name1: "Hamid", age: 23, name2: "Hamed", age: 23 };
+// let array = [2, 3, 4];
+// let object = { name1: "Hamid", age: 23, name2: "Hamed", age: 23 };
 
-console.log(array);
-console.log(object); // { name1: 'Hamid', age: 23, name2: 'Hamed' }
+// console.log(array); // [ 2, 3, 4 ]
+// console.log(object); // { name1: 'Hamid', age: 23, name2: 'Hamed' }
+
+
+// let obj = { love: love };
