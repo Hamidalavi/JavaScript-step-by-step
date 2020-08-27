@@ -227,3 +227,16 @@
 // if (name) {
 //     console.log("Works"); // falsy -- not shown
 // }
+
+// -----------------------------------------------
+
+// if statement
+let number = 0;
+
+while(true){
+    number++;
+    if(number >= 10) {
+        console.log(number);
+        break;
+    }
+}
