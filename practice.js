@@ -431,3 +431,23 @@
 // do {
 //   // do something
 // } while (condition); // <-- see the semicolon
+
+// -----------------------------------------------
+
+// break
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     break;
+//   }
+//   console.log(i); // 1 2 3 4
+// }
+
+// -----------------------------------------------
+
+// continue
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     continue;
+//   }
+//   console.log(i); // 1 2 3 4 6 7 8 9
+// }
