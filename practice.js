@@ -356,7 +356,27 @@
 // -----------------------------------------------
 
 // for..of loop
-let array = ["Hamid", "Alavi"];
-for (const info of array) {
-  console.log(info); // "Hamid" "Alavi"
-}
+// let array = ["Hamid", "Alavi"];
+// for (const info of array) {
+//   console.log(info); // "Hamid" "Alavi"
+// }
+
+// let name = "Hamid";
+// for (const char of name) {
+//   console.log(char); // "H" "a" "m" "i" "d"
+// }
+
+// let array = [23, 45, 67, 89];
+// for (let i = 0; i < array.length; i++) {
+//   console.log(array[i]); // 23 45 67 89
+// }
+
+// let array = [23, 45, 67, 89];
+// for (const i of array) {
+//   console.log(i); // 23 45 67 89
+// }
+
+// let object = { name: "Hamid", age: 23 };
+// for (const val of object) {
+//   console.log(val); // TypeError: object is not iterable
+// }
