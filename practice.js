@@ -451,3 +451,17 @@
 //   }
 //   console.log(i); // 1 2 3 4 6 7 8 9
 // }
+
+// -----------------------------------------------
+
+// label statement
+
+// let number = 0;
+// whileLoop: do {
+//   console.log(number); // 0 1 2 3 4
+//   if (number === 4) {
+//     break whileLoop;
+//   }
+//   number++;
+// } while (number < 10);
+
