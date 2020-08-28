@@ -380,3 +380,54 @@
 // for (const val of object) {
 //   console.log(val); // TypeError: object is not iterable
 // }
+
+// -----------------------------------------------
+
+// for..in loop
+// let object = { name: "Hamid", age: 23 };
+// for (let key in object) {
+//   console.log(key); // "name" "age"
+// }
+
+// let names = ["Hamed", "Hamid", "Ali", "Reza"];
+// for (let key in names) {
+//   console.log(key); // "0" "1" "2" "3"
+// }
+
+// let object = { name: "Hamid", age: 23 };
+// for (let key in object) {
+//   console.log(object[key]); // "Hamid" "23"
+// }
+
+// let object = { name: "Hamid", age: 23 };
+// for (let key in object) {
+//   console.log(`${key} => ${object[key]}`); // "Hamid" "23"
+// }
+// /* "name => Hamid"
+//    "age => 23"
+//  */
+
+// -----------------------------------------------
+
+// while loop
+// let i = 0;
+// while (true) {
+//   console.log(i);
+//   i++; // --infinity
+// }
+
+// let i = 0;
+// while (i < 3) {
+//   console.log(i);
+//   i++; // 0 1 2
+// }
+
+// let i = 0;
+// do {
+//   console.log(i); // 0 1 2
+//   i++;
+// } while (i < 3);
+
+// do {
+//   // do something
+// } while (condition); // <-- see the semicolon
