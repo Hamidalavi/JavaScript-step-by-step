@@ -672,6 +672,9 @@
 
 // hobby(); // ReferenceError: myHobby is not defined
 
+// -----------------------------------------------
+
+// shadowing
 // let userName = "Hamid";
 // function User(name) {
 //   let userName = name;
@@ -690,14 +693,34 @@
 // name = "Reza";
 // greet(); // "Ali"
 
-var name = "Hamid";
-var name = "Hamed";
-function greet() {
-  let name = "Ali";
-  console.log(name);
-}
+// var name = "Hamid";
+// var name = "Hamed";
+// function greet() {
+//   let name = "Ali";
+//   console.log(name);
+// }
 
-console.log(name);
+// console.log(name); // "Hamed"
 
-name = "Reza";
-greet(); // "Ali"
+// greet(); // "Ali"
+
+// -----------------------------------------------
+
+// hoisting
+// console.log(name);
+// var name = "Hamid";
+
+// console.log(name);
+// let name = "Hamid"; // ReferenceError: Cannot access 'name' before initialization
+
+// ----
+
+// "use strict";
+// console.log(undefined);
+// var undefined = "Hamid";
+// // TypeError: Cannot assign to read only property 'undefined' of object
+
+// "use strict";
+// name = "Hamid";
+
+// console.log(name); // ReferenceError: name is not defined
