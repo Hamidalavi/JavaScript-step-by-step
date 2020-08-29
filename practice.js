@@ -466,7 +466,7 @@
 
 // -----------------------------------------------
 
-// nested loop and condtion
+// nested loop
 // for (let i = 0; i < 10; i++) {
 //   for (let j = 1; j < 10; j++) {
 //     console.log(`i: ${i}`, `j: ${j}`);
@@ -563,3 +563,25 @@
 // i: 9 j: 7
 // i: 9 j: 8
 // i: 9 j: 9 */
+
+// let number;
+// whileLoop: do {
+//   for (number = 0; number < 20; number++) {
+//     console.log(number); // 0 1 2 3 4
+//   }
+//   if (number >= 20) {
+//     break whileLoop;
+//   }
+// } while (true);
+
+// let number = 20;
+
+// if (number < 30) {
+//   if (number > 15) {
+//     if (number === 20) {
+//       console.log("True");
+//     }
+//   }
+// } else {
+//   console.log("False");
+// }
