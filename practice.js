@@ -624,3 +624,80 @@
 // }
 // // Oops
 // // Cleanup
+
+// -----------------------------------------------
+
+// var vs let vs const
+// var name = "Hamid";
+// var name = "Hamed";
+// var name = "Ali";
+// console.log(name); // "Ali"
+
+// let name = "Hamid";
+// let name = "Hamed"; // error is here
+// let name = "Ali";
+// let name = "Reza";
+// console.log(name); // SyntaxError: Identifier 'name' has already been declared
+
+// {
+//   var name1 = "Hamid";
+//   let name2 = "Hamed";
+// }
+// console.log(name1, name2); // ReferenceError: name2 is not defined -- name1 = "Hamid"
+
+// function hobby() {
+//   if (true) {
+//     var myHobby = "Programming";
+//   }
+//   console.log(`My favorite hobby is ${myHobby}`);
+// }
+
+// hobby(); // "My favorite hobby is Programming"
+
+// function hobby() {
+//   if (true) {
+//     let myHobby = "Programming";
+//   }
+//   console.log(`My favorite hobby is ${myHobby}`);
+// }
+
+// hobby(); // ReferenceError: myHobby is not defined
+
+// function hobby() {
+//   if (true) {
+//     const myHobby = "Programming";
+//   }
+//   console.log(`My favorite hobby is ${myHobby}`);
+// }
+
+// hobby(); // ReferenceError: myHobby is not defined
+
+// let userName = "Hamid";
+// function User(name) {
+//   let userName = name;
+//   console.log(name);
+// }
+
+// userName = "Hamed";
+// User("Hamid"); // "Hamid"
+
+// let name = "Hamid";
+// function greet() {
+//   let name = "Ali";
+//   console.log(name);
+// }
+
+// name = "Reza";
+// greet(); // "Ali"
+
+var name = "Hamid";
+var name = "Hamed";
+function greet() {
+  let name = "Ali";
+  console.log(name);
+}
+
+console.log(name);
+
+name = "Reza";
+greet(); // "Ali"
