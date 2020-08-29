@@ -585,3 +585,42 @@
 // } else {
 //   console.log("False");
 // }
+
+// -----------------------------------------------
+
+// error handling
+// let maxNumber = 10;
+// if (maxNumber < 20) {
+//   throw "Max number is smaller than...";
+// } // Error: "Max number is smaller than..."
+
+// function getMaxLifeValue() {
+//   const enteredValue = prompt("Maximum life for you and the monster.", "100");
+//   const parsedValue = +enteredValue;
+
+//   // check for invalid entered number
+//   if (isNaN(parsedValue) || parsedValue <= 0) {
+//     throw "Invalid user input, nnot a number!";
+//   }
+//   return parsedValue;
+// }
+
+// let maxLife;
+
+// try {
+//   maxLife = getMaxLifeValue();
+// } catch (error) {
+//   console.log(error);
+//   maxLife = 100;
+//   alert("You enterd something wrong, deafult value of 100 was used.");
+// }
+
+// try {
+//   throw "Oops";
+// } catch (error) {
+//   console.log(error);
+// } finally {
+//   console.log("Cleanup");
+// }
+// // Oops
+// // Cleanup
