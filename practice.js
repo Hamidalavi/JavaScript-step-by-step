@@ -724,3 +724,16 @@
 // name = "Hamid";
 
 // console.log(name); // ReferenceError: name is not defined
+
+// -----------------------------------------------
+
+// primitive and reference
+// let name = "Hamid";
+// console.log(name);
+
+let name = "Hamid";
+let MyFirstName = name;
+console.log(MyFirstName); // "Hamid"
+
+MyFirstName = "Hamed";
+console.log(MyFirstName); // "Hamed"
