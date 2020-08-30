@@ -731,9 +731,42 @@
 // let name = "Hamid";
 // console.log(name);
 
-let name = "Hamid";
-let MyFirstName = name;
-console.log(MyFirstName); // "Hamid"
+// let name = "Hamid";
+// let MyFirstName = name;
+// console.log(MyFirstName); // "Hamid"
 
-MyFirstName = "Hamed";
-console.log(MyFirstName); // "Hamed"
+// MyFirstName = "Hamed";
+// console.log(MyFirstName); // "Hamed"
+
+// let array = ["Hamid"];
+// console.log(array); // [ 'Hamid' ]
+
+// let newArray = array;
+// array.push("Ali");
+// console.log(newArray); // [ 'Hamid', 'Ali' ]
+
+// let human = { name: "hamid", age: 23 };
+// console.log(human); // { name: 'hamid', age: 23 }
+
+// let person = human;
+// person.age = 24;
+// console.log(human); // { name: 'hamid', age: 24 }
+
+// let hobbies = ["Programming"];
+// console.log(hobbies); // [ 'Progeamming' ]
+
+// let moreHobbies = [...hobbies];
+// hobbies.push("Video games");
+// console.log(moreHobbies); // [ 'Progeamming' ]
+
+// const person1 = { age: 23 };
+// const person2 = { age: 23 };
+
+// console.log(person1 === person2); // false
+
+// const names = ["Hamid", "Hamid"];
+// names.push("Ali");
+// console.log(names); // [ 'Hamid', 'Hamid', 'Ali' ]
+
+// names = ["Reza, Majid, Mehrdad, Morteza"];
+// console.log(names); // TypeError: Assignment to constant variable
