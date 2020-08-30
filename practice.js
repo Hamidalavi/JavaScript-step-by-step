@@ -770,3 +770,10 @@
 
 // names = ["Reza, Majid, Mehrdad, Morteza"];
 // console.log(names); // TypeError: Assignment to constant variable
+
+// -----------------------------------------------
+
+// garbage collector
+// let human = { name: "Hamid" }; // not use anymore
+// human = null;
+// console.log(human); // "null"
