@@ -777,3 +777,23 @@
 // let human = { name: "Hamid" }; // not use anymore
 // human = null;
 // console.log(human); // "null"
+
+// function addListener() {
+//   clickableBtn.addEventListener("click", function () {
+//     const value = messageInput.value;
+//     console.log(value || "Clicked me!");
+//   });
+// }
+
+// addListenerBtn.addEventListener("click", addListener);
+
+// function printMessage() {
+//   const value = messageInput.value;
+//   console.log(value || "Clicked me!");
+// }
+
+// function addListener() {
+//   clickableBtn.addEventListener("click", printMessage);
+// }
+
+// addListenerBtn.addEventListener("click", addListener);
