@@ -885,4 +885,7 @@
 //   return a;
 // };
 
-const person = a =>  a;
+// const person = a =>  a;
+
+// const example = function() { };
+// const example = () => { };
