@@ -797,3 +797,71 @@
 // }
 
 // addListenerBtn.addEventListener("click", addListener);
+
+// -----------------------------------------------
+
+// method
+// let user = {
+//   name: "Hamid",
+//   age: 23,
+// };
+
+// user.sayHi = function () {
+//   alert("Hello!");
+// };
+
+// user.sayHi(); // "Hello!"
+
+// let user = {};
+
+// // first, declare
+// function sayHi() {
+//   alert("Hello!");
+// }
+
+// // then add as a method
+// user.sayHi = sayHi;
+
+// user.sayHi(); // "Hello!"
+
+// // these objects do the same
+// user = {
+//   sayHi: function () {
+//     alert("Hello");
+//   },
+// };
+
+// // method shorthand looks better, right?
+// user = {
+//   sayHi() {
+//     // same as "sayHi: function()"
+//     alert("Hello");
+//   },
+// };
+
+// -----------------------------------------------
+
+// fuction expressions
+// const human = function sayHi() {
+//   console.log("Hi");
+// };
+
+// // human(); // "Hi"
+
+// console.log(human.name)
+
+// const start = function () {
+//   console.log("Start game!");
+// };
+
+// start(); // "Start game!"
+
+// func1(); // "Hello!"
+// function func1() {
+//   console.log("Hello!");
+// }
+
+// func2(); // ReferenceError: Cannot access 'func2' before initialization
+// const func2 = function func2() {
+//   console.log("Hello!");
+// };
