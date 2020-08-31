@@ -865,3 +865,24 @@
 // const func2 = function func2() {
 //   console.log("Hello!");
 // };
+
+// -----------------------------------------------
+
+// arrow function
+// const person = function () {
+//   console.log("Hello!");
+// };
+
+// const person = () => {
+//   console.log("Hello!");
+// };
+
+// const person = function (a) {
+//   return a;
+// };
+
+// const person = (a) => {
+//   return a;
+// };
+
+const person = a =>  a;
