@@ -889,4 +889,9 @@
 
 // const example = function() { };
 // const example = () => { };
+"use strict"
+function person(a, a) {
+  console.log("Hello");
+}
 
+// person(); // SyntaxError: Duplicate parameter name not allowed in this context
