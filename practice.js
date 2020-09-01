@@ -956,6 +956,19 @@
 
 // console.log(add(1, 5, 10, -3, 6, 4)); // 17
 
+// const coronaVirus = (a, b, ...people) => {
+//   const validate = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
+//   let sum = 0;
+//   for (const num of people) {
+//     sum += validate(num);
+//   }
+//   return sum;
+// };
+
+// console.log(coronaVirus(12000, 5000, 1000, "Stop", 300, 6000, 400)); // 7700
+
 // -----------------------------------------------
 
 // nested function
@@ -973,6 +986,27 @@
 
 // console.log(add(1, 5, 10, "Hamid", -3, 6, 4)); // 17
 
+// -----------------------------------------------
+
+// callback function
+
+// const add = (resultHandler, ...numbers) => {
+//   const validate = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += validate(num);
+//   }
+//   resultHandler(sum);
+// };
+
+// const showResult = (result) => {
+//   alert(`The result after adding all numbers is: ${result}`);
+// };
+
+// add(showResult, 1, 5, 10, "Hamid", -3, 6, 4); // 23
+
 // const add = (resultHandler, ...numbers) => {
 //   const validate = (number) => {
 //     return isNaN(number) ? 0 : number;
@@ -992,20 +1026,38 @@
 
 // -----------------------------------------------
 
-// callback function
-// const add = (resultHandler, ...numbers) => {
+// bind
+// const combine = (resultHandler, operator, ...numbers) => {
 //   const validate = (number) => {
 //     return isNaN(number) ? 0 : number;
 //   };
 //   let sum = 0;
 //   for (const num of numbers) {
-//     sum += validate(num);
+//     if (operator === "ADD") {
+//       sum += validate(num);
+//     } else {
+//       sum -= validate(num);
+//     }
 //   }
 //   resultHandler(sum);
 // };
 
-// const showResult = (result) => {
-//   alert(`The result after adding all numbers is: ${result}`);
+// const showResult = (messageText, result) => {
+//   alert(`${messageText} ${result}`);
 // };
 
-// add(showResult, 1, 5, 10, "Hamid", -3, 6, 4); // 23
+// combine(showResult.bind(this, "The result after adding all numbers is: "), "ADD", 1, 5, 10, "Hamid", -3, 6, 4); // 23
+
+// combine(showResult.bind(this, "The result after adding all numbers is: "), "SUBTRACT", 1, 5, 10, "Hamid", -3, 6, 4); // -23
+
+// -----------------------------------------------
+
+// complete bind
+let person = {
+  name: "Hamid Alavi",
+  getName: function () {
+    console.log(this.name);
+  },
+};
+
+setTimeout(person.getName, 1000); // undefined
