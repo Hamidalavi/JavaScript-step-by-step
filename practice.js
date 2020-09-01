@@ -889,9 +889,33 @@
 
 // const example = function() { };
 // const example = () => { };
-"use strict"
-function person(a, a) {
-  console.log("Hello");
-}
 
-// person(); // SyntaxError: Duplicate parameter name not allowed in this context
+// -----------------------------------------------
+
+// default arguments in functions
+// function person(name, age = 23) {
+//   console.log(name);
+// }
+
+// person("Hamid"); // "Hamid"
+
+// function person(name = "Hamid", age) {
+//   console.log(`name is ${name}`, `age is ${age}`);
+// }
+
+// person(undefined, 23); // "name is Hamid age is 23"
+
+// function person(name = "" ? "Ali" : "Reza", age) {
+//   console.log(`${name} and ${age}`);
+// }
+
+// person(undefined, 23); // "Reza and 23"
+
+// function person(name = "Hamid" === "Hamid" ? "Ali" : "Reza", age) {
+//   console.log(`${name} and ${age}`);
+// }
+
+// person(undefined, 23); // "Ali and 23"
+
+// -----------------------------------------------
+
