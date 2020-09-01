@@ -1053,11 +1053,37 @@
 // -----------------------------------------------
 
 // complete bind
-let person = {
-  name: "Hamid Alavi",
-  getName: function () {
-    console.log(this.name);
+// let person = {
+//   name: "Hamid Alavi",
+//   getName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// setTimeout(person.getName, 1000); // undefined
+// // or
+// setTimeout(function () {
+//   person.getName();
+// }, 1000);
+// // or
+// let f = person.getName.bind(person);
+// setTimeout(f, 1000);
+
+// ---
+
+const runner = {
+  name: "Runner",
+  run: function (speed) {
+    console.log(`${this.name} runs at ${speed} mph`);
   },
 };
 
-setTimeout(person.getName, 1000); // undefined
+const flyer = {
+  name: "Flyer",
+  fly: function (speed) {
+    console.log(`${this.name} flies at ${speed} mph`);
+  },
+};
+
+let run = runner.run.bind(flyer, 20);
+run(); // "Flyer runs at 20 mph"
