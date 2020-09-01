@@ -920,7 +920,6 @@
 // -----------------------------------------------
 
 // rest operator
-
 // const add = (numbers) => {
 //   let sum = 0;
 //   for (const num of numbers) {
@@ -947,12 +946,66 @@
 
 // console.log(add(1, 5, 10, -3, 6, 4)); // SyntaxError: Rest parameter must be last formal parameter
 
-const add = (a, b, ...numbers) => {
-  let sum = 0;
-  for (const num of numbers) {
-    sum += num;
-  }
-  return sum;
-};
+// const add = (a, b, ...numbers) => {
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += num;
+//   }
+//   return sum;
+// };
 
-console.log(add(1, 5, 10, -3, 6, 4)); // 17
+// console.log(add(1, 5, 10, -3, 6, 4)); // 17
+
+// -----------------------------------------------
+
+// nested function
+
+// const add = (a, b, ...numbers) => {
+//   const validate = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += validate(num);
+//   }
+//   return sum;
+// };
+
+// console.log(add(1, 5, 10, "Hamid", -3, 6, 4)); // 17
+
+// const add = (resultHandler, ...numbers) => {
+//   const validate = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += validate(num);
+//   }
+//   resultHandler(sum);
+// };
+
+// const showResult = (result) => {
+//   alert(`The result after adding all numbers is: ${result}`);
+// };
+
+// add(showResult, 1, 5, 10, "Hamid", -3, 6, 4); // 23
+
+// -----------------------------------------------
+
+// callback function
+// const add = (resultHandler, ...numbers) => {
+//   const validate = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += validate(num);
+//   }
+//   resultHandler(sum);
+// };
+
+// const showResult = (result) => {
+//   alert(`The result after adding all numbers is: ${result}`);
+// };
+
+// add(showResult, 1, 5, 10, "Hamid", -3, 6, 4); // 23
