@@ -919,3 +919,20 @@
 
 // -----------------------------------------------
 
+// rest operator
+
+// const add = (numbers) => {
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += num;
+//   }
+//   return sum;
+// };
+
+// console.log(add([1, 5, 10, -3, 6, 4])); // 23
+
+const add = (...numbers) => {
+  console.log(numbers);
+};
+
+add(1 + 5 + 10 - 3 + 6 + 4); // [ 23 ]
