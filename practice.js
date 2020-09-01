@@ -931,8 +931,28 @@
 
 // console.log(add([1, 5, 10, -3, 6, 4])); // 23
 
-const add = (...numbers) => {
-  console.log(numbers);
+// const add = (...numbers) => {
+//   console.log(numbers);
+// };
+
+// add(1 + 5 + 10 - 3 + 6 + 4); // [ 23 ]
+
+// const add = (...numbers,a,b) => {
+//   let sum = 0;
+//   for (const num of numbers) {
+//     sum += num;
+//   }
+//   return sum;
+// };
+
+// console.log(add(1, 5, 10, -3, 6, 4)); // SyntaxError: Rest parameter must be last formal parameter
+
+const add = (a, b, ...numbers) => {
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
 };
 
-add(1 + 5 + 10 - 3 + 6 + 4); // [ 23 ]
+console.log(add(1, 5, 10, -3, 6, 4)); // 17
