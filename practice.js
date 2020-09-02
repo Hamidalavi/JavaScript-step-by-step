@@ -2052,3 +2052,52 @@ __proto__: WeakSet
 
 // console.log(object[1.4]); // "Hamid"
 // console.log(object[6]); // "Reza"
+
+// -----------------------------------------------
+
+// object - dynamic
+// const person = {
+//   "first name": "Hamid",
+//   age: 23,
+//   height: 180,
+// };
+
+// keyName = "first name";
+
+// console.log(person[keyName]); // "Hamid"
+// console.log(person.keyName); // undefined
+
+// const userChoiceKey = "level";
+
+// const person = {
+//   "first name": "Hamid",
+//   [userChoiceKey]: "This value is `level`",
+//   age: 23,
+//   height: 180,
+// };
+
+// keyName = "first name";
+
+// console.log(person[keyName]); // "Hamid"
+// console.log(person[userChoiceKey]); // "This value is `level`"
+
+// -----------------------------------------------
+
+// object - shorthand property
+const title = document.getElementById("title").value;
+const extraName = document.getElementById("extra-name").value;
+const extraValue = document.getElementById("extra-value").value;
+
+// # normal
+const newMovie = {
+  title: title,
+  extraName: extraName,
+  extraValue: extraValue,
+};
+
+// # shorthand property
+const newMovie = {
+  title,
+  extraName,
+  extraValue,
+};
