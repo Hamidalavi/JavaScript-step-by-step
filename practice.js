@@ -2009,4 +2009,46 @@ __proto__: WeakSet
 
 // console.log(person["first-name"]); // "Hamid"
 
-let movieList = document.getElementById("movie-list")
+// const movieList = document.getElementById("movie-list");
+// movieList.style.backgroundColor = "red";
+// movieList.style[backgroundColor] = "red";
+// movieList.style['backgroundColor'] = "red";
+// movieList.style["backgroundColor"] = "red";
+// movieList.style["background-color"] = "red";
+
+// -----------------------------------------------
+
+// object - types and order
+// const object = {
+//   1: "Hamid",
+//   6: "Reza",
+//   3: "Ali",
+// };
+
+// console.log(object); // { '1': 'Hamid', '3': 'Ali', '6': 'Reza' }
+
+// const object = {
+//   -1: "Hamid", // SyntaxError: Unexpected token '-'
+//   6: "Ali",
+//   -3: "Reza", // SyntaxError: Unexpected token '-'
+// };
+
+// console.log(object); // Error
+
+// const object = {
+//   1.4: "Hamid",
+//   6: "Reza",
+//   3: "Ali",
+// };
+
+// console.log(object.1.4); // SyntaxError
+// console.log(object.6); // SyntaxError
+
+// const object = {
+//   1.4: "Hamid",
+//   6: "Reza",
+//   3: "Ali",
+// };
+
+// console.log(object[1.4]); // "Hamid"
+// console.log(object[6]); // "Reza"
