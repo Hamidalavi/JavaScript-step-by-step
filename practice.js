@@ -1094,5 +1094,6 @@
 document.querySelector();
 document.querySelectorAll();
 document.getElementById();
+document.getElementsByName();
 document.getElementByClassName();
 document.getElementByTagName();
