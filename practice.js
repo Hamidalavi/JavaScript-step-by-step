@@ -1091,3 +1091,8 @@
 // -----------------------------------------------
 
 // DOM
+document.querySelector();
+document.querySelectorAll();
+document.getElementById();
+document.getElementByClassName();
+document.getElementByTagName();
