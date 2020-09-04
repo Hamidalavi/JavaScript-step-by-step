@@ -1091,9 +1091,26 @@
 // -----------------------------------------------
 
 // DOM
-document.querySelector();
-document.querySelectorAll();
-document.getElementById();
-document.getElementsByName();
-document.getElementByClassName();
-document.getElementByTagName();
+// document.querySelector();
+// document.querySelectorAll();
+// document.getElementById();
+// document.getElementsByName();
+// document.getElementByClassName();
+// document.getElementByTagName();
+
+// document.element.parentNode;
+// document.element.parentElement;
+// document.element.closest;
+
+// document.element.nextSibling;
+// document.element.previousSibling;
+// document.element.nextElementSibling;
+// document.element.previousElementSibling;
+
+// document.element.childNode;
+// document.element.children[];
+// document.element.children;
+// document.element.firstChild;
+// document.element.firstElementChild;
+// document.element.lastChild;
+// document.element.lastElementChid;
