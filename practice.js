@@ -1091,63 +1091,63 @@
 // -----------------------------------------------
 
 // DOM
-document.querySelector();
-document.querySelectorAll();
-document.getElementById();
-document.getElementsByName();
-document.getElementByClassName();
-document.getElementByTagName();
-document.createElement("<tag>");
-document.createAttribute();
+// document.querySelector();
+// document.querySelectorAll();
+// document.getElementById();
+// document.getElementsByName();
+// document.getElementByClassName();
+// document.getElementByTagName();
+// document.createElement("<tag>");
+// document.createAttribute();
 
-element.addEventListener("event", () => {});
+// element.addEventListener("event", () => {});
 
-element.classList.toggle();
+// element.classList.toggle();
 
-element.textContent;
-element.textContent = "Some thing";
-element.innerHTML;
-element.innerHTML = "<tag>something</tag>";
+// element.textContent;
+// element.textContent = "Some thing";
+// element.innerHTML;
+// element.innerHTML = "<tag>something</tag>";
 
-element.insertAdjacentHTML("beforebegin", HTML);
-element.insertAdjacentHTML("afterbegin", HTML);
-element.insertAdjacentHTML("beforeend", HTML);
-element.insertAdjacentHTML("afterend", HTML);
+// element.insertAdjacentHTML("beforebegin", HTML);
+// element.insertAdjacentHTML("afterbegin", HTML);
+// element.insertAdjacentHTML("beforeend", HTML);
+// element.insertAdjacentHTML("afterend", HTML);
 
-element.insertAdjacentElement("beforebegin", element);
-element.insertAdjacentElement("afterbegin", element);
-element.insertAdjacentElement("beforeend", element);
-element.insertAdjacentElement("afterend", element);
+// element.insertAdjacentElement("beforebegin", element);
+// element.insertAdjacentElement("afterbegin", element);
+// element.insertAdjacentElement("beforeend", element);
+// element.insertAdjacentElement("afterend", element);
 
-element.appendChild();
-element.append();
-element.prepend();
-element.before(); // ul.lastElementChild.before(newLi)
-element.after();
-element.insertBefore();
-element.remove();
-element.removeChild();
-element.replaceChild();
-element.replaceWith();
+// element.appendChild();
+// element.append();
+// element.prepend();
+// element.before(); // ul.lastElementChild.before(newLi)
+// element.after();
+// element.insertBefore();
+// element.remove();
+// element.removeChild();
+// element.replaceChild();
+// element.replaceWith();
 
-element.parentNode;
-element.parentElement;
-element.closest;
-element.closest();
+// element.parentNode;
+// element.parentElement;
+// element.closest;
+// element.closest();
 
-element.nextSibling;
-element.previousSibling;
-element.nextElementSibling;
-element.previousElementSibling;
+// element.nextSibling;
+// element.previousSibling;
+// element.nextElementSibling;
+// element.previousElementSibling;
 
-element.childNode;
-element.children;
-element.children[];
-element.firstChild;
-element.firstElementChild;
-element.lastChild;
-element.lastElementChid;
+// element.childNode;
+// element.children;
+// element.children[];
+// element.firstChild;
+// element.firstElementChild;
+// element.lastChild;
+// element.lastElementChid;
 
-element.cloneNode();
-element.cloneNode(false);
-element.cloneNode(true);
+// element.cloneNode();
+// element.cloneNode(false);
+// element.cloneNode(true);
