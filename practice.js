@@ -1091,26 +1091,61 @@
 // -----------------------------------------------
 
 // DOM
-// document.querySelector();
-// document.querySelectorAll();
-// document.getElementById();
-// document.getElementsByName();
-// document.getElementByClassName();
-// document.getElementByTagName();
+document.querySelector();
+document.querySelectorAll();
+document.getElementById();
+document.getElementsByName();
+document.getElementByClassName();
+document.getElementByTagName();
+document.createElement("<tag>");
+document.createAttribute();
 
-// document.element.parentNode;
-// document.element.parentElement;
-// document.element.closest;
+element.addEventListener("event", () => {});
 
-// document.element.nextSibling;
-// document.element.previousSibling;
-// document.element.nextElementSibling;
-// document.element.previousElementSibling;
+element.classList.toggle();
 
-// document.element.childNode;
-// document.element.children[];
-// document.element.children;
-// document.element.firstChild;
-// document.element.firstElementChild;
-// document.element.lastChild;
-// document.element.lastElementChid;
+element.textContent;
+element.textContent = "Some thing";
+element.innerHTML;
+element.innerHTML = "<tag>something</tag>";
+
+element.insertAdjacentHTML("beforebegin", HTML);
+element.insertAdjacentHTML("afterbegin", HTML);
+element.insertAdjacentHTML("beforeend", HTML);
+element.insertAdjacentHTML("afterend", HTML);
+
+element.insertAdjacentElement("beforebegin", element);
+element.insertAdjacentElement("afterbegin", element);
+element.insertAdjacentElement("beforeend", element);
+element.insertAdjacentElement("afterend", element);
+
+element.appendChild();
+element.append();
+element.prepend();
+element.before(); // ul.lastElementChild.before(newLi)
+element.after();
+element.insertBefore();
+element.replaceChild();
+element.replaceWith();
+
+element.parentNode;
+element.parentElement;
+element.closest;
+element.closest();
+
+element.nextSibling;
+element.previousSibling;
+element.nextElementSibling;
+element.previousElementSibling;
+
+element.childNode;
+element.children;
+element.children[];
+element.firstChild;
+element.firstElementChild;
+element.lastChild;
+element.lastElementChid;
+
+element.cloneNode();
+element.cloneNode(false);
+element.cloneNode(true);
