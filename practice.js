@@ -1100,52 +1100,54 @@ document.getElementByTagName();
 document.createElement("<tag>");
 document.createAttribute();
 
-node.addEventListener("event", () => {});
+element.addEventListener("event", () => {});
 
-node.classList.toggle();
+element.classList.toggle();
 
-node.textContent;
-node.textContent = "Some thing";
-node.innerHTML;
-node.innerHTML = "<tag>something</tag>";
+element.textContent;
+element.textContent = "Some thing";
+element.innerHTML;
+element.innerHTML = "<tag>something</tag>";
 
-node.insertAdjacentHTML("beforebegin", HTML);
-node.insertAdjacentHTML("afterbegin", HTML);
-node.insertAdjacentHTML("beforeend", HTML);
-node.insertAdjacentHTML("afterend", HTML);
+element.insertAdjacentHTML("beforebegin", HTML);
+element.insertAdjacentHTML("afterbegin", HTML);
+element.insertAdjacentHTML("beforeend", HTML);
+element.insertAdjacentHTML("afterend", HTML);
 
-node.insertAdjacentElement("beforebegin", element);
-node.insertAdjacentElement("afterbegin", element);
-node.insertAdjacentElement("beforeend", element);
-node.insertAdjacentElement("afterend", element);
+element.insertAdjacentElement("beforebegin", element);
+element.insertAdjacentElement("afterbegin", element);
+element.insertAdjacentElement("beforeend", element);
+element.insertAdjacentElement("afterend", element);
 
-node.appendChild();
-node.append();
-node.prepend();
-node.before(); // ul.lastElementChild.before(newLi)
-node.after();
-node.insertBefore();
-node.replaceChild();
-node.replaceWith();
+element.appendChild();
+element.append();
+element.prepend();
+element.before(); // ul.lastElementChild.before(newLi)
+element.after();
+element.insertBefore();
+element.remove();
+element.removeChild();
+element.replaceChild();
+element.replaceWith();
 
-node.parentNode;
-node.parentElement;
-node.closest;
-node.closest();
+element.parentNode;
+element.parentElement;
+element.closest;
+element.closest();
 
-node.nextSibling;
-node.previousSibling;
-node.nextElementSibling;
-node.previousElementSibling;
+element.nextSibling;
+element.previousSibling;
+element.nextElementSibling;
+element.previousElementSibling;
 
-node.childNode;
-node.children;
-node.children[];
-node.firstChild;
-node.firstElementChild;
-node.lastChild;
-node.lastElementChid;
+element.childNode;
+element.children;
+element.children[];
+element.firstChild;
+element.firstElementChild;
+element.lastChild;
+element.lastElementChid;
 
-node.cloneNode();
-node.cloneNode(false);
-node.cloneNode(true);
+element.cloneNode();
+element.cloneNode(false);
+element.cloneNode(true);
