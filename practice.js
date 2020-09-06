@@ -1151,3 +1151,7 @@
 // element.cloneNode();
 // element.cloneNode(false);
 // element.cloneNode(true);
+
+// -----------------------------------------------
+
+// array
