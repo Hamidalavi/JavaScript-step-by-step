@@ -1154,7 +1154,7 @@
 
 // -----------------------------------------------
 
-// array
+// array - basics
 // const array = [15, 8];
 // console.log(array); // [ 15, 8 ]
 
@@ -1179,13 +1179,41 @@
 // const array8 = Array.from("Hi");
 // console.log(array8); // [ 'H', 'i' ]
 
-const nestedArrays = [
-  [15, 8],
-  [22, 26],
-],5;
+// const nestedArrays = [
+//   [15, 8],
+//   [22, 26],
+// ];
 
-for (const data of nestedArrays) {
-  for (const dataPoint of data) {
-    console.log(dataPoint); // 15 8 22 26
-  }
-}
+// for (const data of nestedArrays) {
+//   for (const dataPoint of data) {
+//     console.log(dataPoint); // 15 8 22 26
+//   }
+// }
+
+// const nestedArrays = [[15, 8], [22, 26], 5];
+
+// for (const data of nestedArrays) {
+//   for (const dataPoint of data) {
+//     console.log(dataPoint); // TypeError: data is not iterable
+//   }
+// }
+
+// const zb = ["Hello", "I'm", 23, "Years", "Old"];
+// console.log(zb[0]); // "Hello"
+// console.log(zb[2]); // 23
+
+// -----------------------------------------------
+
+// array - insert and remove
+// const array = ["Hamid", "Hamed"];
+// array.push("Ali");
+// console.log(array); // [ 'Hamid', 'Hamed', 'Ali' ] -- (3)
+
+// const array = ["Hamid", "Hamed"];
+// array.unshift("Ali");
+// console.log(array); // [ 'Ali', 'Hamid', 'Hamed' ] -- (3)
+
+const array = ["Hamid", "Hamed"];
+array.unshift("Ali");
+array.pop();
+console.log(array); // [ 'Ali', 'Hamid' ] -- (2)
