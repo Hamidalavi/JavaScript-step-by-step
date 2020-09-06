@@ -1169,3 +1169,12 @@ console.log(array4); // [ 5 ]
 
 const array5 = Array.of(15, 8);
 console.log(array5); // [ 15, 8 ]
+
+const array6 = Array.from(15, 8);
+console.log(array6); // TypeError
+
+const array7 = Array.from([15, 8]);
+console.log(array7); // [ 15, 8 ]
+
+const array8 = Array.from("Hi");
+console.log(array8); // [ 'H', 'i' ]
