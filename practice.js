@@ -1213,7 +1213,16 @@
 // array.unshift("Ali");
 // console.log(array); // [ 'Ali', 'Hamid', 'Hamed' ] -- (3)
 
-const array = ["Hamid", "Hamed"];
-array.unshift("Ali");
-array.pop();
-console.log(array); // [ 'Ali', 'Hamid' ] -- (2)
+// const array = ["Hamid", "Hamed"];
+// array.unshift("Ali");
+// array.pop();
+// console.log(array); // [ 'Ali', 'Hamid' ] -- (2)
+
+// const array = ["Hamid", "Hamed"];
+// array.unshift("Ali");
+// array.pop();
+// array.shift();
+// console.log(array); // [ 'Hamid' ]
+
+// -----------------------------------------------
+
