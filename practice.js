@@ -1155,3 +1155,17 @@
 // -----------------------------------------------
 
 // array
+const array = [15, 8];
+console.log(array); // [ 15, 8 ]
+
+const array2 = new Array(15, 8);
+console.log(array2); // [ 15, 8 ]
+
+const array3 = new Array(5);
+console.log(array3); // [ <5 empty items> ]
+
+const array4 = Array.of(5);
+console.log(array4); // [ 5 ]
+
+const array5 = Array.of(15, 8);
+console.log(array5); // [ 15, 8 ]
