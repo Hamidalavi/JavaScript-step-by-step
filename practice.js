@@ -1269,7 +1269,7 @@
 
 // -----------------------------------------------
 
-// array - slice
+// array - slice()
 // const array = [1, 2, 34, -56, 4, 77];
 // const array2 = array;
 
@@ -1334,7 +1334,7 @@
 
 // -----------------------------------------------
 
-// array - indexOf()
+// array - indexOf() and lastIndexOf()
 // const array = [10, 22, 23, 56, 43, 42, 78];
 // console.log(array.indexOf(56, 2)); // 3
 
@@ -1347,3 +1347,36 @@
 
 // const array = [{ name: "Hamid" }, { name: "Hamed" }];
 // console.log(array.indexOf({ name: "Hamed" })); // -1
+
+// -----------------------------------------------
+
+// array - find() and findIndex() and includes()
+// const array = [{ name: "Hamid" }, { name: "Hamed" }];
+
+// const hamed = array.find((person, index, entireArray) => {
+//   return (person.name === "Hamed");
+// });
+
+// console.log(hamed); // { name: 'Hamed' }
+
+// const array = [{ name: "Hamid" }, { name: "Hamed" }];
+
+// const hamed = array.find((person, index, entireArray) => {
+//   return (person.name === "Hamed");
+// });
+
+// hamed.name = "Ali";
+
+// console.log(hamed); // { name: 'Ali' }
+
+// const array = [{ name: "Hamid" }, { name: "Hamed" }];
+
+// const hamed = array.findIndex((person, index, entireArray) => {
+//   return person.name === "Hamed";
+// });
+
+// console.log(hamed); // 1
+
+const array = [10, 22, 23, 56, 43, 42, 78];
+console.log(array.includes(25)); // false
+console.log(array.includes(23)); // true
