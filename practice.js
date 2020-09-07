@@ -1377,6 +1377,6 @@
 
 // console.log(hamed); // 1
 
-const array = [10, 22, 23, 56, 43, 42, 78];
-console.log(array.includes(25)); // false
-console.log(array.includes(23)); // true
+// const array = [10, 22, 23, 56, 43, 42, 78];
+// console.log(array.includes(25)); // false
+// console.log(array.includes(23)); // true
