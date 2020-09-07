@@ -1226,3 +1226,40 @@
 
 // -----------------------------------------------
 
+// array - splice()
+// const array = ["Hamid", "Hamed"];
+// array.splice(0, 0, "Ali");
+// console.log(array); // [ 'Ali', 'Hamid', 'Hamed' ]
+
+// const array = ["Hamid", "Hamed"];
+// array.splice(1, 0, "Ali");
+// console.log(array); // [ 'Hamid', 'Ali', 'Hamed' ]
+
+// const array = ["Hamid", "Hamed"];
+// array.splice(1, 1, "Ali");
+// console.log(array); // [ 'Hamid', 'Ali' ]
+
+// const array = ["Hamid", "Hamed", "Ali"];
+// console.log(array.splice(2)); // [ 'Ali' ]
+// console.log(array.splice(1)); // [ 'Hamed' ]
+// console.log(array.splice(0)); // [ 'Hamid' ]
+
+// const array = ["Hamid", "Hamed", "Ali"];
+// array.splice(0, 2, "Reza", "Mehrdad", "Majid", "Morteza");
+// console.log(array); // [ 'Reza', 'Mehrdad', 'Majid', 'Morteza', 'Ali' ]
+
+// const array = ["Hamid", "Hamed", "Ali"];
+// array.splice(0, 1);
+// console.log(array); // [ 'Reza', 'Mehrdad', 'Majid', 'Morteza', 'Ali' ]
+
+// const array = ["Majid", "Hamid", "Hamed", "Ali"];
+// array.splice(0); // []
+// console.log(array);
+
+// const array = ["Hamid", "Hamed"];
+// array.splice(0, 1, "Ali");
+// console.log(array); // [ 'Ali', 'Hamed' ]
+
+const array = ["Hamid", "Hamed", "Reza"];
+array.splice(-1, 0, "Ali");
+console.log(array); // [ 'Hamid', 'Hamed', 'Ali', 'Reza' ]
