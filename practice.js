@@ -1334,5 +1334,16 @@
 
 // -----------------------------------------------
 
-const array = [10, 22, 23, 56, 43, 42, 78];
-console.log(array.indexOf(1, 2)); // -1
+// array - indexOf()
+// const array = [10, 22, 23, 56, 43, 42, 78];
+// console.log(array.indexOf(56, 2)); // 3
+
+// const array = [10, 22, 23, 56, 43, 42, 56, 78];
+// console.log(array.indexOf(56, 2)); // 3
+
+// const array = [10, 22, 23, 56, 43, 42, 56, 78];
+// console.log(array.indexOf(56)); // 3
+// console.log(array.lastIndexOf(56)); // 6
+
+// const array = [{ name: "Hamid" }, { name: "Hamed" }];
+// console.log(array.indexOf({ name: "Hamed" })); // -1
