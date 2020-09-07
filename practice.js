@@ -1260,6 +1260,46 @@
 // array.splice(0, 1, "Ali");
 // console.log(array); // [ 'Ali', 'Hamed' ]
 
-const array = ["Hamid", "Hamed", "Reza"];
-array.splice(-1, 0, "Ali");
-console.log(array); // [ 'Hamid', 'Hamed', 'Ali', 'Reza' ]
+// const array = ["Hamid", "Hamed", "Reza"];
+// array.splice(-1, 0, "Ali");
+// console.log(array); // [ 'Hamid', 'Hamed', 'Ali', 'Reza' ]
+
+// const array = ["hamid", "hamed", "Ali", "Reza"];
+// console.log(array[-1]); // undefined
+
+// -----------------------------------------------
+
+// array - slice
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array;
+
+// console.log(array2); // [ 1, 2, 34, -56, 4, 77 ]
+
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array;
+
+// array.push(100);
+
+// console.log(array2); // [ 1,  2,  34, -56, 4, 77, 100 ]
+
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array.slice();
+
+// array.push(100);
+
+// console.log(array2); // [ 1, 2, 34, -56, 4, 77 ]
+
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array.slice(0, 3);
+
+// console.log(array2); // [ 1, 2, 34 ]
+
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array.slice(-3, -1);
+
+// console.log(array2); // [ -56, 4 ]
+
+// const array = [1, 2, 34, -56, 4, 77];
+// const array2 = array.slice(2);
+
+// console.log(array2); // [ 34, -56, 4, 77 ]
