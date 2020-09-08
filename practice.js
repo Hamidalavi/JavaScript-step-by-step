@@ -1560,9 +1560,28 @@
 
 // console.log(sum); // 46.97
 
-const originalArray = [{ price: 10.99 }, { price: 5.99 }, { price: 29.99 }];
-const sum = originalArray
-  .map((obj) => obj.price)
-  .reduce((sumVal, curVal) => sumVal + curVal, 0);
+// const originalArray = [{ price: 10.99 }, { price: 5.99 }, { price: 29.99 }];
+// const sum = originalArray
+//   .map((obj) => obj.price)
+//   .reduce((sumVal, curVal) => sumVal + curVal, 0);
 
-console.log(sum); // 46.97
+// console.log(sum); // 46.97
+
+// -----------------------------------------------
+
+// array - split() and join()
+// const string = "Hello;my;name;is;hamid;alavi";
+// const transformedString = string.split(";");
+// console.log(transformedString); // [ 'Hello', 'my', 'name', 'is', 'hamid', 'alavi' ]
+
+// const string = "Hello;my;name;is;hamid;alavi";
+// const transformedString = string.split(";", 2);
+// console.log(transformedString); // [ 'Hello', 'my' ]
+
+// const bio = ["Hamid", "Alavi", "is", "a programmer"];
+// const joinedValue = bio.join(" ");
+// console.log(joinedValue); // "Hamid Alavi is a programmer"
+
+const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
+const joinedValue = bio.join(" ");
+console.log(joinedValue); // "Hamid Alavi is a programmer"
