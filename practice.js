@@ -1494,15 +1494,47 @@
 // prices.sort();
 // console.log(prices); // [ 1000, 10000, 140, 3900, 4500, 7800 ]
 
-const prices = [140, 1000, 4500, 3900, 7800, 10000];
-prices.sort((a, b) => {
-  if (a > b) {
-    return -1;
-  } else if (a === b) {
-    return 0;
-  } else {
-    return 1;
-  }
-});
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort((a, b) => {
+//   if (a > b) {
+//     return -1;
+//   } else if (a === b) {
+//     return 0;
+//   } else {
+//     return 1;
+//   }
+// });
 
-console.log(prices); // [ 140, 1000, 3900, 4500, 7800, 10000 ]
+// console.log(prices); // [ 10000, 7800, 4500, 3900, 1000, 140 ]
+
+// -----------------------------------------------
+
+// array - filter()
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// const filteredArray = prices.filter((price, index, array) => {
+//   return price > 4000;
+// });
+
+// console.log(filteredArray); // [ 4500, 7800, 10000 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// const filteredArray = prices.filter(price => price > 4000);
+
+// console.log(filteredArray); // [ 4500, 7800, 10000 ]
+
+// -----------------------------------------------
+
+// array - reduce()
+// const array = [1, 2, 3, 4];
+// let sum = 0;
+
+// const prices = array.forEach((value) => (sum += value));
+// console.log(sum); // 10
+
+const array = [1, 2, 3, 4];
+const sum = array.reduce((prevValue, currValue, index, array) => {
+  return prevValue + currValue;
+}, 20);
+// const sum = array.reduce((perv,curr) => perv + curr)
+
+console.log(sum); // 10
