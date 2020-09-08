@@ -1531,10 +1531,27 @@
 // const prices = array.forEach((value) => (sum += value));
 // console.log(sum); // 10
 
-const array = [1, 2, 3, 4];
-const sum = array.reduce((prevValue, currValue, index, array) => {
-  return prevValue + currValue;
-}, 20);
-// const sum = array.reduce((perv,curr) => perv + curr)
+// const array = [1, 2, 3, 4];
+// const sum = array.reduce((prevValue, currValue, index, array) => {
+//   return prevValue + currValue;
+// }, 20);
+// console.log(sum); // 10
 
-console.log(sum); // 10
+// const array = [1, 2, 3, 4];
+// const sum = array.reduce((perv, curr) => perv + curr);
+// console.log(sum); // 10
+
+// const array = [1, 2, 3, 4];
+// const sum = array.reduce((perv, curr) => perv + curr, 15);
+// console.log(sum); // 25
+
+// -----------------------------------------------
+
+// array - important
+const originalArray = [{ price: 10.99 }, { price: 5.99 }, { price: 29.99 }];
+const transformedArray = originalArray.map((obj) => obj.price); // produces [10.99, 5.99, 29.99]
+const sum = transformedArray.reduce((sumVal, curVal) => sumVal + curVal, 0);
+
+console.log(transformedArray); // [ 10.99, 5.99, 29.99 ]
+console.log(sum); // 46.97
+
