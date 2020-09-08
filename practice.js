@@ -1555,7 +1555,14 @@
 // console.log(transformedArray); // [ 10.99, 5.99, 29.99 ]
 // console.log(sum); // 46.97
 
+// const originalArray = [{ price: 10.99 }, { price: 5.99 }, { price: 29.99 }];
+// const sum = originalArray.reduce((sumVal, curVal) => sumVal + curVal.price, 0);
+
+// console.log(sum); // 46.97
+
 const originalArray = [{ price: 10.99 }, { price: 5.99 }, { price: 29.99 }];
-const sum = originalArray.reduce((sumVal, curVal) => sumVal + curVal.price, 0);
+const sum = originalArray
+  .map((obj) => obj.price)
+  .reduce((sumVal, curVal) => sumVal + curVal, 0);
 
 console.log(sum); // 46.97
