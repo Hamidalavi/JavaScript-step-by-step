@@ -1463,6 +1463,46 @@
 // -----------------------------------------------
 
 // array - sort() and reverse()
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort();
+// console.log(prices); // [ 1000, 10000, 140, 3900, 4500, 7800 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort((a, b) => {
+//   if (a > b) {
+//     return 1;
+//   } else if (a === b) {
+//     return 0;
+//   } else {
+//     return -1;
+//   }
+// });
+
+// console.log(prices); // [ 140, 1000, 3900, 4500, 7800, 10000 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort((a, b) => a - b);
+
+// console.log(prices); // [ 140, 1000, 3900, 4500, 7800, 10000 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort((a, b) => a - b);
+
+// console.log(prices.reverse()); // [ 10000, 7800, 4500, 3900, 1000, 140 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// prices.sort();
+// console.log(prices); // [ 1000, 10000, 140, 3900, 4500, 7800 ]
+
 const prices = [140, 1000, 4500, 3900, 7800, 10000];
-prices.sort();
-console.log(prices);
+prices.sort((a, b) => {
+  if (a > b) {
+    return -1;
+  } else if (a === b) {
+    return 0;
+  } else {
+    return 1;
+  }
+});
+
+console.log(prices); // [ 140, 1000, 3900, 4500, 7800, 10000 ]
