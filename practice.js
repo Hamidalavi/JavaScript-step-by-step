@@ -1380,3 +1380,89 @@
 // const array = [10, 22, 23, 56, 43, 42, 78];
 // console.log(array.includes(25)); // false
 // console.log(array.includes(23)); // true
+
+// -----------------------------------------------
+
+// array - forEach()
+// const prices = [0.99, 1.99, 4.99, 9.99, 49.99, 99.99];
+// const tax = 0.09;
+// const taxAdjustedPrices = [];
+
+// for (const price of prices) {
+//   taxAdjustedPrices.push(price * (1 + tax));
+// }
+
+// console.log(taxAdjustedPrices); // [ 1.07, 2.16, 5.43, 10.88, 54.48, 108.98 ]
+
+// const prices = [0.99, 1.99, 4.99, 9.99, 49.99, 99.99];
+// const tax = 0.09;
+// const taxAdjustedPrices = [];
+
+// prices.forEach((price, idx, array) => {
+//   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+//   taxAdjustedPrices.push(priceObj);
+// });
+
+// console.log(taxAdjustedPrices);
+// /*
+// [
+//   { index: 0, taxAdjPrice: 1.0791000000000002 },
+//   { index: 1, taxAdjPrice: 2.1691000000000003 },
+//   { index: 2, taxAdjPrice: 5.439100000000001 },
+//   { index: 3, taxAdjPrice: 10.889100000000001 },
+//   { index: 4, taxAdjPrice: 54.48910000000001 },
+//   { index: 5, taxAdjPrice: 108.98910000000001 }
+// ]
+// */
+
+// -----------------------------------------------
+
+// array - map()
+// const prices = [0.99, 1.99, 4.99, 9.99, 49.99, 99.99];
+// const tax = 0.09;
+// const taxAdjustedPrices = prices.map((price, idx, array) => {
+//   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+//   return priceObj;
+// });
+// console.log(prices, taxAdjustedPrices);
+// /*
+// [ 0.99, 1.99, 4.99, 9.99, 49.99, 99.99 ]
+
+// [
+//   { index: 0, taxAdjPrice: 1.0791000000000002 },
+//   { index: 1, taxAdjPrice: 2.1691000000000003 },
+//   { index: 2, taxAdjPrice: 5.439100000000001 },
+//   { index: 3, taxAdjPrice: 10.889100000000001 },
+//   { index: 4, taxAdjPrice: 54.48910000000001 },
+//   { index: 5, taxAdjPrice: 108.98910000000001 }
+// ]
+// */
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// const transformedPrice = prices.map((value) => value * 2);
+// console.log(transformedPrice); // [ 280, 2000, 9000, 7800, 15600, 20000 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// const transformedPrice = prices.map((value, index) =>  index);
+// console.log(transformedPrice); // [ 0, 1, 2, 3, 4, 5 ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// const transformedPrice = prices.map((value, index, array) =>  array);
+// console.log(transformedPrice);
+// /*
+// [
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ],
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ],
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ],
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ],
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ],
+//   [ 140, 1000, 4500, 3900, 7800, 10000 ]
+// ]
+// */
+
+// -----------------------------------------------
+
+// array - sort() and reverse()
+const prices = [140, 1000, 4500, 3900, 7800, 10000];
+prices.sort();
+console.log(prices);
