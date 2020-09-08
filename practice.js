@@ -1582,6 +1582,14 @@
 // const joinedValue = bio.join(" ");
 // console.log(joinedValue); // "Hamid Alavi is a programmer"
 
-const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
-const joinedValue = bio.join(" ");
-console.log(joinedValue); // "Hamid Alavi is a programmer"
+// const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
+// const joinedValue = bio.join(" ");
+// console.log(joinedValue); // "Hamid Alavi is 23 years old"
+
+// const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
+// const joinedValue = bio.join(" -- ");
+// console.log(joinedValue); // "Hamid -- Alavi -- is -- 23 -- years -- old"
+
+// const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
+// const joinedValue = bio.join("#*#*#");
+// console.log(joinedValue); // "Hamid#*#*#Alavi#*#*#is#*#*#23#*#*#years#*#*#old"
