@@ -1607,10 +1607,19 @@
 // const elements = [...array];
 // console.log(elements); // [ 1, 2, 3 ]
 
-const array = [1, 2, 3];
-const elements = [array];
-console.log(elements); // [ [ 1, 2, 3 ] ]
+// const array = [1, 2, 3];
+// const elements = [array];
+// console.log(elements); // [ [ 1, 2, 3 ] ]
+
+// const array = ["Hamid", "Alavi"];
+// const copiedArray = [...array];
+
+// array.push(" and I'm 23 years old");
+
+// console.log(array); // [ 'Hamid', 'Alavi', " and I'm 23 years old" ]
+// console.log(copiedArray); // [ 'Hamid', 'Alavi' ]
 
 // const prices = [140, 1000, 4500, 3900, 7800, 10000];
 // console.log(Math.min(prices)); //NaN
 // console.log(Math.min(...prices)); // 140
+
