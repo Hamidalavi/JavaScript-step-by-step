@@ -1593,3 +1593,9 @@
 // const bio = ["Hamid", "Alavi", "is", 23, "years", "old"];
 // const joinedValue = bio.join("#*#*#");
 // console.log(joinedValue); // "Hamid#*#*#Alavi#*#*#is#*#*#23#*#*#years#*#*#old"
+
+// -----------------------------------------------
+
+const prices = [140, 1000, 4500, 3900, 7800, 10000];
+console.log(Math.min(prices)); //NaN
+console.log(Math.min(...prices)); // 140
