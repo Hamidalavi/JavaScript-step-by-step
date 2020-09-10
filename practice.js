@@ -1596,6 +1596,21 @@
 
 // -----------------------------------------------
 
-const prices = [140, 1000, 4500, 3900, 7800, 10000];
-console.log(Math.min(prices)); //NaN
-console.log(Math.min(...prices)); // 140
+// array - ... spread operator
+// const sum = (x, y, z) => x + y + z;
+
+// const numbers = [1, 2, 3];
+
+// console.log(sum(...numbers)); // 6
+
+// const array = [1, 2, 3];
+// const elements = [...array];
+// console.log(elements); // [ 1, 2, 3 ]
+
+const array = [1, 2, 3];
+const elements = [array];
+console.log(elements); // [ [ 1, 2, 3 ] ]
+
+// const prices = [140, 1000, 4500, 3900, 7800, 10000];
+// console.log(Math.min(prices)); //NaN
+// console.log(Math.min(...prices)); // 140
