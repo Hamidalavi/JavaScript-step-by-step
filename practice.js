@@ -1623,3 +1623,46 @@
 // console.log(Math.min(prices)); //NaN
 // console.log(Math.min(...prices)); // 140
 
+// const persons = [
+//   { name: "Hamid", age: 23 },
+//   { name: "Hamed", age: 23 },
+// ];
+
+// const copiedPersons = [...persons];
+
+// persons.push({ name: "Ali", age: 22 });
+
+// console.log(persons); // [ { name: 'Hamid', age: 23 }, { name: 'Hamed', age: 23 }, { name: 'Ali', age: 22 } ]
+// console.log(copiedPersons); // [ { name: 'Hamid', age: 23 }, { name: 'Hamed', age: 23 } ]
+
+// const persons = [
+//   { name: "Hamid", age: 23 },
+//   { name: "Hamed", age: 23 },
+// ];
+
+// const copiedPersons = [...persons];
+
+// persons.push({ name: "Ali", age: 22 });
+// persons[0].age = 24;
+
+// console.log(persons); // [ { name: 'Hamid', age: 24 }, { name: 'Hamed', age: 23 }, { name: 'Ali', age: 22 } ]
+// console.log(copiedPersons); // [ { name: 'Hamid', age: 24 }, { name: 'Hamed', age: 23 } ]
+
+// -----------------------------------------------
+
+// array - array destructring
+// const nameDate = ["Hamid", "Alavi"];
+// const firstName = nameDate[0];
+// const lastName = nameDate[1];
+
+// console.log(firstName, lastName); // "Hamid Alavi"
+
+// const nameDate = ["Hamid", "Alavi"];
+// const [firstName, lastName] = nameDate;
+
+// console.log(firstName, lastName); // "Hamid Alavi"
+
+// const nameDate = ["Hamid", "Alavi", 23, "Ali", 22, "Reza"];
+// const [firstName, lastName, ...otherInformation] = nameDate;
+
+// console.log(firstName, lastName, otherInformation); // Hamid Alavi [ 23, 'Ali', 22, 'Reza' ]
