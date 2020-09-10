@@ -1666,3 +1666,43 @@
 // const [firstName, lastName, ...otherInformation] = nameDate;
 
 // console.log(firstName, lastName, otherInformation); // Hamid Alavi [ 23, 'Ali', 22, 'Reza' ]
+
+// -----------------------------------------------
+
+// array - Sets and Maps
+// const ids = new Set();
+// console.log(ids); // Set(0) {}
+
+// const ids = new Set([1, 2, 3]);
+// console.log(ids[1]); // undefined
+
+// const ids = new Set([1, 2, 3]);
+// console.log(ids.has(2)); // true
+// console.log(ids.has(4)); // false
+
+// const ids = new Set([1, 2, 3]);
+// ids.add(4);
+// ids.add(4);
+// ids.add(4);
+// ids.add(4);
+// console.log(ids); // Set(4) { 1, 2, 3, 4 }
+
+// const ids = new Set([1, 2, 3]);
+// console.log(ids.entries()); // [Set Entries] { [ 1, 1 ], [ 2, 2 ], [ 3, 3 ] }
+
+// const ids = new Set(["Hello", "Wellcome", "Hamid Alavi"]);
+// console.log(ids.entries());
+// /*
+// [Set Entries] {
+//   [ 'Hello', 'Hello' ],
+//   [ 'Wellcome', 'Wellcome' ],
+//   [ 'Hamid Alavi', 'Hamid Alavi' ]
+// }
+// */
+
+const ids = new Set([1, 2, 3]);
+console.log(ids.values()); // [Set Entries] { [ 1, 1 ], [ 2, 2 ], [ 3, 3 ] }
+
+// const ids = new Set(["Hello", "Wellcome", "Hamid Alavi"]);
+// ids.delete("Wellcome");
+// console.log(ids); // Set(2) { 'Hello', 'Hamid Alavi' }
