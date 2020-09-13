@@ -1912,3 +1912,20 @@ __proto__: WeakSet
 // value: "Extra Info"
 // __proto__: WeakMap
 // */
+
+// -----------------------------------------------
+
+// objects
+// const complexPerson = {
+//   name: "Hamid",
+//   hobbies: ["Programming", "Gaming"],
+//   address: {
+//     street: "Some Street",
+//     stateId: 10,
+//     country: "Iran",
+//     phone: {
+//       number: Number("+989216570293"),
+//       isMobile: true,
+//     },
+//   },
+// };
