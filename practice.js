@@ -1700,9 +1700,162 @@
 // }
 // */
 
-const ids = new Set([1, 2, 3]);
-console.log(ids.values()); // [Set Entries] { [ 1, 1 ], [ 2, 2 ], [ 3, 3 ] }
+// const ids = new Set([1, 2, 3]);
+// console.log(ids.values()); // [Set Iterator] { 1, 2, 3 }
 
 // const ids = new Set(["Hello", "Wellcome", "Hamid Alavi"]);
 // ids.delete("Wellcome");
 // console.log(ids); // Set(2) { 'Hello', 'Hamid Alavi' }
+
+// const map1 = new Map([[1 , 2], [2 ,3 ] ,[4, 5]]);
+// const map2 = new Map([["firstName", "Hamid"], ["lastName", "Alavi"]]);
+// const map3 = new Map([["positive numbers", [1, 2, 3, 4]], ["decimal numbers", [1.1, 1.2, 1.3, 1.4]], ["negative numbers" , [-1, -2, -3, -4]]]);
+// const map4 = new Map([[["firstName", "lastName"], ["Hamid", "Alavi"]], [["friend 1", "friend 2"], ["Ali", "Reza"]]]);
+
+// console.log(map1); // Map(3) { 1 => 2, 2 => 3, 4 => 5 }
+// console.log(map2); // Map(2) { 'firstName' => 'Hamid', 'lastName' => 'Alavi' }
+// console.log(map3);
+// /*
+// Map(3) {
+//   'positive numbers' => [ 1, 2, 3, 4 ],
+//   'decimal numbers' => [ 1.1, 1.2, 1.3, 1.4 ],
+//   'negative numbers' => [ -1, -2, -3, -4 ]
+// }
+// */
+// console.log(map4);
+// /*
+// Map(2) {
+//   [ 'firstName', 'lastName' ] => [ 'Hamid', 'Alavi' ],
+//   [ 'friend 1', 'friend 2' ] => [ 'Ali', 'Reza' ]
+// }
+// */
+
+// const person = { name: "hamid", age: 23 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// console.log(personData); // Map(1) { { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ] }
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// for (const entry of personData.entries()) {
+//   console.log(entry);
+// }
+// /*
+// [ { name: 'hamid', age: 23 }, [ { date: 'firstName', price: 100 } ] ]
+// [ { name: 'Ali', age: 22 }, [ { date: 'two weeks ago', price: 120 } ] ]
+// */
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// for (const [key, value] of personData.entries()) {
+//   console.log(key, value);
+// }
+// /*
+// [ { name: 'hamid', age: 23 }, [ { date: 'firstName', price: 100 } ] ]
+// [ { name: 'Ali', age: 22 }, [ { date: 'two weeks ago', price: 120 } ] ]
+// */
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// for (const key of personData.keys()) {
+//   console.log(key);
+// }
+// /*
+// { name: 'hamid', age: 23 }
+// { name: 'Ali', age: 22 }
+// */
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// for (const value of personData.values()) {
+//   console.log(value);
+// }
+// /*
+// [ { date: 'firstName', price: 100 } ]
+// [ { date: 'two weeks ago', price: 120 } ]
+// */
+
+// const person = { name: "hamid", age: 23 };
+// const person2 = { name: "Ali", age: 22 };
+// const personData = new Map([[person, [{ date: "firstName", price: 100 }]]]);
+
+// personData.set(person2, [{ date: "two weeks ago", price: 120 }]);
+
+// console.log(personData);
+// /*
+// Map(2) {
+//   { name: 'hamid', age: 23 } => [ { date: 'firstName', price: 100 } ],
+//   { name: 'Ali', age: 22 } => [ { date: 'two weeks ago', price: 120 } ]
+// }
+// */
+// console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
+
+// console.log(personData.size); // 2
