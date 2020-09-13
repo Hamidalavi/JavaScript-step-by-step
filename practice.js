@@ -1896,19 +1896,19 @@ __proto__: WeakSet
 // __proto__: Set
 // */
 
-let person = { name: "Hamid" };
-const persons = new WeakMap();
+// let person = { name: "Hamid" };
+// const persons = new WeakMap();
 
-persons.set(person, "Extra Info");
+// persons.set(person, "Extra Info");
 
-person = null;
+// person = null;
 
-console.log(persons);
-/*
-WeakMap {{…} => "Extra Info"}
-[[Entries]]
-0: {Object => "Extra Info"}
-key: {name: "Hamid"}
-value: "Extra Info"
-__proto__: WeakMap
-*/
+// console.log(persons);
+// /*
+// WeakMap {{…} => "Extra Info"}
+// [[Entries]]
+// 0: {Object => "Extra Info"}
+// key: {name: "Hamid"}
+// value: "Extra Info"
+// __proto__: WeakMap
+// */
