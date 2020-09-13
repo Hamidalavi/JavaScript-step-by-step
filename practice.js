@@ -1997,3 +1997,16 @@ __proto__: WeakSet
 //   },
 // };
 // // SyntaxError: Unexpected token '-'
+
+// const person = {
+//   "first-name": "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+
+// console.log(person["first-name"]); // "Hamid"
+
+let movieList = document.getElementById("movie-list")
