@@ -1859,3 +1859,56 @@
 // console.log(personData.get(person)); // [ { date: 'firstName', price: 100 } ]
 
 // console.log(personData.size); // 2
+
+// -----------------------------------------------
+
+// array - WeakSets and WeakMaps
+
+// let person = { name: "Hamid" };
+// const persons = new WeakSet();
+
+// persons.add(person);
+
+// person = null;
+
+// console.log(persons);
+/*
+WeakSet {{…}}
+[[Entries]]
+No properties
+__proto__: WeakSet
+*/
+
+// let person = { name: "Hamid" };
+// const persons = new Set();
+
+// persons.add(person);
+
+// person = null;
+
+// console.log(persons);
+// /*
+// Set(1) {{…}}
+// [[Entries]]
+// 0:
+// value: {name: "Hamid"}
+// size: (...)
+// __proto__: Set
+// */
+
+let person = { name: "Hamid" };
+const persons = new WeakMap();
+
+persons.set(person, "Extra Info");
+
+person = null;
+
+console.log(persons);
+/*
+WeakMap {{…} => "Extra Info"}
+[[Entries]]
+0: {Object => "Extra Info"}
+key: {name: "Hamid"}
+value: "Extra Info"
+__proto__: WeakMap
+*/
