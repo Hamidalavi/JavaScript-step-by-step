@@ -1915,7 +1915,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// objects
+// object
 // const complexPerson = {
 //   name: "Hamid",
 //   hobbies: ["Programming", "Gaming"],
@@ -1929,3 +1929,71 @@ __proto__: WeakSet
 //     },
 //   },
 // };
+
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+
+// console.log(person.name); // "Hamid"
+// console.log(person.isAdmin); // undefined
+
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+
+// console.log(person.name); // "Hamid"
+
+// person.isAdmin = true;
+// console.log(person.isAdmin); // true
+
+// -----------------------------------------------
+
+// object - modify and delete properties
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+
+// console.log(person.name); // "Hamid"
+
+// person.name = "Reza";
+// console.log(person.name); // "Reza"
+
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+
+// delete person.name;
+// console.log(person.name); // undefined
+
+// -----------------------------------------------
+
+// object - coerced to string
+// const person = {
+//   first-name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+//   greet: function () {
+//     alert("Hi there!");
+//   },
+// };
+// // SyntaxError: Unexpected token '-'
