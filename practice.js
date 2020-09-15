@@ -2145,10 +2145,65 @@ __proto__: WeakSet
 // console.log(person); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming', 'Reading' ] }
 // console.log(anotherPerson); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming' ] }
 
-const person = { name: "Hamid" };
-const anotherPerson = Object.assign({}, person);
+// const person = { name: "Hamid" };
+// const anotherPerson = Object.assign({}, person);
 
-person.age = 23;
+// person.age = 23;
 
-console.log(person); // { name: 'Hamid', age: 23 }
-console.log(anotherPerson); // { name: 'Hamid' }
+// console.log(person); // { name: 'Hamid', age: 23 }
+// console.log(anotherPerson); // { name: 'Hamid' }
+
+// -----------------------------------------------
+
+// object - object destructuring
+// const user = {
+//   id: 42,
+//   is_verified: true,
+// };
+
+// const { id, is_verified } = user;
+
+// console.log(id); // 42
+// console.log(is_verified); // true
+
+// const user = {
+//   id: 42,
+//   is_verified: true,
+// };
+
+// const { id: userId, is_verified: validation } = user;
+
+// console.log(userId); // 42
+// console.log(validation); // true
+
+// const metadata = {
+//   title: "Scratchpad",
+//   translations: [
+//     {
+//       locale: "ir",
+//       localization_tags: [],
+//       last_edit: "2020-10-14T08:43:37",
+//       url: "/ir/docs/Tools/Scratchpad",
+//       title: "JavaScript",
+//     },
+//   ],
+//   url: "/en-US/docs/Tools/Scratchpad",
+// };
+
+// let {
+//   title: englishTitle, // rename
+//   translations: [
+//     {
+//       title: localeTitle, // rename
+//     },
+//   ],
+// } = metadata;
+
+// console.log(englishTitle); // "Scratchpad"
+// console.log(localeTitle); // "JavaScript"
+
+const numbers = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7 };
+const { a, b, ...others } = numbers;
+
+console.log(a, b);
+console.log(others);
