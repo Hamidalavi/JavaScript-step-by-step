@@ -2084,20 +2084,41 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // object - shorthand property
-const title = document.getElementById("title").value;
-const extraName = document.getElementById("extra-name").value;
-const extraValue = document.getElementById("extra-value").value;
+// const title = document.getElementById("title").value;
+// const extraName = document.getElementById("extra-name").value;
+// const extraValue = document.getElementById("extra-value").value;
 
-// # normal
-const newMovie = {
-  title: title,
-  extraName: extraName,
-  extraValue: extraValue,
-};
+// // # normal
+// const newMovie = {
+//   title: title,
+//   extraName: extraName,
+//   extraValue: extraValue,
+// };
 
-// # shorthand property
-const newMovie = {
-  title,
-  extraName,
-  extraValue,
-};
+// // # shorthand property
+// const newMovie = {
+//   title,
+//   extraName,
+//   extraValue,
+// };
+
+// [{…}]
+// 0:
+// id: 0.7939495269983203
+// info:
+// Level: "5"
+// title: "JavaScript Course"
+// __proto__: Object
+// __proto__: Object
+// length: 1
+// __proto__: Array(0)
+
+// -----------------------------------------------
+
+// object - spread operator
+const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
+const anotherPerson = person;
+
+person.age = 23;
+
+console.log(anotherPerson);
