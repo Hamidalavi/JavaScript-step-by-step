@@ -2116,9 +2116,39 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // object - spread operator
-const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
-const anotherPerson = person;
+// const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
+// const anotherPerson = person;
+
+// person.age = 23;
+
+// console.log(anotherPerson); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming' ], age: 23 }
+
+// const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
+// const anotherPerson = { ...person };
+
+// person.age = 23;
+
+// console.log(anotherPerson); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming' ] }
+
+// const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
+// const anotherPerson = { ...person };
+
+// person.age = 23;
+// person.hobbies.push("Reading");
+
+// console.log(anotherPerson); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming', 'Reading' ] }
+
+// const person = { name: "Hamid", hobbies: ["Programming", "Gaming"] };
+// const anotherPerson = { ...person, hobbies: [...person.hobbies] };
+// person.hobbies.push("Reading");
+
+// console.log(person); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming', 'Reading' ] }
+// console.log(anotherPerson); // { name: 'Hamid', hobbies: [ 'Programming', 'Gaming' ] }
+
+const person = { name: "Hamid" };
+const anotherPerson = Object.assign({}, person);
 
 person.age = 23;
 
-console.log(anotherPerson);
+console.log(person); // { name: 'Hamid', age: 23 }
+console.log(anotherPerson); // { name: 'Hamid' }
