@@ -2202,8 +2202,46 @@ __proto__: WeakSet
 // console.log(englishTitle); // "Scratchpad"
 // console.log(localeTitle); // "JavaScript"
 
-const numbers = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7 };
-const { a, b, ...others } = numbers;
+// const numbers = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7 };
+// const { a, b, ...others } = numbers;
 
-console.log(a, b);
-console.log(others);
+// console.log(a, b); // 1 2
+// console.log(others); // { c: 3, d: 4, e: 5, f: 6, g: 7 }
+
+// -----------------------------------------------
+
+// object - checking for property existance
+// const person = { name: "hamid", age: 23 };
+
+// if ("name" in person) {
+//   console.log("Yeah"); // "Yeah"
+// }
+
+// if ("hobbies" in person) {
+//   console.log("Yeah");
+// } else {
+//   console.log("Noo"); // "Noo"
+// }
+
+// -----------------------------------------------
+
+// object - this
+// const something = {
+//   prop: 23,
+//   func: function () {
+//     return this.prop;
+//   },
+// };
+
+// console.log(something.func()); // 23
+
+// ---
+
+// console.log(this === window); // true
+
+// age = 23;
+// console.log(window.age); // 23
+
+// this.name = "Hamid";
+// console.log(window.name); // "Hamid"
+// console.log(name); // "Hamid"
