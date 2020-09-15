@@ -2113,6 +2113,16 @@ __proto__: WeakSet
 // length: 1
 // __proto__: Array(0)
 
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   sayHi: function () {
+//     console.log("Hi There!");
+//   },
+// };
+
+// person.sayHi(); // "Hi There!"
+
 // -----------------------------------------------
 
 // object - spread operator
