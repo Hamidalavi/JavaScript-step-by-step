@@ -2220,7 +2220,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// object - checking for property existance
+// object - checking for property existence
 // const person = { name: "hamid", age: 23 };
 
 // if ("name" in person) {
@@ -2373,3 +2373,75 @@ __proto__: WeakSet
 // console.log(MyClass); // [class MyClass]
 // console.log(new MyClass()); // MyClass { title: 'DEAFAULT', description: 'NO DESCRIPTION' }
 // console.log(MyClass()); // TypeError: Class constructor MyClass cannot be invoked without 'new'
+
+// -----------------------------------------------
+
+// OOP - constructors
+// class Example {
+//   title = "DEFAULT";
+//   imageUrl;
+//   price;
+//   description;
+
+//   constructor(title, url, price, desc) {
+//     this.title = title;
+//     this.imageUrl = url;
+//     this.price = price;
+//     this.description = desc;
+//   }
+// }
+
+// const product = new Example(
+//   "JavaScript",
+//   "https://i.pinimg.com/originals/fc/c5/bd/fcc5bdf4590e2459f4b9aa606fe4ce43.jpg",
+//   199.99,
+//   "A good course"
+// );
+
+// console.log(product);
+// /*
+// Example {
+//   title: 'JavaScript',
+//   imageUrl: 'https://i.pinimg.com/originals/fc/c5/bd/fcc5bdf4590e2459f4b9aa606fe4ce43.jpg',
+//   price: 199.99,
+//   description: 'A good course'
+// }
+// */
+
+// class Product {
+//   category = "DEFAULT";
+//   constructor(title) {
+//     this.title = title;
+//   }
+
+//   printInfo() {
+//     console.log(this.title, this.category);
+//   }
+// }
+
+// class Product {
+//   category = "DEFAULT";
+//   title;
+//   constructor(title) {
+//     this.title = title;
+//   }
+// }
+
+// console.log(new Product("Title")); // Product { category: 'DEFAULT', title: 'Title' }
+
+// class Product {
+//   category = "DEFAULT";
+//   constructor(title) {
+//     this.title = title;
+//   }
+// }
+
+// console.log(new Product("Title")); // Product { category: 'DEFAULT', title: 'Title' }
+
+// const object = {
+//   name: "Hamid",
+// };
+
+// object.age = 23;
+
+// console.log(object); // { name: 'Hamid', age: 23 }
