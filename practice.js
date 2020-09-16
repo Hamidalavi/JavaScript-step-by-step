@@ -2327,27 +2327,40 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // object - getters and setters
-const person = {
-  info: {
-    set name(val) {
-      if (val.trim() === "") {
-        this._name = "DEFAULT";
-        return;
-      }
-      this._name = val;
-    },
-    get name() {
-      return this._name + " Alavi";
-    },
-    age: 23,
-  },
-  hobbies: ["programming", "Gaming"],
-};
+// const person = {
+//   info: {
+//     set name(val) {
+//       if (val.trim() === "") {
+//         this._name = "DEFAULT";
+//         return;
+//       }
+//       this._name = val;
+//     },
+//     get name() {
+//       return this._name + " Alavi";
+//     },
+//     age: 23,
+//   },
+//   hobbies: ["programming", "Gaming"],
+// };
 
-person.info.name = "";
-console.log(person.info.name); // DEFAULT
+// person.info.name = "";
+// console.log(person.info.name); // DEFAULT
 
-person.info.name = "Hamid";
-console.log(person.info.name); // Hamid Alavi
+// person.info.name = "Hamid";
+// console.log(person.info.name); // Hamid Alavi
 
-console.log(person); // { info: { name: [Getter/Setter], age: 23, _name: 'Hamed' }, hobbies: [ 'programming', 'Gaming' ] }
+// console.log(person); // { info: { name: [Getter/Setter], age: 23, _name: 'Hamid' }, hobbies: [ 'programming', 'Gaming' ] }
+
+// -----------------------------------------------
+
+// OOP
+// const example1 = {
+//   title: "DEAFAULT",
+//   description: "NO DESCRIPTION",
+// };
+
+// class Example2 {
+//   title = "DEAFAULT";
+//   description = "NO DESCRIPTION";
+// }
