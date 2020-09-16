@@ -2273,22 +2273,22 @@ __proto__: WeakSet
 // Ali - Persian Sight
 // */
 
-const members = {
-  teamName: "Persian Sight",
-  people: ["Hamid", "Hamed", "Ali"],
-  getTeamMember() {
-    this.people.forEach(function (p) {
-      console.log(p + " - " + this.teamName);
-    });
-  },
-};
+// const members = {
+//   teamName: "Persian Sight",
+//   people: ["Hamid", "Hamed", "Ali"],
+//   getTeamMember() {
+//     this.people.forEach(function (p) {
+//       console.log(p + " - " + this.teamName);
+//     });
+//   },
+// };
 
-members.getTeamMember();
-/*
-Hamid - undefined
-Hamed - undefined
-Ali - undefined
-*/
+// members.getTeamMember();
+// /*
+// Hamid - undefined
+// Hamed - undefined
+// Ali - undefined
+// */
 
 // -----------------------------------------------
 
@@ -2323,3 +2323,31 @@ Ali - undefined
 // };
 
 // console.log(person.fullName.apply(person1)); // "Hamid Alavi"
+
+// -----------------------------------------------
+
+// object - getters and setters
+const person = {
+  info: {
+    set name(val) {
+      if (val.trim() === "") {
+        this._name = "DEFAULT";
+        return;
+      }
+      this._name = val;
+    },
+    get name() {
+      return this._name + " Alavi";
+    },
+    age: 23,
+  },
+  hobbies: ["programming", "Gaming"],
+};
+
+person.info.name = "";
+console.log(person.info.name); // DEFAULT
+
+person.info.name = "Hamid";
+console.log(person.info.name); // Hamid Alavi
+
+console.log(person); // { info: { name: [Getter/Setter], age: 23, _name: 'Hamed' }, hobbies: [ 'programming', 'Gaming' ] }
