@@ -2255,3 +2255,71 @@ __proto__: WeakSet
 // this.name = "Hamid";
 // console.log(window.name); // "Hamid"
 // console.log(name); // "Hamid"
+
+// const members = {
+//   teamName: "Persian Sight",
+//   people: ["Hamid", "Hamed", "Ali"],
+//   getTeamMember() {
+//     this.people.forEach((p) => {
+//       console.log(p + " - " + this.teamName);
+//     });
+//   },
+// };
+
+// members.getTeamMember();
+// /*
+// Hamid - Persian Sight
+// Hamed - Persian Sight
+// Ali - Persian Sight
+// */
+
+const members = {
+  teamName: "Persian Sight",
+  people: ["Hamid", "Hamed", "Ali"],
+  getTeamMember() {
+    this.people.forEach(function (p) {
+      console.log(p + " - " + this.teamName);
+    });
+  },
+};
+
+members.getTeamMember();
+/*
+Hamid - undefined
+Hamed - undefined
+Ali - undefined
+*/
+
+// -----------------------------------------------
+
+// object - call() and apply() methods
+// const person = {
+//   fullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+
+// const person1 = {
+//   firstName: "Hamid",
+//   lastName: "Alavi",
+// };
+
+// const person2 = {
+//   firstName: "Hamed",
+//   lastName: "Alavi",
+// };
+
+// console.log(person.fullName.call(person1)); // "Hamid Alavi"
+
+// const person = {
+//   fullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+
+// const person1 = {
+//   firstName: "Hamid",
+//   lastName: "Alavi",
+// };
+
+// console.log(person.fullName.apply(person1)); // "Hamid Alavi"
