@@ -2364,3 +2364,12 @@ __proto__: WeakSet
 //   title = "DEAFAULT";
 //   description = "NO DESCRIPTION";
 // }
+
+// class MyClass {
+//   title = "DEAFAULT";
+//   description = "NO DESCRIPTION";
+// }
+
+// console.log(MyClass); // [class MyClass]
+// console.log(new MyClass()); // MyClass { title: 'DEAFAULT', description: 'NO DESCRIPTION' }
+// console.log(MyClass()); // TypeError: Class constructor MyClass cannot be invoked without 'new'
