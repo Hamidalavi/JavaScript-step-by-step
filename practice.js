@@ -2449,13 +2449,64 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // OOP - static
-class App {
-  title;
-  description;
+// class App {
+//   title;
+//   description;
 
-  static init() {
-    console.log("Yeah");
+//   static init() {
+//     console.log("Yeah");
+//   }
+// }
+
+// App.init(); // "Yeah"
+
+// -----------------------------------------------
+
+// OOP - inheritance
+// class Person {
+//   height;
+//   isFat;
+//   age;
+//   name;
+
+//   constructor(name, age, height, isFat) {
+//     this.height = height;
+//     this.isFat = isFat;
+//     this.age = age;
+//     this.name = name;
+//     console.log(name, age, height, isFat);
+//   }
+// }
+
+// // new Person("Hamid", 23, 180, false); // "Hamid" 23 180 false
+
+// class Girl extends Person {}
+
+// new Girl("Sarah", 23, 180, false); // "Sarah" 23 180 false
+
+// class Boy extends Girl {}
+
+// new Boy("Hamid", 23, 180, false); // "Hamid" 23 180 false
+
+class Parent {
+  height;
+  isFat;
+  age;
+  name;
+
+  constructor(name, age, height, isFat) {
+    this.height = height;
+    this.isFat = isFat;
+    this.age = age;
+    this.name = name;
+    console.log(name, age, height, isFat);
   }
 }
 
-App.init(); // "Yeah"
+class Child extends Parent {
+  constructor(a, b, c, d) {
+    super(a, b, c, d);
+  }
+}
+
+new Child("Hamid", 23, 180, false); // "Hamid" 23 180 false
