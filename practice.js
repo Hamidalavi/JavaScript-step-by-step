@@ -2445,3 +2445,17 @@ __proto__: WeakSet
 // object.age = 23;
 
 // console.log(object); // { name: 'Hamid', age: 23 }
+
+// -----------------------------------------------
+
+// OOP - static
+class App {
+  title;
+  description;
+
+  static init() {
+    console.log("Yeah");
+  }
+}
+
+App.init(); // "Yeah"
