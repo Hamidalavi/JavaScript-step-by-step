@@ -2552,3 +2552,17 @@ __proto__: WeakSet
 // console.log(p instanceof Person); // true
 // console.log(typeof Person); // "function"
 // console.log(typeof p); // "object"
+
+// const btn = document.querySelector("button");
+
+// console.log(btn instanceof HTMLButtonElement); // true
+// console.log(btn instanceof HTMLElement); // true
+// console.log(btn instanceof Person); // false
+
+const myObj = new Object();
+const myArray = new Array();
+
+console.log(myObj); // "{}"
+console.log(myArray); // "[]"
+console.log(typeof myObj); // "object"
+console.log(typeof myArray); // "object"
