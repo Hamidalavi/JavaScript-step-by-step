@@ -2559,10 +2559,73 @@ __proto__: WeakSet
 // console.log(btn instanceof HTMLElement); // true
 // console.log(btn instanceof Person); // false
 
-const myObj = new Object();
-const myArray = new Array();
+// const myObj = new Object();
+// const myArray = new Array();
 
-console.log(myObj); // "{}"
-console.log(myArray); // "[]"
-console.log(typeof myObj); // "object"
-console.log(typeof myArray); // "object"
+// console.log(myObj); // "{}"
+// console.log(myArray); // "[]"
+// console.log(typeof myObj); // "object"
+// console.log(typeof myArray); // "object"
+
+// -----------------------------------------------
+
+// OOP - object descriptors
+// const person = {
+//   name: "Hamid",
+//   greet() {
+//     this.name;
+//   },
+// };
+
+// console.log(Object.getOwnPropertyDescriptors(person));
+// /*
+// {name: {…}, greet: {…}}
+//   greet:
+//   configurable: true
+//   enumerable: true
+//   value: ƒ greet()
+//   writable: true
+//   __proto__: Object
+// name:
+//   configurable: true
+//   enumerable: true
+//   value: "Hamid"
+//   writable: true
+//   __proto__: Object
+// __proto__: Object
+// */
+
+// const person = { name: "Hamid" };
+// Object.defineProperty(person, "name", {
+//   configurable: true,
+//   enumerable: true,
+//   value: "Hamid Alavi",
+//   writable: false,
+// });
+
+// console.log(person.name); // "Hamid Alavi"
+// person.name = "Ali Rahimi";
+// console.log(person.name); // "Hamid Alavi"
+
+// const person = { name: "Hamid" };
+// Object.defineProperty(person, "name", {
+//   configurable: false,
+//   enumerable: true,
+//   value: "Hamid Alavi",
+//   writable: false,
+// });
+
+// delete person.name;
+// console.log(person); // { name: 'Hamid Alavi' }
+
+// const person = { name: "Hamid", age: 23, height: 180 };
+// Object.defineProperty(person, "name", {
+//   configurable: true,
+//   enumerable: false,
+//   value: "Hamid Alavi",
+//   writable: false,
+// });
+
+// for (key in person) {
+//   console.log(key); // "age" "height"
+// }
