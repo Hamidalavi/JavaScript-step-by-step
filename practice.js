@@ -2695,23 +2695,88 @@ __proto__: WeakSet
 
 // person.sayHello();
 
-class Person {
-  name = "Hamid";
-  age = 23;
+// class Person {
+//   name = "Hamid";
+//   age = 23;
 
-  greet() {
-    console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
-  }
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+
+// console.log(person.toString()); // "[object Object]"
+
+// console.log(person);
+// /*
+// Person {name: "Hamid", age: 23}
+//   age: 23
+//   name: "Hamid"
+//   __proto__: Object
+// */
+
+// class Person {
+//   name = "Hamid";
+//   age = 23;
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+
+// console.log(person.__proto__);
+// /*
+// {constructor: ƒ, greet: ƒ}
+//   constructor: class Person
+//   greet: ƒ greet()
+//   __proto__: Object
+// */
+// console.log(person.__proto__ == Person.prototype); // true
+// console.log(person.__proto__ === Person.prototype); // true
+
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
+
+// Person.prototype = {
+//   printAge() {
+//     console.log(this.age);
+//   },
+// };
+
+// const person = new Person();
+
+// console.log(person); // { name: 'Hamid', age: 23 } --
+// /*
+// Person {name: "Hamid", age: 23}
+//   age: 23
+//   name: "Hamid"
+//   __proto__:
+//     printAge: ƒ printAge()
+//     __proto__: Object
+// */
+// person.printAge(); // 23
+// console.log(person.__proto__); // { printAge: [Function: printAge] } --
+// /*
+// {printAge: ƒ}
+// printAge: ƒ printAge()
+// __proto__: Object
+// */
+
+// function User() {
+//   // ... // some logic, doesn't matter => configures which properties etc. user objects will have
+// }
+
+// User.prototype = { age: 30 }; // sets prototype object for "to be created" user objects, NOT for User function object
+
+function User() {
+  this.name = "Hamid";
 }
 
-const person = new Person();
-
-console.log(person.toString()); // "[object Object]"
-
-console.log(person);
-/*
-Person {name: "Hamid", age: 23}
-  age: 23
-  name: "Hamid"
-  __proto__: Object
-*/
+const userA = new User();
+console.log(userA.__proto__ === User.prototype); // true
+console.log(userA.__proto__ === User.__proto__); // false
