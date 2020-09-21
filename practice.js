@@ -2543,3 +2543,12 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // OOP - instanceof
+// class Person {
+//   name = "Hamid";
+// }
+
+// const p = new Person();
+
+// console.log(p instanceof Person); // true
+// console.log(typeof Person); // "function"
+// console.log(typeof p); // "object"
