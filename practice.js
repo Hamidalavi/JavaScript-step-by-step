@@ -2632,7 +2632,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Constructor functions and prototypes - constructor functions vs classes
+// constructor functions and prototypes - constructor functions vs classes
 // class Person {
 //   name = "Hamid";
 //   constructor() {
@@ -2681,7 +2681,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Constructor functions and prototypes - prototypes
+// constructor functions and prototypes - prototypes
 // class Person {
 //   name;
 
@@ -2773,10 +2773,85 @@ __proto__: WeakSet
 
 // User.prototype = { age: 30 }; // sets prototype object for "to be created" user objects, NOT for User function object
 
-function User() {
-  this.name = "Hamid";
-}
+// function User() {
+//   this.name = "Hamid";
+// }
 
-const userA = new User();
-console.log(userA.__proto__ === User.prototype); // true
-console.log(userA.__proto__ === User.__proto__); // false
+// const userA = new User();
+// console.log(userA.__proto__ === User.prototype); // true
+// console.log(userA.__proto__ === User.__proto__); // false
+
+// -----------------------------------------------
+
+// constructor functions and prototypes - working with prototypes
+// class AgedPerson {
+//   printAge() {
+//     console.log(this.age);
+//   }
+// }
+
+// class Person extends AgedPerson {
+//   name = "Hamid";
+//   constructor() {
+//     super();
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+
+// person.printAge(); // 23
+// console.log(person.__proto__);
+// /*
+// AgedPerson {constructor: ƒ, greet: ƒ}
+//   constructor: class Person
+//   greet: ƒ greet()
+//   __proto__: Object
+// */
+
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
+
+// Person.prototype = {
+//   printAge() {
+//     console.log(this.age);
+//   },
+// };
+
+// const person = new Person();
+
+// console.log(person.__proto__);
+// /*
+// {printAge: ƒ}
+// printAge: ƒ printAge()
+// __proto__: Object
+// */
+
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
+
+// Person.prototype.printAge = function () {
+//   console.log(this.age);
+// };
+
+// const person = new Person();
+
+// console.log(person.__proto__);
+// /*
+// {printAge: ƒ, constructor: ƒ}
+//   printAge: ƒ ()
+//   constructor: ƒ Person()
+//   __proto__: Object
+// */
+
+// -----------------------------------------------
+
+// constructor functions and prototypes - xxx
