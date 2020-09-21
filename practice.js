@@ -2488,25 +2488,58 @@ __proto__: WeakSet
 
 // new Boy("Hamid", 23, 180, false); // "Hamid" 23 180 false
 
-class Parent {
-  height;
-  isFat;
-  age;
-  name;
+// class Parent {
+//   height;
+//   isFat;
+//   age;
+//   name;
 
-  constructor(name, age, height, isFat) {
-    this.height = height;
-    this.isFat = isFat;
-    this.age = age;
-    this.name = name;
-    console.log(name, age, height, isFat);
-  }
-}
+//   constructor(name, age, height, isFat) {
+//     this.height = height;
+//     this.isFat = isFat;
+//     this.age = age;
+//     this.name = name;
+//     console.log(name, age, height, isFat);
+//   }
+// }
 
-class Child extends Parent {
-  constructor(a, b, c, d) {
-    super(a, b, c, d);
-  }
-}
+// class Child extends Parent {
+//   constructor(a, b, c, d) {
+//     super(a, b, c, d);
+//   }
+// }
 
-new Child("Hamid", 23, 180, false); // "Hamid" 23 180 false
+// new Child("Hamid", 23, 180, false); // "Hamid" 23 180 false
+
+// -----------------------------------------------
+
+// OOP - private mode
+// class ClassWithPrivateStaticMethod {
+//   static #privateStaticMethod() {
+//     return 23;
+//   }
+
+//   static publicStaticMethod() {
+//     return this.#privateStaticMethod();
+//   }
+// }
+
+// console.log(ClassWithPrivateStaticMethod.publicStaticMethod() === 23); // true
+
+// class ClassWithPrivateMethod {
+//   #privateMethod() {
+//     return "hello world";
+//   }
+
+//   getPrivateMessage() {
+//     return this.#privateMethod();
+//   }
+// }
+
+// const instance = new ClassWithPrivateMethod();
+// console.log(instance.#privateMethod()); // SyntaxError: Private field '#privateMethod' must be declared in an enclosing class
+// console.log(instance.getPrivateMessage()); // "hello worl​d"
+
+// -----------------------------------------------
+
+// OOP - instanceof
