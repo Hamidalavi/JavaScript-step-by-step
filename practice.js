@@ -2669,15 +2669,49 @@ __proto__: WeakSet
 // const person = Person();
 // person.greet(); // TypeError: Cannot read property 'greet' of undefined
 
-function Person() {
-  this = {};
-  this.name = "Hamid";
-  this.age = 23;
-  this.greet = function () {
+// function Person() {
+//   this = {};
+//   this.name = "Hamid";
+//   this.age = 23;
+//   this.greet = function () {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   };
+//   return this;
+// }
+
+// -----------------------------------------------
+
+// Constructor functions and prototypes - prototypes
+// class Person {
+//   name;
+
+//   greet() {
+//     console.log("Yo guys and girls");
+//   }
+// }
+
+// const person = new Person();
+// person.greet(); // "Yo guys and girls"
+
+// person.sayHello();
+
+class Person {
+  name = "Hamid";
+  age = 23;
+
+  greet() {
     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
-  };
-  return this;
+  }
 }
 
-const person = Person();
-person.greet(); // TypeError: Cannot read property 'greet' of undefined
+const person = new Person();
+
+console.log(person.toString()); // "[object Object]"
+
+console.log(person);
+/*
+Person {name: "Hamid", age: 23}
+  age: 23
+  name: "Hamid"
+  __proto__: Object
+*/
