@@ -2854,4 +2854,38 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// constructor functions and prototypes - xxx
+// constructor functions and prototypes - prototype chain
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
+
+// Person.describe = function () {
+//   console.log("Hey there!");
+// };
+
+// const person = new Person();
+
+// console.log(person);
+// /*
+// Person {name: "Hamid", age: 23}
+//   age: 23
+//   name: "Hamid"
+//   __proto__: Object
+// */
+
+// console.log(person.describe());
+
+function Person() {
+  this.name = "Hamid";
+  this.age = 23;
+}
+
+Person.describe = function () {
+  console.log("Hey there!");
+};
+
+const person = new Person();
+
+console.log(Object.length); // 1
+console.log(person.length); // undefiend
