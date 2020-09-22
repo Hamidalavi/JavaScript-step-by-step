@@ -2876,16 +2876,169 @@ __proto__: WeakSet
 
 // console.log(person.describe());
 
-function Person() {
-  this.name = "Hamid";
-  this.age = 23;
-}
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
 
-Person.describe = function () {
-  console.log("Hey there!");
-};
+// Person.describe = function () {
+//   console.log("Hey there!");
+// };
+
+// const person = new Person();
+
+// console.log(Object.length); // 1
+// console.log(person.length); // undefiend
+
+// -----------------------------------------------
+
+// constructor functions and prototypes - methods in classes and in constructors
+// class AgedPerson {
+//   printAge() {
+//     console.log(this.age);
+//   }
+// }
+
+// class Person extends AgedPerson {
+//   name = "Hamid";
+//   constructor() {
+//     super();
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+
+// class AgedPerson {
+//   printAge() {
+//     console.log(this.age);
+//   }
+// }
+
+// class Person extends AgedPerson {
+//   name = "Hamid";
+//   constructor() {
+//     super();
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+// const person2 = new Person();
+
+// console.log(person.__proto__ === person2.__proto__); // true
+
+// ---
+
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+// }
+
+// Person.prototype.greet = function () {
+//   console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+// };
+
+// const person = new Person();
+
+// console.log(person);
+// /*
+// Person {name: "Hamid", age: 23}
+//   age: 23
+//   name: "Hamid"
+//   __proto__:
+//     greet: ƒ ()
+//     constructor: ƒ Person()
+//     __proto__: Object
+// */
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const person = new Person();
+
+// console.log(person);
+// /*
+// Person {name: "Hamid", age: 23}
+//   age: 23
+//   name: "Hamid"
+//   __proto__:
+//     constructor: class Person
+//     greet: ƒ greet()
+//     __proto__: Object
+// */
+
+// function Person() {
+//   this.name = "Hamid";
+//   this.age = 23;
+//   this.greet = function () {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   };
+// }
+
+// const person = new Person();
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//     this.greet = function () {
+//       console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//     };
+//   }
+// }
+
+// const person = new Person();
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet = function () {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   };
+// }
+
+// const person = new Person();
+
+// console.log(person);
+// /*
+// Person {name: "Hamid", age: 23, greet: ƒ}
+//   age: 23
+//   greet: ƒ ()
+//   name: "Hamid"
+//   __proto__: Object
+// */
+
+class Person {
+  name = "Hamid";
+  constructor() {
+    this.age = 23;
+  }
+
+  greet = () => {
+    console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+  };
+}
 
 const person = new Person();
 
-console.log(Object.length); // 1
-console.log(person.length); // undefiend
+console.log(person);
