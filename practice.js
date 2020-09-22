@@ -3028,17 +3028,74 @@ __proto__: WeakSet
 //   __proto__: Object
 // */
 
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet = () => {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   };
+// }
+
+// const person = new Person();
+
+// console.log(person);
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const p = new Person();
+
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", p.greet); // "Hi, I am  and I am undefined years old"
+
+// class Person {
+//   name = "Hamid";
+//   constructor() {
+//     this.age = 23;
+//   }
+
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// const p = new Person();
+
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", p.greet.bind(p)); // "Hi, I am Hamid and I am 23 years old"
+
+// -----------------------------------------------
+
+// constructor functions and prototypes - xxx
 class Person {
-  name = "Hamid";
-  constructor() {
-    this.age = 23;
-  }
-
   greet = () => {
-    console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+    /*...*/
   };
+  constructor() {
+    this.greet2 = () => {
+      /*...*/
+    };
+  }
 }
-
-const person = new Person();
-
-console.log(person);
