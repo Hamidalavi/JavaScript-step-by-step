@@ -3173,28 +3173,28 @@ __proto__: WeakSet
 
 // console.log(obj.progress); // 0.8
 
-const obj = Object.create(
-  {
-    printProgress() {
-      console.log(this.progress);
-    },
-  },
-  {
-    name: {
-      configurable: true,
-      enumerable: true,
-      value: "Hamid",
-      writable: true,
-    },
-  }
-);
+// const obj = Object.create(
+//   {
+//     printProgress() {
+//       console.log(this.progress);
+//     },
+//   },
+//   {
+//     name: {
+//       configurable: true,
+//       enumerable: true,
+//       value: "Hamid",
+//       writable: true,
+//     },
+//   }
+// );
 
-Object.defineProperty(obj, "progress", {
-  configurable: true,
-  enumerable: true,
-  value: 0.8,
-  writable: false,
-});
+// Object.defineProperty(obj, "progress", {
+//   configurable: true,
+//   enumerable: true,
+//   value: 0.8,
+//   writable: false,
+// });
 
-console.log(obj.progress); // 0.8
-console.log(obj.name); // "Hamid"
+// console.log(obj.progress); // 0.8
+// console.log(obj.name); // "Hamid"
