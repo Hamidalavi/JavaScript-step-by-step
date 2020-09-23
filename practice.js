@@ -3088,14 +3088,113 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// constructor functions and prototypes - xxx
-class Person {
-  greet = () => {
-    /*...*/
-  };
-  constructor() {
-    this.greet2 = () => {
-      /*...*/
-    };
+// constructor functions and prototypes - setting and getting prototypes
+// const course = {
+//   title: "JavaScript",
+//   rating: 5,
+// };
+
+// console.log(Object.getPrototypeOf(course)); // like `course.__proto__`
+// /*
+// {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+//   constructor: ƒ Object()
+//   hasOwnProperty: ƒ hasOwnProperty()
+//   isPrototypeOf: ƒ isPrototypeOf()
+//   propertyIsEnumerable: ƒ propertyIsEnumerable()
+//   toLocaleString: ƒ toLocaleString()
+//   toString: ƒ toString()
+//   valueOf: ƒ valueOf()
+//   __defineGetter__: ƒ __defineGetter__()
+//   __defineSetter__: ƒ __defineSetter__()
+//   __lookupGetter__: ƒ __lookupGetter__()
+//   __lookupSetter__: ƒ __lookupSetter__()
+//   get __proto__: ƒ __proto__()
+//   set __proto__: ƒ __proto__()
+// */
+
+// const course = {
+//   title: "JavaScript",
+//   rating: 5,
+// };
+
+// Object.setPrototypeOf(course, {
+//   printRating() {
+//     console.log(`${this.rating}/5`);
+//   },
+// });
+
+// course.printRating(); // "5/5"
+
+// const course = {
+//   title: "JavaScript",
+//   rating: 5,
+// };
+
+// Object.setPrototypeOf(course, {
+//   ...Object.getPrototypeOf(course),
+//   printRating() {
+//     console.log(`${this.rating}/5`);
+//   },
+// });
+
+// course.printRating(); // "5/5"
+
+// -----------------------------------------------
+
+// constructor functions and prototypes - create an object
+// const obj = Object.create({
+//   printProgress() {
+//     console.log(this.progress);
+//   },
+// });
+
+// console.log(obj);
+// /*
+// {}
+//   __proto__:
+//     printProgress: ƒ printProgress()
+//     __proto__: Object
+// */
+
+// const obj = Object.create({
+//   printProgress() {
+//     console.log(this.progress);
+//   },
+// });
+
+// obj.name = "Hamid";
+
+// Object.defineProperty(obj, "progress", {
+//   configurable: true,
+//   enumerable: true,
+//   value: 0.8,
+//   writable: false,
+// });
+
+// console.log(obj.progress); // 0.8
+
+const obj = Object.create(
+  {
+    printProgress() {
+      console.log(this.progress);
+    },
+  },
+  {
+    name: {
+      configurable: true,
+      enumerable: true,
+      value: "Hamid",
+      writable: true,
+    },
   }
-}
+);
+
+Object.defineProperty(obj, "progress", {
+  configurable: true,
+  enumerable: true,
+  value: 0.8,
+  writable: false,
+});
+
+console.log(obj.progress); // 0.8
+console.log(obj.name); // "Hamid"
