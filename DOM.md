@@ -9,6 +9,7 @@ document.getElementsByClassName(); // gets elements by `class`
 document.getElementsByTagName(); // gets elements by tag -- HTML tag (HTMLCollection)
 document.createElement("<tag>"); // creates an element (Node)
 document.createAttribute(); // creates a new attribute node, and returns it
+document.importNode(element.content, true); // returns a copy of node. If deep is `true`, the copy also includes the node's descendants
 
 element.addEventListener("event", () => {}); // add event listener to that element (like click, hover, scroll and son on)
 

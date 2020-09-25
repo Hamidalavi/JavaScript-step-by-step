@@ -3198,3 +3198,19 @@ __proto__: WeakSet
 
 // console.log(obj.progress); // 0.8
 // console.log(obj.name); // "Hamid"
+
+// -----------------------------------------------
+
+// DOM - import node (template)
+// const tooltipTemplate = document.getElementById("tooltip");
+// const tooltipBody = document.importNode(tooltipTemplate.content, true);
+// tooltipBody.lastElementChild.textContent = this.text;
+// // tooltipBody.querySelector("p").textContent = this.text;
+// tooltipElement.append(tooltipBody);
+
+// -----------------------------------------------
+
+// DOM - loading scripts dynamically
+const script = document.createElement('script');
+script.textContent = "alert('Hello there')";
+document.head.append(script);
