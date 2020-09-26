@@ -3277,3 +3277,35 @@ __proto__: WeakSet
 // btn.addEventListener("click", () => {
 //   clearInterval(intervalId);
 // });
+
+// -----------------------------------------------
+
+// DOM - dates
+// const date = new Date();
+// const date2 = new Date("04/8/20");
+
+// console.log(date - date2); // 14854160012
+
+// console.log(date / 100 * 2 - 300); // 32022838900.24
+
+// -----------------------------------------------
+
+// DOM - errors
+// new Error("Somthing went wrong!"); // Error: Somthing went wrong!
+
+// throw "Somthing went wrong!"; // Uncaught Somthing went wrong!
+
+// throw new Error("Somthing went wrong!"); // Uncaught Error: Somthing went wrong! at :1:7 (anonymous) @ VM109:1)
+
+// const customError = new Error("Somthing went wrong!");
+// customError.code = 404;
+
+// console.dir(customError);
+// /*
+// Error: Somthing went wrong!
+//     at <anonymous>:1:13
+// code: 404
+// message: "Somthing went wrong!"
+// stack: "Error: Somthing went wrong!↵    at <anonymous>:1:13"
+// __proto__: Object
+// */
