@@ -3253,9 +3253,27 @@ __proto__: WeakSet
 //   console.log("Hamid");
 // }, 3000); // every three seconds, "Hamid"
 
-const name = () => {
-  console.log("Hamid");
-};
-const time = 3000;
+// const name = () => {
+//   console.log("Hamid");
+// };
+// const time = 3000;
 
-setInterval(name, time); // every three seconds, "Hamid"
+// setInterval(name, time); // every three seconds, "Hamid"
+
+// const intervalId = setInterval(() => {
+//   console.log("Hamid");
+// }, 1000); // every three seconds, "Hamid"
+
+// setTimeout(() => {
+//   clearInterval(intervalId);
+// }, 5000);
+
+// const btn = document.getElementById("btn");
+
+// const intervalId = setInterval(() => {
+//   console.log("Hamid");
+// }, 1000); // every three seconds, "Hamid"
+
+// btn.addEventListener("click", () => {
+//   clearInterval(intervalId);
+// });
