@@ -3211,6 +3211,23 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // DOM - loading scripts dynamically
-const script = document.createElement('script');
-script.textContent = "alert('Hello there')";
-document.head.append(script);
+// const script = document.createElement("script");
+// script.textContent = "alert('Hello there')";
+// document.head.append(script);
+
+// -----------------------------------------------
+
+// DOM - timers
+// const name = () => {
+//   console.log("Hamid");
+// };
+
+// setTimeout(name, 3000); // after three seconds, "Hamid"
+
+// setTimeout(() => {
+//   console.log("Hamid");
+// }, 3000); // after three seconds, "Hamid"
+
+setTimeout(function () {
+  console.log("Hamid");
+}, 3000); // after three seconds, "Hamid"
