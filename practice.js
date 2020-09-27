@@ -3513,3 +3513,36 @@ __proto__: WeakSet
 // }
 
 // window.addEventListener("scroll", scrollHandler);
+
+// -----------------------------------------------
+
+// Event - prevntDefault()
+// const button = document.querySelector("form");
+
+// button.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   console.log(event);
+// });
+// /*
+// SubmitEvent {isTrusted: true, submitter: button#title, type: "submit", target: form, currentTarget: form, …}
+//   bubbles: true
+//   cancelBubble: false
+//   cancelable: true
+//   composed: false
+//   currentTarget: null
+//   defaultPrevented: true
+//   eventPhase: 0
+//   isTrusted: true
+//   path: (5) [form, body, html, document, Window]
+//   returnValue: false
+//   srcElement: form
+//   submitter: button#title
+//   target: form
+//   timeStamp: 2540.234999999484
+//   type: "submit"
+//   __proto__: SubmitEvent
+// */
+
+// -----------------------------------------------
+
+// Event - xxx
