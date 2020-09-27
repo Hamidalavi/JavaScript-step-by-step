@@ -3473,13 +3473,43 @@ __proto__: WeakSet
 //   __proto__: MouseEvent
 // */
 
-const buttons = document.querySelectorAll("button");
+// const buttons = document.querySelectorAll("button");
 
-const clickButtonHandler = (event) => {
-    event.target.disabled = true;
-  console.log(event);
-};
+// const clickButtonHandler = (event) => {
+//   event.target.disabled = true;
+//   console.log(event);
+// };
 
-buttons.forEach((btn) => {
-  addEventListener("click", clickButtonHandler);
-});
+// buttons.forEach((btn) => {
+//   btn.addEventListener("click", clickButtonHandler);
+// });
+
+// -----------------------------------------------
+
+// Event - types
+// const buttons = document.querySelectorAll("button");
+
+// const clickButtonHandler = (event) => {
+//   event.target.disabled = true;
+//   console.log(event);
+// };
+
+// buttons.forEach((btn) => {
+//   btn.addEventListener("mouseenter", clickButtonHandler);
+// });
+
+// infinite scrolling
+// let curElementNumber = 0;
+
+// function scrollHandler() {
+//   const distanceToBottom = document.body.getBoundingClientRect().bottom;
+
+//   if (distanceToBottom < document.documentElement.clientHeight + 150) {
+//     const newDataElement = document.createElement("div");
+//     curElementNumber++;
+//     newDataElement.innerHTML = `<p>Element ${curElementNumber}</p>`;
+//     document.body.append(newDataElement);
+//   }
+// }
+
+// window.addEventListener("scroll", scrollHandler);
