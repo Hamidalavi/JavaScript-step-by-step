@@ -3309,3 +3309,33 @@ __proto__: WeakSet
 // stack: "Error: Somthing went wrong!↵    at <anonymous>:1:13"
 // __proto__: Object
 // */
+
+// -----------------------------------------------
+
+// Event
+// const button = document.querySelector("button");
+
+// button.onclick = function () {
+//   alert("Hello!");
+// };
+
+// const button = document.querySelector("button");
+
+// const clickButtonHandler = () => {
+//   alert("Hello!");
+// };
+
+// button.onclick = clickButtonHandler;
+
+// const button = document.querySelector("button");
+
+// const clickButtonHandler = () => {
+//   alert("Hello!");
+// };
+
+// const clickButtonHandler2 = () => {
+//   console.log("Button was clicked!");
+// };
+
+// button.onclick = clickButtonHandler;
+// button.onclick = clickButtonHandler2;
