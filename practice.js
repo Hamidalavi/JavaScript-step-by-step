@@ -3412,3 +3412,74 @@ __proto__: WeakSet
 // setTimeout(() => {
 //   button.removeEventListener("click", boundFn);
 // }, 3000);
+
+// -----------------------------------------------
+
+// Event - event object
+// const button = document.getElementById("button");
+
+// const clickButtonHandler = (event) => {
+//   console.log(event);
+// };
+
+// button.addEventListener("click", clickButtonHandler);
+
+// setTimeout(() => {
+//   button.removeEventListener("click", clickButtonHandler);
+// }, 3000);
+// /*
+// MouseEvent {isTrusted: true, screenX: 93, screenY: 582, clientX: 93, clientY: 446, …}
+//   altKey: false
+//   bubbles: true
+//   button: 0
+//   buttons: 0
+//   cancelBubble: false
+//   cancelable: true
+//   clientX: 93
+//   clientY: 446
+//   composed: true
+//   ctrlKey: false
+//   currentTarget: null
+//   defaultPrevented: false
+//   detail: 1
+//   eventPhase: 0
+//   fromElement: null
+//   isTrusted: true
+//   layerX: 93
+//   layerY: 838
+//   metaKey: false
+//   movementX: 0
+//   movementY: 0
+//   offsetX: 92
+//   offsetY: 0
+//   pageX: 93
+//   pageY: 838
+//   path: (5) [button#button, body, html, document, Window]
+//   relatedTarget: null
+//   returnValue: true
+//   screenX: 93
+//   screenY: 582
+//   shiftKey: false
+//   sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
+//   srcElement: button#button
+//   target: button#button
+//   timeStamp: 2617.870000000039
+//   toElement: button#button
+//   type: "click"
+//   view: Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+//   which: 1
+//   x: 93
+//   y: 446
+//   __proto__: MouseEvent
+// */
+
+const buttons = document.querySelectorAll("button");
+
+const clickButtonHandler = (event) => {
+    event.target.disabled = true;
+  console.log(event);
+};
+
+buttons.forEach((btn) => {
+  addEventListener("click", clickButtonHandler);
+});
