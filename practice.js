@@ -3312,7 +3312,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Event
+// Event - add and remove event listener (click)
 // const button = document.querySelector("button");
 
 // button.onclick = function () {
@@ -3339,3 +3339,76 @@ __proto__: WeakSet
 
 // button.onclick = clickButtonHandler;
 // button.onclick = clickButtonHandler2;
+
+// const button = document.querySelector("button");
+
+// const clickButtonHandler = () => {
+//   console.log("Button was clicked!");
+// };
+
+// button.addEventListener("click", clickButtonHandler);
+
+// const button = document.getElementById("button");
+
+// const clickButtonHandler = () => {
+//   console.log("Button was clicked!");
+// };
+
+// button.addEventListener("click", clickButtonHandler);
+
+// const removeClickEvent = () => {
+//   button.removeEventListener("click", clickButtonHandler);
+//   console.log("Button event has removed!");
+// };
+
+// setTimeout(removeClickEvent, 3000);
+
+// const button = document.getElementById("button");
+
+// button.addEventListener("click", () => {
+//   console.log("Cicked!");
+// });
+
+// setTimeout(() => {
+//   button.removeEventListener("click", () => {
+//     console.log("Cicked!");
+//   });
+// }, 3000); // not works
+
+// const button = document.getElementById("button");
+
+// const clickButtonHandler = () => {
+//   console.log("Button was clicked!");
+// };
+
+// button.addEventListener("click", clickButtonHandler);
+
+// setTimeout(() => {
+//   button.removeEventListener("click", clickButtonHandler);
+// }, 3000);
+
+// const button = document.getElementById("button");
+
+// const clickButtonHandler = () => {
+//   console.log("Button was clicked!");
+// };
+
+// button.addEventListener("click", clickButtonHandler.bind(this));
+
+// setTimeout(() => {
+//   button.removeEventListener("click", clickButtonHandler.bind(this));
+// }, 3000); // not workss
+
+// const button = document.getElementById("button");
+
+// const clickButtonHandler = () => {
+//   console.log("Button was clicked!");
+// };
+
+// const boundFn = clickButtonHandler.bind(this);
+
+// button.addEventListener("click", boundFn);
+
+// setTimeout(() => {
+//   button.removeEventListener("click", boundFn);
+// }, 3000);
