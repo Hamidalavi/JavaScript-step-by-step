@@ -3545,4 +3545,16 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Event - xxx
+// Event - event.stopPropagation()
+
+// const button = document.querySelector("button");
+// const div = document.querySelector("div");
+
+// div.addEventListener("click", () => {
+//   console.log("CLICKED DIV");
+// });
+
+// button.addEventListener("click", (event) => {
+//   event.stopPropagation();
+//   console.log("CLICKED BUTTON");
+// });
