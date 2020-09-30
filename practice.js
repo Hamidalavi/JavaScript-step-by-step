@@ -3561,4 +3561,12 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Event - xxx
+// Event - event delegation pattern
+// const list = document.querySelector("ul");
+
+// list.addEventListener("click", (event) => {
+//   {
+//     event.target.closest("li").classList.toggle("bg-red");
+//     console.log(event);
+//   }
+// });
