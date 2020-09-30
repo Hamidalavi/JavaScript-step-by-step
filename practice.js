@@ -3564,9 +3564,31 @@ __proto__: WeakSet
 // Event - event delegation pattern
 // const list = document.querySelector("ul");
 
-// list.addEventListener("click", (event) => {
-//   {
-//     event.target.closest("li").classList.toggle("bg-red");
-//     console.log(event);
+// list.addEventListeخانent);
 //   }
+// });
+
+// -----------------------------------------------
+
+// Event - this
+// button.addEventListener("click", (event) => {
+//   event.stopPropagation();
+//   console.log("CLICKED BUTTON");
+//   console.log(this); // `window` object
+// });
+
+// button.addEventListener("click", function (event) {
+//   event.stopPropagation();
+//   console.log("CLICKED BUTTON");
+//   console.log(this); // `window` object
+// });
+
+// const list = document.querySelector("ul");
+
+// list.addEventListener("click", function(event)  {
+//   event.target.closest("li").classList.toggle("bg-red");
+//   // form.submit();
+//   button.click();
+//   console.log(this); // <ul>...</ul>
+//   console.log(event.currentTarget); // <ul>...</ul>
 // });
