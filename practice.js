@@ -3592,3 +3592,16 @@ __proto__: WeakSet
 //   console.log(this); // <ul>...</ul>
 //   console.log(event.currentTarget); // <ul>...</ul>
 // });
+
+// -----------------------------------------------
+
+// Event - drag and drop
+// event.dataTransfer.setData("text/plain", "This is text to drag");
+
+// let dt = event.dataTransfer;
+// dt.setData("text/uri-list", "https://www.google.com");
+// dt.setData("text/plain", "https://www.google.com");
+
+// let dt = event.dataTransfer;
+// dt.setData("text/html", "Hello there, <strong>stranger</strong>");
+// dt.setData("text/plain", "Hello there, stranger");
