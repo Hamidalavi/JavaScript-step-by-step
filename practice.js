@@ -3561,15 +3561,6 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Event - event delegation pattern
-// const list = document.querySelector("ul");
-
-// list.addEventListeخانent);
-//   }
-// });
-
-// -----------------------------------------------
-
 // Event - this
 // button.addEventListener("click", (event) => {
 //   event.stopPropagation();
@@ -3605,3 +3596,19 @@ __proto__: WeakSet
 // let dt = event.dataTransfer;
 // dt.setData("text/html", "Hello there, <strong>stranger</strong>");
 // dt.setData("text/plain", "Hello there, stranger");
+
+// -----------------------------------------------
+
+// advance function - pure function and side effects
+// function add(num1, num2) {
+//   return num1 + num2;
+// }
+
+// console.log(add(15, 8)); // 23
+
+// function add(num) {
+//   return num + Math.random();
+// }
+
+// console.log(add(23)); // 23.????????
+
