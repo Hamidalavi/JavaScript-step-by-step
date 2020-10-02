@@ -3642,9 +3642,24 @@ __proto__: WeakSet
 
 // console.log(createTaxCalculator(100, 0.19)); // 19
 
+// function createTaxCalculator(tax) {
+//   function calculateTax(amount) {
+//     return amount * tax;
+//   }
+//   return calculateTax;
+// }
+
+// const vatAmount = createTaxCalculator(0.19);
+// const incomeTax = createTaxCalculator(0.25);
+
+// console.log(vatAmount(100)); // 19
+// console.log(incomeTax(200)); // 50
+
+let multiplier = 1.1;
 function createTaxCalculator(tax) {
   function calculateTax(amount) {
-    return amount * tax;
+    console.log(multiplier);
+    return amount * tax * multiplier;
   }
   return calculateTax;
 }
@@ -3652,5 +3667,7 @@ function createTaxCalculator(tax) {
 const vatAmount = createTaxCalculator(0.19);
 const incomeTax = createTaxCalculator(0.25);
 
-console.log(vatAmount(100));
-console.log(incomeTax(200));
+multiplier = 1.2;
+
+console.log(vatAmount(100)); // 1.2 - 22.8
+console.log(incomeTax(200)); // 1.2 - 60
