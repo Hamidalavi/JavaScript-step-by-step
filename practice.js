@@ -3655,19 +3655,74 @@ __proto__: WeakSet
 // console.log(vatAmount(100)); // 19
 // console.log(incomeTax(200)); // 50
 
-let multiplier = 1.1;
-function createTaxCalculator(tax) {
-  function calculateTax(amount) {
-    console.log(multiplier);
-    return amount * tax * multiplier;
-  }
-  return calculateTax;
+// let multiplier = 1.1;
+// function createTaxCalculator(tax) {
+//   function calculateTax(amount) {
+//     console.log(multiplier);
+//     return amount * tax * multiplier;
+//   }
+//   return calculateTax;
+// }
+
+// const vatAmount = createTaxCalculator(0.19);
+// const incomeTax = createTaxCalculator(0.25);
+
+// multiplier = 1.2;
+
+// console.log(vatAmount(100)); // 1.2 - 22.8
+// console.log(incomeTax(200)); // 1.2 - 60
+
+// let userName = "Hamid";
+
+// function greetUser() {
+//   console.log("Hi", userName);
+// }
+
+// greetUser(); // "Hi Hamid"
+
+// let userName = "Hamid";
+
+// function greetUser() {
+//   console.log("Hi", userName);
+// }
+
+// userName = "Hamed";
+
+// greetUser(); // "Hi Hamed"
+
+// let userName = "Hamid";
+
+// function greetUser() {
+//   let name = userName;
+//   console.log("Hi", name);
+// }
+
+// userName = "Hamed";
+
+// greetUser(); // "Hi Hamed"
+
+// let userName = "Hamid";
+
+// function greetUser() {
+//   let name = "Ali";
+//   console.log("Hi", name);
+// }
+
+// let name = "Reza";
+
+// userName = "Hamed";
+
+// greetUser(); // "Hi Ali"
+
+let userName = "Hamid";
+
+function greetUser() {
+//   let name = "Ali";
+  console.log("Hi", name);
 }
 
-const vatAmount = createTaxCalculator(0.19);
-const incomeTax = createTaxCalculator(0.25);
+let name = "Reza";
 
-multiplier = 1.2;
+userName = "Hamed";
 
-console.log(vatAmount(100)); // 1.2 - 22.8
-console.log(incomeTax(200)); // 1.2 - 60
+greetUser(); // "Hi Reza"
