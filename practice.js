@@ -3599,7 +3599,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// advance function - pure function and side effects
+// advance function - pure function
 // function add(num1, num2) {
 //   return num1 + num2;
 // }
@@ -3612,3 +3612,45 @@ __proto__: WeakSet
 
 // console.log(add(23)); // 23.????????
 
+// -----------------------------------------------
+
+// advance function - side effect
+// let previousResult = 0;
+
+// function add(num1, num2) {
+//   const sum = num1 + num2;
+//   previousResult = sum;
+//   return sum;
+// }
+
+// const hobbies = ["programming", "gaming"];
+
+// function printHobbies(hob) {
+//   hob.push("Reading");
+
+//   console.log(hob);
+// }
+
+// printHobbies(hobbies); // [ 'programming', 'gaming', 'Reading' ]
+
+// -----------------------------------------------
+
+// advance function - factory functions
+// function createTaxCalculator(amount, tax) {
+//   return amount * tax;
+// }
+
+// console.log(createTaxCalculator(100, 0.19)); // 19
+
+function createTaxCalculator(tax) {
+  function calculateTax(amount) {
+    return amount * tax;
+  }
+  return calculateTax;
+}
+
+const vatAmount = createTaxCalculator(0.19);
+const incomeTax = createTaxCalculator(0.25);
+
+console.log(vatAmount(100));
+console.log(incomeTax(200));
