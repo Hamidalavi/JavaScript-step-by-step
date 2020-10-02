@@ -3785,13 +3785,120 @@ __proto__: WeakSet
 
 // console.log(powerOf(1, 1)); // 1
 
-function powerOf(x, n) {
-  if (n === 1) {
-    return x;
-  }
-  return x * powerOf(x, n - 1);
+// function powerOf(x, n) {
+//   return n === 1 ? x : x * powerOf(x, n - 1);
+// }
 
-  return n === 1 ? x : x * powerOf(x, n - 1);
-}
+// console.log(powerOf(1, 1)); // 1
 
-console.log(powerOf(1, 1)); // 1
+// const myself = {
+//   name: "Hamid",
+//   friends: [
+//     {
+//       name: "Hamed",
+//       friends: [
+//         {
+//           name: "Ali"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Reza"
+//     }
+//   ]
+// }
+
+// function printFriendName(person) {
+//   for (const friends of person.friends) {
+//     for (const friendsFriends of friends.friends) {
+//       for (const x of n.friends) {
+//         // ...
+//       }
+//     }
+//   }
+// }
+
+// const myself = {
+//   name: "Hamid",
+//   friends: [
+//     {
+//       name: "Hamed",
+//       friends: [
+//         {
+//           name: "Ali"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Reza"
+//     }
+//   ]
+// }
+
+// function printFriendName(person) {
+//   const collectedNames = [];
+//   for (const friend of person.friends) {
+//     collectedNames.push(friend.name);
+//   }
+//   return collectedNames;
+// }
+
+// console.log(printFriendName(myself)); // [ 'Hamed', 'Reza' ]
+
+// const myself = {
+//   name: "Hamid",
+//   friends: [
+//     {
+//       name: "Hamed",
+//       friends: [
+//         {
+//           name: "Ali"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Reza"
+//     }
+//   ]
+// }
+
+// function printFriendName(person) {
+//   const collectedNames = [];
+//   for (const friend of person.friends) {
+//     printFriendName(friend);
+//   }
+//   return collectedNames;
+// }
+
+// const myself = {
+//   name: "Hamid",
+//   friends: [
+//     {
+//       name: "Hamed",
+//       friends: [
+//         {
+//           name: "Ali"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Reza"
+//     }
+//   ]
+// }
+
+// function printFriendName(person) {
+//   const collectedNames = [];
+
+//   if (!person.friends) {
+//     return [];
+//   }
+
+//   for (const friend of person.friends) {
+//     collectedNames.push(friend.name);
+//     collectedNames.push(...printFriendName(friend));
+//   }
+//   return collectedNames;
+// }
+
+// console.log(printFriendName(myself)); // [ 'Hamed', 'Ali', 'Reza' ]
