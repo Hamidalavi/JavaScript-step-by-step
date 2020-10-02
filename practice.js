@@ -3635,7 +3635,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// advance function - factory functions
+// advance function - factory functions and closures
 // function createTaxCalculator(amount, tax) {
 //   return amount * tax;
 // }
@@ -3714,15 +3714,84 @@ __proto__: WeakSet
 
 // greetUser(); // "Hi Ali"
 
-let userName = "Hamid";
+// let userName = "Hamid";
 
-function greetUser() {
-//   let name = "Ali";
-  console.log("Hi", name);
+// function greetUser() {
+// //   let name = "Ali";
+//   console.log("Hi", name);
+// }
+
+// let name = "Reza";
+
+// userName = "Hamed";
+
+// greetUser(); // "Hi Reza"
+
+// -----------------------------------------------
+
+// advance function - IIFE
+// (function () {
+//   var age = 23;
+//   console.log(age); // 23
+// })();
+
+// console.log(age); // Error: "age is not defined"
+
+// {
+//   const age = 23;
+//   console.log(age); // 23
+// }
+
+// console.log(age); // Error: "age is not defined"
+
+// -----------------------------------------------
+
+// advance function - recursion
+// function powerOf(x, n) {
+//   let result = 1;
+//   for (let i = 0; i < n; i++) {
+//     result *= x;
+//   }
+//   return result;
+// }
+
+// console.log(powerOf(2, 3)); // 8
+
+// function powerOf(x, n) {
+//   return x * powerOf(x, n - 1);
+// }
+
+// console.log(powerOf(1, 1));
+// /*
+// Uncaught RangeError: Maximum call stack size exceeded
+//     at powerOf (<anonymous>:2:3)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+//     at powerOf (<anonymous>:2:14)
+// */
+
+// function powerOf(x, n) {
+//   if (n === 1) {
+//     return x;
+//   }
+//   return x * powerOf(x, n - 1);
+// }
+
+// console.log(powerOf(1, 1)); // 1
+
+function powerOf(x, n) {
+  if (n === 1) {
+    return x;
+  }
+  return x * powerOf(x, n - 1);
+
+  return n === 1 ? x : x * powerOf(x, n - 1);
 }
 
-let name = "Reza";
-
-userName = "Hamed";
-
-greetUser(); // "Hi Reza"
+console.log(powerOf(1, 1)); // 1
