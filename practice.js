@@ -3902,3 +3902,6 @@ __proto__: WeakSet
 // }
 
 // console.log(printFriendName(myself)); // [ 'Hamed', 'Ali', 'Reza' ]
+
+// -----------------------------------------------
+// numbers and strings
