@@ -3974,5 +3974,68 @@ __proto__: WeakSet
 // console.log(Number.NEGATIVE_INFINITY); // -Infinity
 // console.log(1 / 0); // Infinity
 
-console.log(Number.isFinite(23)); // true
-console.log(Number.isFinite(Infinity)); // false
+// console.log(Number.isFinite(23)); // true
+// console.log(Number.isFinite(Infinity)); // false
+
+// function randomIntBetween(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+
+// console.log(randomIntBetween(1, 10)); // 1~10
+
+// -----------------------------------------------
+// numbers and strings - String
+// const str = "hamid".toUpperCase();
+// console.log(str); // "HAMID"
+// console.log(str.startsWith("ha")); // false
+// console.log(str.startsWith("HA")); // true
+
+// -----------------------------------------------
+// numbers and strings - template literal
+// const name = "hamid";
+// console.log(`Hi my name is ${name}`); // "Hi my name is hamid"
+
+// function productDescription(strings, productName, productPrice) {
+//     console.log(strings);
+//   return `this is a product`;
+// }
+
+// const prodName = "JavaScript book";
+// const prodPrice = 29.99;
+
+// const productOutput = productDescription`This product (${prodName}) is ${prodName}.`;
+// console.log(productOutput); // "this is a product"
+
+// function productDescription(strings, productName, productPrice) {
+//   console.log(strings); // [ 'This product (', ') is ', '.' ]
+//   console.log(productName); // "JavaScript book"
+//   console.log(productPrice); // 29.99
+//   return `this is a product`;
+// }
+
+// const prodName = "JavaScript book";
+// const prodPrice = 29.99;
+
+// const productOutput = productDescription`This product (${prodName}) is ${prodPrice}.`;
+// console.log(productOutput); // "this is a product"
+
+// function productDescription(strings, productName, productPrice) {
+//   return `${strings[0]}${productName}${strings[1]}${productPrice}${strings[2]}`;
+// }
+
+// const prodName = "JavaScript book";
+// const prodPrice = 29.99;
+
+// const productOutput = productDescription`This product (${prodName}) is ${prodPrice}.`;
+// console.log(productOutput); // "This product (JavaScript book) is 29.99."
+
+// function productDescription(strings, productName, productPrice) {
+//   //   return `${strings[0]}${productName}${strings[1]}${productPrice}${strings[2]}`;
+//   return { name: productName, price: productPrice };
+// }
+
+// const prodName = "JavaScript book";
+// const prodPrice = 29.99;
+
+// const productOutput = productDescription`This product (${prodName}) is ${prodPrice}.`;
+// console.log(productOutput); // { name: 'JavaScript book', price: 29.99 }
