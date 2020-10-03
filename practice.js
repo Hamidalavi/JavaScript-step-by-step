@@ -3913,5 +3913,57 @@ __proto__: WeakSet
 // console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
 // console.log(Number.MIN_VALUE); // 5e-324
 
-let result = 0.4 + 0.2;
-console.log(result === 0.6);
+// let result = 0.4 + 0.2;
+// console.log(result === 0.6); // false
+
+// -----------------------------------------------
+// numbers and strings - binary system
+// const num = (5).toString(2);
+// console.log(num); // "101" -- 4 + 0 + 1
+
+// const num = (0.2).toString(2);
+// console.log(num); // "0.001100110011001100110011001100110011001100110011001101"
+
+// const num = 0.2.toString(2);
+// console.log(num); // "0.001100110011001100110011001100110011001100110011001101"
+
+// const num = 1 / 3 + 1 / 3 + 1 / 3;
+// console.log(num); // 1
+
+// const num = 0.33333 + 0.33333 +0.33333;
+// console.log(num.toString(10)); // "0.99999"
+
+// const num = (0.2).toFixed(20);
+// console.log(num); // "0.20000000000000001110"
+
+// const num = (0.2 + 0.4).toFixed(2);
+// console.log(num); // "0.60"
+
+// -----------------------------------------------
+// numbers and strings - big int
+// const num = Number.MAX_SAFE_INTEGER;
+// console.log(num); // 9007199254740991
+
+// const num2 = 900719925474099148474857537585n;
+// console.log(num2); // 900719925474099148474857537585n
+
+// const num3 = -900719925474099148474857537585n;
+// console.log(num3); // -900719925474099148474857537585n
+
+// const num4 = 9007199254740991.3835n;
+// console.log(num4); // SyntaxError: Invalid or unexpected token
+
+// const num = 15n + 8n;
+// console.log(num); // 23n
+
+// const num2 = 15n + 8;
+// console.log(num2); // TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+// const num = 15n + BigInt(8);
+// console.log(num); // 23n
+
+// const num2 = parseInt(15n) + 8;
+// console.log(num2); // 23
+
+const num = 5n / 2n;
+console.log(num); // 2n
