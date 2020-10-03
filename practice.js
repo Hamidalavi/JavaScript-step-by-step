@@ -3965,5 +3965,14 @@ __proto__: WeakSet
 // const num2 = parseInt(15n) + 8;
 // console.log(num2); // 23
 
-const num = 5n / 2n;
-console.log(num); // 2n
+// const num = 5n / 2n;
+// console.log(num); // 2n
+
+// -----------------------------------------------
+// numbers and strings - Number
+// console.log(Number.POSITIVE_INFINITY); // Infinity
+// console.log(Number.NEGATIVE_INFINITY); // -Infinity
+// console.log(1 / 0); // Infinity
+
+console.log(Number.isFinite(23)); // true
+console.log(Number.isFinite(Infinity)); // false

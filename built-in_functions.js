@@ -162,26 +162,31 @@ Uint32Array(number); // a typed array of 32-bit unsigned integer values
 // Math -----------------------------------------------
 
 // Trigonometry (triangle)
-cosh(); // hyperbolic cosine
-acosh(); // hyperbolic arccosine
-sinh(); // hyperbolic sine
-asinh(); // hyperbolic arcsine
-tanh(); // hyperbolic tangent
-atanh(); // hyperbolic arctangent
-hypot(); // the squareroot of the sum of the squares (i.e., the generalized Pythagorean theorem)
+Math.cosh(); // hyperbolic cosine
+Math.acosh(); // hyperbolic arccosine
+Math.sinh(); // hyperbolic sine
+Math.asinh(); // hyperbolic arcsine
+Math.tanh(); // hyperbolic tangent
+Math.atanh(); // hyperbolic arctangent
+Math.hypot(); // the squareroot of the sum of the squares (i.e., the generalized Pythagorean theorem)
 
 // Arithmetic
-cbrt(); // cube root
-clz32(); // count leading zeros in 32-bit binary representation
-expm1(); // the same as `exp(x) - 1`
-log2(); // binary logarithm (log base 2)
-log10(); // log base 10
-log1p(); // the same as `log(x + 1)`
-imul(); // 32-bit integer multiplication of two numbers
+Math.cbrt(); // cube root
+Math.clz32(); // count leading zeros in 32-bit binary representation
+Math.expm1(); // the same as `exp(x) - 1`
+Math.log2(); // binary logarithm (log base 2)
+Math.log10(); // log base 10
+Math.log1p(); // the same as `log(x + 1)`
+Math.imul(); // 32-bit integer multiplication of two numbers
 
 // Meta
-sign(); // returns the sign of the number
-trunc(); // returns only the integer part of a number
-fround(); // rounds to nearest 32-bit (single precision) floating-point value
+Math.sign(); // returns the sign of the number
+Math.trunc(); // returns only the integer part of a number
+Math.fround(); // rounds to nearest 32-bit (single precision) floating-point value
 
 Math.pow(number, number); // returns the value of a base expression taken to a specified power
+Math.random(); // returns a pseudorandom number between 0 and 1
+Math.sqrt(); // returns the square root of a number
+Math.abs(number); // returns the absolute value of a number (e.g. -5 => 5)
+Math.PI; // this is the ratio of the circumference of a circle to its diameter (3.14)
+Math.E; // the mathematical constant e. This is Euler's number, the base of natural logarithms (2.718)
