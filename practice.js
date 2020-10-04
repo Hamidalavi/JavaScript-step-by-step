@@ -4039,3 +4039,29 @@ __proto__: WeakSet
 
 // const productOutput = productDescription`This product (${prodName}) is ${prodPrice}.`;
 // console.log(productOutput); // { name: 'JavaScript book', price: 29.99 }
+
+// -----------------------------------------------
+// numbers and strings - regular expression
+// let userInput = "testest";
+// let recommended = userInput;
+
+// if (!userInput.includes("@")) {
+//   userInput = `${userInput} is not valid, please choose another address, for example:
+//     ${recommended}@gmail.com
+//     ${recommended}345@gmail.com
+//     ${recommended}roger@gmail.com
+//     `;
+// }
+
+// console.log(userInput);
+// /*
+// testest is not valid, please choose another address, for example:
+//     testest@gmail.com
+//     testest345@gmail.com
+//     testestroger@gmail.com
+// */
+
+const userInput = "testtest.com";
+const regex = /^\S+@\S+\.\S+$/;
+console.log(regex.test(userInput)); // false
+console.log(regex.test("test@test.com")); // true
