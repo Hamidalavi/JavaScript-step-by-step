@@ -4061,7 +4061,44 @@ __proto__: WeakSet
 //     testestroger@gmail.com
 // */
 
-const userInput = "testtest.com";
-const regex = /^\S+@\S+\.\S+$/;
-console.log(regex.test(userInput)); // false
-console.log(regex.test("test@test.com")); // true
+// const userInput = "testtest.com";
+// const regex = /^\S+@\S+\.\S+$/;
+// console.log(regex.test(userInput)); // false
+// console.log(regex.test("test@test.com")); // true
+
+// const regex = /hamid/;
+// console.log(regex.test("hamid")); // true
+// console.log(regex.test("Hello there, hamid")); // true
+// console.log(regex.test("Hamid")); // false
+
+// const regex = /(h|H)amid/;
+// console.log(regex.test("hamid")); // true
+// console.log(regex.test("Hello there, hamid")); // true
+// console.log(regex.test("amid")); // false
+
+// const regex = /.amid/;
+// console.log(regex.test("hamid")); // true
+// console.log(regex.test("Hello there, hamid")); // true
+// console.log(regex.test("Hamid")); // true
+// console.log(regex.test("Samid")); // true
+// console.log(regex.test("Jamid")); // true
+
+// const regex = /.amid/;
+// console.log(regex.test("hamid")); // true
+// console.log(regex.test("Hello there, hamid")); // true
+// console.log(regex.test("mid")); // false
+// console.log(regex.test("Samid")); // true
+// console.log(regex.test("amid")); // false
+
+// const regex = /.amid/;
+// console.log(regex.test("hamid")); // true
+// console.log(regex.exec("Hamid")); // [ 'Hamid', index: 0, input: 'Hamid', groups: undefined ]
+// console.log(regex.exec("Hello There, Hamid")); // [ 'Hamid', index: 13, input: 'Hello There, Hamid', groups: undefined ]
+// console.log(regex.exec("hamid")); // [ 'hamid', index: 0, input: 'hamid', groups: undefined ]
+
+const regex = /.amid/;
+
+const result = "Hi, Hamid".match(regex);
+const search = "Hi, Hamid".search(regex);
+console.log(result); // [ 'Hamid', index: 4, input: 'Hi, Hamid', groups: undefined ]
+console.log(search); // 4
