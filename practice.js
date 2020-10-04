@@ -3904,6 +3904,7 @@ __proto__: WeakSet
 // console.log(printFriendName(myself)); // [ 'Hamed', 'Ali', 'Reza' ]
 
 // -----------------------------------------------
+
 // numbers and strings
 // console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
 // console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
@@ -3917,6 +3918,7 @@ __proto__: WeakSet
 // console.log(result === 0.6); // false
 
 // -----------------------------------------------
+
 // numbers and strings - binary system
 // const num = (5).toString(2);
 // console.log(num); // "101" -- 4 + 0 + 1
@@ -3940,6 +3942,7 @@ __proto__: WeakSet
 // console.log(num); // "0.60"
 
 // -----------------------------------------------
+
 // numbers and strings - big int
 // const num = Number.MAX_SAFE_INTEGER;
 // console.log(num); // 9007199254740991
@@ -3969,6 +3972,7 @@ __proto__: WeakSet
 // console.log(num); // 2n
 
 // -----------------------------------------------
+
 // numbers and strings - Number
 // console.log(Number.POSITIVE_INFINITY); // Infinity
 // console.log(Number.NEGATIVE_INFINITY); // -Infinity
@@ -3984,6 +3988,7 @@ __proto__: WeakSet
 // console.log(randomIntBetween(1, 10)); // 1~10
 
 // -----------------------------------------------
+
 // numbers and strings - String
 // const str = "hamid".toUpperCase();
 // console.log(str); // "HAMID"
@@ -3991,6 +3996,7 @@ __proto__: WeakSet
 // console.log(str.startsWith("HA")); // true
 
 // -----------------------------------------------
+
 // numbers and strings - template literal
 // const name = "hamid";
 // console.log(`Hi my name is ${name}`); // "Hi my name is hamid"
@@ -4041,6 +4047,7 @@ __proto__: WeakSet
 // console.log(productOutput); // { name: 'JavaScript book', price: 29.99 }
 
 // -----------------------------------------------
+
 // numbers and strings - regular expression
 // let userInput = "testest";
 // let recommended = userInput;
@@ -4096,9 +4103,19 @@ __proto__: WeakSet
 // console.log(regex.exec("Hello There, Hamid")); // [ 'Hamid', index: 13, input: 'Hello There, Hamid', groups: undefined ]
 // console.log(regex.exec("hamid")); // [ 'hamid', index: 0, input: 'hamid', groups: undefined ]
 
-const regex = /.amid/;
+// const regex = /.amid/;
 
-const result = "Hi, Hamid".match(regex);
-const search = "Hi, Hamid".search(regex);
-console.log(result); // [ 'Hamid', index: 4, input: 'Hi, Hamid', groups: undefined ]
-console.log(search); // 4
+// const result = "Hi, Hamid".match(regex);
+// const search = "Hi, Hamid".search(regex);
+// console.log(result); // [ 'Hamid', index: 4, input: 'Hi, Hamid', groups: undefined ]
+// console.log(search); // 4
+
+// -----------------------------------------------
+
+// async
+const button = document.querySelector("button");
+const output = document.querySelector("p");
+
+function trackUserHandler() {}
+
+button.addEventListener("click", trackUserHandler);
