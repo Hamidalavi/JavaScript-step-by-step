@@ -4113,9 +4113,21 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // async
-const button = document.querySelector("button");
-const output = document.querySelector("p");
+// const button = document.querySelector("button");
+// const output = document.querySelector("p");
 
-function trackUserHandler() {}
+// function trackUserHandler() {}
 
-button.addEventListener("click", trackUserHandler);
+// button.addEventListener("click", trackUserHandler);
+
+console.log("Hamid");
+
+setTimeout(() => console.log("Hello"), 2000);
+
+console.log("After hello");
+
+/*
+1. "Hamid"
+2. "After hello"
+3. "Hello"
+*/
