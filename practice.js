@@ -4120,14 +4120,26 @@ __proto__: WeakSet
 
 // button.addEventListener("click", trackUserHandler);
 
-console.log("Hamid");
+// console.log("Hamid");
 
-setTimeout(() => console.log("Hello"), 2000);
+// setTimeout(() => console.log("Hello"), 2000);
 
-console.log("After hello");
+// console.log("After hello");
 
-/*
-1. "Hamid"
-2. "After hello"
-3. "Hello"
-*/
+// /*
+// 1. "Hamid"
+// 2. "After hello"
+// 3. "Hello"
+// */
+
+// -----------------------------------------------
+
+// promises
+// // callback
+// navigator.geolocation.getCurrentPosition(() =>
+//   setTimeout(() => doMoreAsyncStuff(() => console.log("Helllo")), 1000)
+// );
+
+// // Promise
+// someAsyncTask().then(() => anotherTask()), then(() => yetAnotherTask()).then(...);
+
