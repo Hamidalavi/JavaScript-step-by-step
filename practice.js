@@ -4142,3 +4142,108 @@ __proto__: WeakSet
 
 // // Promise
 // someAsyncTask().then(() => anotherTask()), then(() => yetAnotherTask()).then(...);
+
+// -----------------------------------------------
+
+// HTTP
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+// xhr.send();
+
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+// xhr.onload = () => console.log(xhr.response);
+// xhr.send();
+
+// /*
+// [
+//   {
+//     "id": 1,
+//     "title": "Post 1"
+//   },
+//   {
+//     "id": 2,
+//     "title": "Post 2"
+//   },
+//   {
+//     "id": 3,
+//     "title": "Post 3"
+//   }
+// ]
+// */
+
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+
+// xhr.onload = function () {
+//   const listOfPosts = JSON.parse(xhr.response);
+//   console.log(listOfPosts);
+// };
+
+// xhr.send();
+
+// /*
+// (3) [{…}, {…}, {…}]
+//   0: {id: 1, title: "Post 1"}
+//   1: {id: 2, title: "Post 2"}
+//   2: {id: 3, title: "Post 3"}
+//   length: 3
+//   __proto__: Array(0)
+// */
+
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+
+// xhr.responseType = "json";
+
+// xhr.onload = function () {
+//   //   const listOfPosts = JSON.parse(xhr.response);
+//   console.log(this.response);
+// };
+
+// xhr.send();
+
+// /*
+// (3) [{…}, {…}, {…}]
+//   0: {id: 1, title: "Post 1"}
+//   1: {id: 2, title: "Post 2"}
+//   2: {id: 3, title: "Post 3"}
+//   length: 3
+//   __proto__: Array(0)
+// */
+
+// const listElement = document.querySelector(".posts");
+// const postTemplate = document.getElementById("single-post");
+
+// const xhr = new XMLHttpRequest();
+
+// xhr.open("GET", "https://my-json-server.typicode.com/typicode/demo/posts");
+
+// xhr.responseType = "json";
+
+// xhr.onload = function () {
+//   //   const listOfPosts = JSON.parse(xhr.response);
+//   const listOfPosts = this.response;
+//   for (const post of listOfPosts) {
+//     const postEl = document.importNode(postTemplate.content, true);
+//     postEl.querySelector("h2").textContent = post.title.toUpperCase();
+//     postEl.querySelector("p").textContent = post.id;
+//     listElement.append(postEl);
+//   }
+
+//   console.log(listOfPosts);
+// };
+
+// /*
+// (3) [{…}, {…}, {…}]
+//   0: {id: 1, title: "Post 1"}
+//   1: {id: 2, title: "Post 2"}
+//   2: {id: 3, title: "Post 3"}
+//   length: 3
+//   __proto__: Array(0)
+// */
+
+// xhr.send();
