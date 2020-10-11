@@ -4247,3 +4247,62 @@ __proto__: WeakSet
 // */
 
 // xhr.send();
+
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: [
+//     { id: "h1", title: "Gaming" },
+//     { id: "h2", title: "Programming" },
+//   ],
+//   isInstructor: true,
+// };
+
+// JSONs = JSON.stringify(person);
+
+// /*
+// {
+//     "name": "Hamid",
+//     "age": 23,
+//     "hobbies": [
+//         { "id": "h1", "title": "Gaming" },
+//         { "id": "h2", "title": "Programming" }
+//     ],
+//     "isInstructor": true
+// }
+
+// or
+
+// "{"name":"Hamid","age":23,"hobbies":[{"id":"h1","title":"Gaming"},{"id":"h2","title":"Programming"}],"isInstructor":true}"
+// */
+
+// console.log(typeof JSONs); // "string"
+
+// const person = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: [
+//     { id: "h1", title: "Gaming" },
+//     { id: "h2", title: "Programming" },
+//   ],
+//   isInstructor: true,
+// };
+
+// JSONs = JSON.stringify(person);
+// const parsedData = JSON.parse(JSONs);
+
+// console.log(parsedData);
+// /*
+// {name: "Hamid", age: 23, hobbies: Array(2), isInstructor: true}
+//   age: 23
+//   hobbies: Array(2)
+//     0: {id: "h1", title: "Gaming"}
+//     1: {id: "h2", title: "Programming"}
+//     length: 2
+//     __proto__: Array(0)
+//   isInstructor: true
+//   name: "Hamid"
+//   __proto__: Object
+// */
+// console.log(typeof JSONs); // "string"
+// console.log(typeof parsedData); // "object"
