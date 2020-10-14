@@ -4309,5 +4309,43 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// third-party libraries
+// third-party libraries - lodash
+// const customers = ["Hamid", "Hamed", "Ali"];
+// const activeCustomers = ["Hamid", "Hamed"];
+// const inactiveCustomers = _.difference(customers, activeCustomers);
+
+// console.log(inactiveCustomers); // ["Ali"]
+
+// -----------------------------------------------
+
+// third-party libraries - axios
+// axios.get("https://jsonplaceholder.typicode.com/posts");
+// axios.post("https://jsonplaceholder.typicode.com/posts", fd);
+// axios.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+
+// async function fetchPosts() {
+//   try {
+//     const responseData = await axios.get(
+//       "https://jsonplaceholder.typicode.com/posts"
+//     );
+
+//     const listOfPosts = responseData.data;
+//     for (const post of listOfPosts) {
+//       const postEl = document.importNode(postTemplate.content, true);
+//       postEl.querySelector("h2").textContent = post.title.toUpperCase();
+//       postEl.querySelector("p").textContent = post.body;
+//       postEl.querySelector("li").id = post.id;
+//       listElement.append(postEl);
+//     }
+//   } catch (error) {
+//     alert(error.message);
+//   }
+// }
+
+// function createPost(userId = Math.random()) {
+//   const fd = new FormData(form);
+//   fd.append("userId", userId);
+
+//   axios.post("https://jsonplaceholder.typicode.com/posts", fd);
+// }
 
