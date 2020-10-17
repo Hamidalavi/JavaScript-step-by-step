@@ -4349,3 +4349,11 @@ __proto__: WeakSet
 //   axios.post("https://jsonplaceholder.typicode.com/posts", fd);
 // }
 
+// -----------------------------------------------
+
+// module
+// import("path").then((module) => {});
+
+import("./test.js").then((module) => {
+  new module.Tooltip();
+});
