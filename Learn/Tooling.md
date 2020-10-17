@@ -35,3 +35,19 @@ How to solve those issues:
 |Reload Dev Server|Installed globally|Compilation (Babel)|
 |-||Optimization|
 |-||Production-ready Code|
+
+First of all, we need to create a node package for our project. To do this, we must install nodeJS (app) and `npm` packages. Then inside it, we write the `npm init` into it:
+
+```json
+{
+  "name": "project-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamid Alavi",
+  "license": "ISC"
+}
+```
