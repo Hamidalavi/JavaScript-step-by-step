@@ -51,3 +51,7 @@ First of all, we need to create a node package for our project. To do this, we m
   "license": "ISC"
 }
 ```
+
+We can install install ESLint with `npm install --save-dev eslint` command. If we do that, our `package.json` will update (add ESLint with this version). We also have `node_modules` folder that holds all **JavaScript** code, but **important**: You should never change code in `node_modules` folder.
+
+If suddenly we deleted our `node_modules` folder, we can restore it with `npm install` command. When we run `npm install`, npm will go into our `package.json` file and look at our dependencies and development dependencies and install all the dependencies it finds there.
