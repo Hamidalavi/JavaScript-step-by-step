@@ -364,5 +364,5 @@ Finally, we run it with `npm run build:prod` and then, new file will be added in
 After that, we must create a new class and use this class:
 
 ```js
-1
+
 ```
