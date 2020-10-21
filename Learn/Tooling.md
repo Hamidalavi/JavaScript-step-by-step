@@ -26,7 +26,7 @@ How to solve those issues:
 
 ## Workflow
 
-> Overview:
+> ### Overview
 
 |During Development (upon **Save**)|npm & NodeJS|For Production (upon Command)|
 |:-:|:-:|:-:|
@@ -36,7 +36,7 @@ How to solve those issues:
 |-||Optimization|
 |-||Production-ready Code|
 
-First of all, we need to create a node package for our project. To do this, we must install nodeJS (app) and `npm` packages. Then inside it, we write the `npm init` into it:
+First of all, we need to create a node package for our project. We must install nodeJS (app) and `npm` packages. Then inside it, we must write the `npm init` into it:
 
 ```json
 {
@@ -52,6 +52,317 @@ First of all, we need to create a node package for our project. To do this, we m
 }
 ```
 
-We can install install ESLint with `npm install --save-dev eslint` command. If we do that, our `package.json` will update (add ESLint with this version). We also have `node_modules` folder that holds all **JavaScript** code, but **important**: You should never change code in `node_modules` folder.
+> ### ESLint
 
-If suddenly we deleted our `node_modules` folder, we can restore it with `npm install` command. When we run `npm install`, npm will go into our `package.json` file and look at our dependencies and development dependencies and install all the dependencies it finds there.
+We can install ESLint with `npm install --save-dev eslint` command. If we do that, our `package.json` will update (add ESLint with this version). We also have `node_modules` folder that holds all **JavaScript** code, but **important**: You should never change code in `node_modules` folder.
+
+If we suddenly delete our `node_modules` folder, we can restore it with `npm install` command. When we run `npm install`, npm will go into our `package.json` file and look at our dependencies and development dependencies and install all the dependencies it finds there.
+
+We can create a config for ESLint with `ctrl+p` or `cmd+p` in MACOS. We can also use `f1` key in VsCode text editor. For creating a configuration file, we need to type `eslint` and choose the `ESLint: Create ESLint configuration` option.
+
+- FirstQ: We can choose how strict is ESLint (last option recommended).
+- SecondQ: We can choose the type of modules (**`import`/`export`** recommended).
+- ThirdQ: We can choose which framework does our project use (**None of these** recommended).
+- FourthQ: We don't need to use TypeScript (press `n` for no).
+- FifthQ: Where are code run? (**browser** recommended).
+- SixthQ: We need to inspect or **JavaScript** files.
+- SeventhQ: We must choose a path (e.g. `assets/scripts/app.js`).
+- EighthQ: We need to config our file in JSON format.
+
+After answering these questions, the file will be created and should be `.eslintrc.json` as name.
+
+**Note1**: We can change the Lint rules for our scripts. For example:
+
+- Press enter after a variable declaration (`newline-after-var` = `"always"` recommended).
+- Use semi (semicolon) after each line (end of line).
+- Use single quotes instead of double quotes.
+- Complaining about trailing spaces.
+- Error for having a `console.log()` command between our code (`no-console` = `"off"` recommended).
+- Complaining about some magic numbers like `setInterval(() => console.log("hamid"), 2000);` (it would better to store them into a constant and use that here instead of `2000`).
+- Press enter after a function declaration (`function-call-argument-newline` = `"off"` recommended).
+
+**Note2**: We can fix all problems with `ESLint: Fix all auto-fixable Problems`.
+
+**Note3**: Or we can remove all rules from rules part in `.eslintrc.json` file.
+
+**Note4**: You can use `ctrl+space` between the double quote and select the options and its value (i.e. off, warn, always and so on).
+
+You can set up your own rules from the ground up (basically what we started doing in the lectures) but you can also use presets and pre-configured rulesets.
+
+To fully understand all options you can configure in .eslintrc.json, this part of the official docs should be helpful: <https://eslint.org/docs/user-guide/configuring>
+
+To explore all available rules and what they mean, explore this part of the official docs: <https://eslint.org/docs/rules/>
+
+Want to use a preset? Here you go: <https://www.npmjs.com/search?q=eslint-config> (just click on one of the results and follow the instructions provided there)
+
+Also check out the docs in general: <https://eslint.org/docs/user-guide/getting-started>
+
+> ### Bundling
+
+Webpack is a bundling tool; it's also more than that, it helps us orchestrate our entire build workflow.
+
+First of all, we need to install the webpack and webpack-cli:
+
+`>>> sudo npm install --save-dev webpack webpack-cli` (remove the `sudo` command in other OS except for GNU/Linux)
+
+If we do that, we will see:
+
+```json
+{
+  "name": "project-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamid Alavi",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0"
+  }
+}
+```
+
+After that, we need to make a `webpack.config.js` file in our project and config with:
+
+```js
+const path = require("path");
+
+module.exports = {
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts")
+  }
+};
+```
+
+In this code, `require()` is Node require. `module.exports` object gets an entry and then generates a path for output.
+
+Then, in `package.json` file, in `"scripts"` part, we need to add a custom script, for example:
+
+```json
+{
+  "name": "project-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Hamid Alavi",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0"
+  }
+}
+```
+
+We added the `"build"` to `scripts` section. Webpack will automatically search for such a `webpack.config.js` file and take this configuration (code inside of the file) into account.
+
+**Warning**: Make sure you delete a `.js` extension from all imports (also in dynamic imports).
+
+Some notes that you must do for bundling your files:
+
+- Remove all `.js` extensions from static and dynamic imports.
+- Don't use extra and trivial code.
+- If you get an error, move functions and fields into the constructor function and use `this` keyword. For example use:
+
+  ```js
+  import { DOMHelper } from "../Utility/DOMHelper";
+
+  export class ProjectItem {
+    constructor(id, updateProjectListsFuntion, type) {
+      this.id = id;
+      this.hasActiveTooltip = false;
+      this.updateProjectListsHandler = updateProjectListsFuntion;
+      this.connectMoreInfoButton();
+      this.connectSwitchButton(type);
+      this.connectDrag();
+    }
+  }
+  ```
+
+  instead of:
+
+  ```js
+  import { DOMHelper } from "../Utility/DOMHelper";
+
+  hasActiveTooltip = false;
+
+  export class ProjectItem {
+    constructor(id, updateProjectListsFuntion, type) {
+      this.id = id;
+      this.updateProjectListsHandler = updateProjectListsFuntion;
+      this.connectMoreInfoButton();
+      this.connectSwitchButton(type);
+      this.connectDrag();
+    }
+  }
+  ```
+
+- In the example project, we only have **one main entry point**: `app.js`. In bigger projects - with multiple HTML pages - **you might have multiple scripts** for the different pages (HTML files) you might be building. Hence you **might need more than one entry point** because you want to build more than one bundle (i.e. not every HTML page uses the same script).
+
+  So you need to write `entry: { x,y,z }` instead of `entry: ./src/app.js` as `module.exports` property.
+
+  Now Webpack will **look up all these entry points** and create one bundle per entry point - you can then link to these bundles in your respective HTML files.
+
+  You can learn more about multiple entry points with these two resources:
+
+  - Code Splitting (i.e. generating more than one bundle): <https://webpack.js.org/guides/code-splitting/>
+
+  - Entry Point Configuration: <https://webpack.js.org/concepts/#entry>
+
+  And in general, check out the official Webpack docs to dive into it in detail: <https://webpack.js.org/guides/>
+
+- Don't use `entries` for multiple entries. As we mentioned, use `entry: { x,y,z }`.
+
+If you follow these webpack rules, your files will ready for create.
+
+> ### Development Mode
+
+We can use `development mode`:
+
+```js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts")
+  }
+};
+```
+
+Then we use `npm run build` again. After that, new file will be added to our project that not really optimized (e.g. `src_App_Tooltip_js.app.js`).
+
+We can also use `publicPath` key for `path` object to use generated file (e.g. `0.app.js` or `331.app.js`):
+
+```js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+    publicPath: "./assets/scripts"
+  }
+};
+```
+
+With this method, we won't get an error in future.
+
+> ### Live Refresh
+
+We can use `webpack-dev-server` package and script to enable the live reloading (WDS). We can do it exactly like `webpack` and `webpack-cli`:
+
+- We must install the `webpack-dev-server` tool (package).
+- Then, in `package.json` file, in `"scripts"` part, we need to add a custom script (e.g. `build:dev`).
+- Finally we run it with `npm run build:dev` command (or we can use `sudo` in GNU/Linux).
+
+Using these methods, our page will be recompiled when any changes occur.
+
+**Note**: This method is deprecated.
+
+> ### Debugging
+
+For code debugging, we need to add the `devtool` property in `module.exports` object:
+
+```js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+    publicPath: "./assets/scripts",
+  },
+  devtool: "eval-cheap-module-source-map",
+};
+```
+
+You can use some devtool from this page: <https://webpack.js.org/configuration/devtool/>
+
+We need to run `npm run build:dev` command again and go to the our `./src` folder (**Sources** tab in the browser developer tools). It's greate way for debugging our code.
+
+> ### Production Mode
+
+We can switch to the production mode with `production` value.
+
+**Note**: Make sure that you create a new file (e.g. `webpack.config.prod.js`).
+
+```js
+const path = require("path");
+
+module.exports = {
+  mode: "production",
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+    publicPath: "./assets/scripts",
+  },
+  devtool: "eval-cheap-module-source-map",
+};
+```
+
+Then we need to add a new custom script in our `package.json` file. For example:
+
+```json
+{
+  "name": "project-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:dev": "webpack-dev-server",
+    "build:prod": "webpack --config webpack.config.prod.js"
+  },
+  "author": "Hamid Alavi",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
+```
+
+We need to config our script, because webpack automatically searches for the `webpack.config.js` file. So we need to config it with `--config` value and then we must give a file name, for example:
+
+```json
+{
+"scripts": {
+    "build:prod": "webpack --config webpack.config.prod.js"
+  }
+}
+```
+
+Finally, we run it with `npm run build:prod` and then, new file will be added in our project (e.g. `app.js.map` or `331.app.js.map`).
+
+**Note**: Make sure that you use the correct devtool (i.e. supports the production); for more information: <https://webpack.js.org/configuration/devtool/>
+
+> ### Final Optimization
+
+**Method 1**: We can remove older and unused files with `clean-web-pack` package. We can install it with `npm install --save-dev clean-web-pack` command.
+
+After that, we must create a new class and use this class:
+
+```js
+
+```

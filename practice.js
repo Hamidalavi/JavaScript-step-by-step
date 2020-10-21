@@ -4354,6 +4354,19 @@ __proto__: WeakSet
 // module
 // import("path").then((module) => {});
 
-import("./test.js").then((module) => {
-  new module.Tooltip();
-});
+// import("./test.js").then((module) => {
+//   new module.Tooltip();
+// });
+
+// -----------------------------------------------
+
+// webpack
+const path = require("path");
+
+module.exports = {
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+  },
+};
