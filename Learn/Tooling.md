@@ -359,7 +359,7 @@ Finally, we run it with `npm run build:prod` and then, new file will be added in
 
 > ### Final Optimization
 
-**Method 1**: We can remove older and unused files with `clean-web-pack` package. We can install it with `npm install --save-dev clean-web-pack` command.
+**Method 1**: We can remove the older and unused files with `clean-web-pack` package. We can install it with `npm install --save-dev clean-web-pack` command.
 
 After that, we must create a new class and use this class:
 
