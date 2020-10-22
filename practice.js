@@ -4,6 +4,9 @@
 // hamid = 23;
 // console.log(hamid); // 23
 
+const { Hash, randomBytes, randomFill, pseudoRandomBytes } = require("crypto");
+const { HashedModuleIdsPlugin } = require("webpack");
+
 // -----------------------------------------------
 
 // string
@@ -4361,12 +4364,28 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // webpack
-const path = require("path");
+// const path = require("path");
 
-module.exports = {
-  entry: "./src/app.js",
-  output: {
-    filename: "app.js",
-    path: path.resolve(__dirname, "assets", "scripts"),
-  },
-};
+// module.exports = {
+//   entry: "./src/app.js",
+//   output: {
+//     filename: "app.js",
+//     path: path.resolve(__dirname, "assets", "scripts"),
+//   },
+// };
+
+// const path = require("path");
+// const CleanPlugin = require("clean-webpack-plugin");
+
+// module.exports = {
+//   mode: "development",
+//   entry: "./src/app.js",
+//   output: {
+//     filename: "app.js",
+//     path: path.resolve(__dirname, "assets", "scripts"),
+//     publicPath: "./assets/scripts",
+//   },
+//   devool: "eval-cheap-module-source-map",
+//   plugins: [new CleanPlugin.CleanWebpackPlugin()],
+// };
+

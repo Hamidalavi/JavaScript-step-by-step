@@ -359,10 +359,50 @@ Finally, we run it with `npm run build:prod` and then, new file will be added in
 
 > ### Final Optimization
 
-**Method 1**: We can remove the older and unused files with `clean-web-pack` package. We can install it with `npm install --save-dev clean-web-pack` command.
+**Method 1**: We can remove the older and unused files with `clean-webpack-plugin` package. We can install it with `npm install --save-dev clean-webpack-plugin` command.
 
-After that, we must create a new class and use this class:
+After that, we must create a new class and use this class (in both `webpack.config.js` and `webpack.config.prod.js` files):
 
 ```js
+const path = require("path");
+const CleanPlugin = require("clean-webpack-plugin");
 
+module.exports = {
+  mode: "development",
+  entry: "./src/app.js",
+  output: {
+    filename: "app.js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+    publicPath: "./assets/scripts",
+  },
+  devool: "eval-cheap-module-source-map",
+  plugins: [new CleanPlugin.CleanWebpackPlugin()],
+};
 ```
+
+**Method 2**: We can randomize the files name with `[contenthash].js`. If we do this, the browser doesn't cache some css and styles (because there is no more the same file name found).
+
+```js
+const path = require("path");
+const CleanPlugin = require("clean-webpack-plugin");
+
+module.exports = {
+  mode: "production",
+  entry: "./src/app.js",
+  output: {
+    filename: "[contenthash].js",
+    path: path.resolve(__dirname, "assets", "scripts"),
+    publicPath: "./assets/scripts",
+  },
+  devtool: "cheap-source-map",
+  plugins: [new CleanPlugin.CleanWebpackPlugin()],
+};
+
+// output
+5da9a9115e86d8de54f1.js
+5da9a9115e86d8de54f1.js.map
+d6920574f62410e9feac.js
+d6920574f62410e9feac.js.map
+```
+
+This is now an output which will change every time we change the underlying files and we rebuild. Therefore since the file name now changes, browsers will redownload these files.
