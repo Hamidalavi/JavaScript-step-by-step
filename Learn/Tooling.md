@@ -406,3 +406,15 @@ d6920574f62410e9feac.js.map
 ```
 
 This is now an output which will change every time we change the underlying files and we rebuild. Therefore since the file name now changes, browsers will redownload these files.
+
+We can also use `lodash` library with `npm`. We install it with `npm i --save lodash` or `npm install --save lodash` command. So as you learned before, you can import this library with `import`: `import * as _ from "lodash"`.
+
+Or `import * as _ from "lodash/array"` for only add array functionalities.
+
+**Note**: `difference` is an array functionality, for example:
+
+```js
+import * as _ form "lodash";
+
+_.difference([0, 1], [1, 2])
+```
