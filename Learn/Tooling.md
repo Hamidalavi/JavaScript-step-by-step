@@ -24,9 +24,7 @@ How to solve those issues:
 |Babel|Code Compilation Tool|Write modern code, get **older** code as output|
 |ESLint|Code Quality Checker|Check code quality, check for conventions & patterns|
 
-## Workflow
-
-> ### Overview
+## Workflow - Overview
 
 |During Development (upon **Save**)|npm & NodeJS|For Production (upon Command)|
 |:-:|:-:|:-:|
@@ -52,7 +50,7 @@ First of all, we need to create a node package for our project. We must install 
 }
 ```
 
-> ### ESLint
+## ESLint
 
 We can install ESLint with `npm install --save-dev eslint` command. If we do that, our `package.json` will update (add ESLint with this version). We also have `node_modules` folder that holds all **JavaScript** code, but **important**: You should never change code in `node_modules` folder.
 
@@ -97,7 +95,7 @@ Want to use a preset? Here you go: <https://www.npmjs.com/search?q=eslint-config
 
 Also check out the docs in general: <https://eslint.org/docs/user-guide/getting-started>
 
-> ### Bundling
+## Bundling
 
 Webpack is a bundling tool; it's also more than that, it helps us orchestrate our entire build workflow.
 
@@ -225,7 +223,7 @@ Some notes that you must do for bundling your files:
 
 If you follow these webpack rules, your files will ready for create.
 
-> ### Development Mode
+## Development Mode
 
 We can use `development mode`:
 
@@ -262,7 +260,7 @@ module.exports = {
 
 With this method, we won't get an error in future.
 
-> ### Live Refresh
+## Live Refresh
 
 We can use `webpack-dev-server` package and script to enable the live reloading (WDS). We can do it exactly like `webpack` and `webpack-cli`:
 
@@ -274,7 +272,7 @@ Using these methods, our page will be recompiled when any changes occur.
 
 **Note**: This method is deprecated.
 
-> ### Debugging
+## Debugging
 
 For code debugging, we need to add the `devtool` property in `module.exports` object:
 
@@ -297,7 +295,7 @@ You can use some devtool from this page: <https://webpack.js.org/configuration/d
 
 We need to run `npm run build:dev` command again and go to the our `./src` folder (**Sources** tab in the browser developer tools). It's greate way for debugging our code.
 
-> ### Production Mode
+## Production Mode
 
 We can switch to the production mode with `production` value.
 
@@ -357,7 +355,7 @@ Finally, we run it with `npm run build:prod` and then, new file will be added in
 
 **Note**: Make sure that you use the correct devtool (i.e. supports the production); for more information: <https://webpack.js.org/configuration/devtool/>
 
-> ### Final Optimization
+## Final Optimization
 
 **Method 1**: We can remove the older and unused files with `clean-webpack-plugin` package. We can install it with `npm install --save-dev clean-webpack-plugin` command.
 
@@ -407,6 +405,8 @@ d6920574f62410e9feac.js.map
 
 This is now an output which will change every time we change the underlying files and we rebuild. Therefore since the file name now changes, browsers will redownload these files.
 
+**Note**: If you think about `development` and `production` mode, we get that the `production` mode is good for randomize name of files for user and browser.
+
 We can also use `lodash` library with `npm`. We install it with `npm i --save lodash` or `npm install --save lodash` command. So as you learned before, you can import this library with `import`: `import * as _ from "lodash"`.
 
 Or `import * as _ from "lodash/array"` for only add array functionalities.
@@ -418,3 +418,9 @@ import * as _ form "lodash";
 
 _.difference([0, 1], [1, 2])
 ```
+
+## Useful Resources & Links
+
+- Official ESLint Docs: <https://eslint.org/>
+
+- Official Webpack Docs: <https://webpack.js.org>
