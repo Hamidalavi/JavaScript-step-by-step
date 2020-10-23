@@ -4389,3 +4389,21 @@ __proto__: WeakSet
 //   plugins: [new CleanPlugin.CleanWebpackPlugin()],
 // };
 
+// -----------------------------------------------
+
+// storage - local storage
+const storeBtn = document.getElementById("store-btn");
+const retrBtn = document.getElementById("retrieve-btn");
+
+const user = {
+  name: "Hamid",
+  age: 23,
+  hobbies: ["Programming", "Gaming"],
+};
+
+storeBtn.addEventListener("click", () => {
+  localStorage.setItem("user", JSON.stringify(user));
+});
+retrBtn.addEventListener("click", () => {
+  JSON.parse(localStorage.getItem("user"));
+});
