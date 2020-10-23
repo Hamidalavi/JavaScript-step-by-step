@@ -4392,18 +4392,67 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // storage - local storage
-const storeBtn = document.getElementById("store-btn");
-const retrBtn = document.getElementById("retrieve-btn");
+// const storeBtn = document.getElementById("store-btn");
+// const retrBtn = document.getElementById("retrieve-btn");
 
-const user = {
-  name: "Hamid",
-  age: 23,
-  hobbies: ["Programming", "Gaming"],
-};
+// const user = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+// };
 
-storeBtn.addEventListener("click", () => {
-  localStorage.setItem("user", JSON.stringify(user));
-});
-retrBtn.addEventListener("click", () => {
-  JSON.parse(localStorage.getItem("user"));
-});
+// storeBtn.addEventListener("click", () => {
+//   localStorage.setItem("user", JSON.stringify(user));
+// });
+// retrBtn.addEventListener("click", () => {
+//   JSON.parse(localStorage.getItem("user"));
+// });
+
+// -----------------------------------------------
+
+// storage - session storage
+// const storeBtn = document.getElementById("store-btn");
+// const retrBtn = document.getElementById("retrieve-btn");
+
+// const user = {
+//   name: "Hamid",
+//   age: 23,
+//   hobbies: ["Programming", "Gaming"],
+// };
+
+// storeBtn.addEventListener("click", () => {
+//   sessionStorage.setItem("user", JSON.stringify(user));
+// });
+// retrBtn.addEventListener("click", () => {
+//   JSON.parse(sessionStorage.getItem("user"));
+// });
+
+// -----------------------------------------------
+
+// storage - session storage
+// const storeBtn = document.getElementById("store-btn");
+// const retrBtn = document.getElementById("retrieve-btn");
+
+// const userId = "u123";
+
+// storeBtn.addEventListener("click", () => {
+//   document.cookie = `uid=${userId}`;
+// });
+// retrBtn.addEventListener("click", () => {
+//   console.log(document.cookie);
+// });
+
+// -----------------------------------------------
+
+// storage - cookies
+// const storeBtn = document.getElementById("store-btn");
+// const retrBtn = document.getElementById("retrieve-btn");
+
+// const userId = "u123";
+
+// storeBtn.addEventListener("click", () => {
+//   document.cookie = `uid=${userId}`;
+// });
+// retrBtn.addEventListener("click", () => {
+//   console.log(document.cookie);
+// });
