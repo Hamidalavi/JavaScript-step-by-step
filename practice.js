@@ -4515,62 +4515,76 @@ __proto__: WeakSet
 
 // ---
 
-const storeBtn = document.getElementById("store-btn");
-const retrBtn = document.getElementById("retrieve-btn");
+// const storeBtn = document.getElementById("store-btn");
+// const retrBtn = document.getElementById("retrieve-btn");
 
-let db;
+// let db;
 
-const dbRequest = indexedDB.open("StorageDummy", 1);
+// const dbRequest = indexedDB.open("StorageDummy", 1);
 
-dbRequest.onsuccess = function (event) {
-  db = event.target.result;
-};
+// dbRequest.onsuccess = function (event) {
+//   db = event.target.result;
+// };
 
-dbRequest.onupgradeneeded = function (event) {
-  db = event.target.result;
+// dbRequest.onupgradeneeded = function (event) {
+//   db = event.target.result;
 
-  const objStore = db.createObjectStore("products", { keyPath: "id" });
+//   const objStore = db.createObjectStore("products", { keyPath: "id" });
 
-  objStore.transaction.oncomplete = function (event) {
-    const productsStore = db
-      .transaction("products", "readwrite")
-      .objectStore("products");
-    productsStore.add({
-      id: "p1",
-      title: "A First Product",
-      price: 12.99,
-      tags: ["Expensive", "Luxury"],
-    });
-  };
-};
+//   objStore.transaction.oncomplete = function (event) {
+//     const productsStore = db
+//       .transaction("products", "readwrite")
+//       .objectStore("products");
+//     productsStore.add({
+//       id: "p1",
+//       title: "A First Product",
+//       price: 12.99,
+//       tags: ["Expensive", "Luxury"],
+//     });
+//   };
+// };
 
-dbRequest.onerror = function (event) {
-  console.log("ERROR!");
-};
+// dbRequest.onerror = function (event) {
+//   console.log("ERROR!");
+// };
 
-storeBtn.addEventListener("click", () => {
-  if (!db) {
-    return;
-  }
-  const productsStore = db
-    .transaction("products", "readwrite")
-    .objectStore("products");
-  productsStore.add({
-    id: "p2",
-    title: "A Second Product",
-    price: 122.99,
-    tags: ["Expensive", "Luxury"],
-  });
-});
+// storeBtn.addEventListener("click", () => {
+//   if (!db) {
+//     return;
+//   }
+//   const productsStore = db
+//     .transaction("products", "readwrite")
+//     .objectStore("products");
+//   productsStore.add({
+//     id: "p2",
+//     title: "A Second Product",
+//     price: 122.99,
+//     tags: ["Expensive", "Luxury"],
+//   });
+// });
 
-retrBtn.addEventListener("click", () => {
-  const productsStore = db
-    .transaction("products", "readwrite")
-    .objectStore("products");
-  const request = productsStore.get("p2");
+// retrBtn.addEventListener("click", () => {
+//   const productsStore = db
+//     .transaction("products", "readwrite")
+//     .objectStore("products");
+//   const request = productsStore.get("p2");
 
-  request.onsuccess = function () {
-    console.log(request.result);
-    // {id: "p2", title: "A Second Product", price: 122.99, tags: Array(2)}
-  };
+//   request.onsuccess = function () {
+//     console.log(request.result);
+//     // {id: "p2", title: "A Second Product", price: 122.99, tags: Array(2)}
+//   };
+// });
+
+// -----------------------------------------------
+
+// feature detection
+const button = document.querySelector("button");
+const paragraphText = document.querySelector("p");
+
+button.addEventListener("click", () => {
+  const text = paragraphText.textContent;
+  navigator.clipboard
+    .writeText(text)
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
 });
