@@ -4578,13 +4578,29 @@ __proto__: WeakSet
 // -----------------------------------------------
 
 // feature detection
-const button = document.querySelector("button");
-const paragraphText = document.querySelector("p");
+// const button = document.querySelector("button");
+// const paragraphText = document.querySelector("p");
 
-button.addEventListener("click", () => {
-  const text = paragraphText.textContent;
-  navigator.clipboard
-    .writeText(text)
-    .then((result) => console.log(result))
-    .catch((error) => console.log(error));
-});
+// button.addEventListener("click", () => {
+//   const text = paragraphText.textContent;
+//   navigator.clipboard
+//     .writeText(text)
+//     .then((result) => console.log(result))
+//     .catch((error) => console.log(error));
+// });
+
+// const button = document.querySelector("button");
+// const paragraphText = document.querySelector("p");
+
+// button.addEventListener("click", () => {
+//   const text = paragraphText.textContent;
+//   if (navigator.clipboard) {
+//     navigator.clipboard
+//       .writeText(text)
+//       .then((result) => console.log(result))
+//       .catch((error) => console.log(error));
+//   } else {
+//     console.log("Feature not available, please copy manually!");
+//   }
+// });
+
