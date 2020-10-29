@@ -4,8 +4,8 @@
 // hamid = 23;
 // console.log(hamid); // 23
 
-const { Hash, randomBytes, randomFill, pseudoRandomBytes } = require("crypto");
-const { HashedModuleIdsPlugin } = require("webpack");
+// const { Hash, randomBytes, randomFill, pseudoRandomBytes } = require("crypto");
+// const { HashedModuleIdsPlugin } = require("webpack");
 
 // -----------------------------------------------
 
@@ -4604,3 +4604,33 @@ __proto__: WeakSet
 //   }
 // });
 
+// -----------------------------------------------
+
+// meta-programming - Symbol
+
+// const uid = Symbol();
+// console.log(uid, typeof uid); // Symbol() "symbol"
+
+// const uid = Symbol("uid");
+
+// const user = {
+//   [uid]: "p1",
+//   name: "Hamid",
+//   age: 23
+// };
+
+// console.log(user); // { name: 'Hamid', age: 23, [Symbol(uid)]: 'p1' }
+
+// console.log(Symbol("uid") === Symbol("uid"));
+
+const uid = Symbol("uid");
+
+const user = {
+  [uid]: "p1",
+  name: "Hamid",
+  age: 23,
+  [Symbol.toStringTag]: "User"
+};
+
+user[uid] = "p2";
+console.log(user.toString()); // "[object User]"

@@ -21,6 +21,8 @@ addEventListener("event", functionname); // adds event and we can choose what ha
 removeEventListener("event", functionname); // removes event and we can choose what happen if we click or hover or exit and etc
 // learn more in DOM.md file
 
+Symbol.toStringTag; // a String value that is used in the creation of the default string description of an object
+
 // output -----------------------------------------------
 
 console.log(value); // logs the output
