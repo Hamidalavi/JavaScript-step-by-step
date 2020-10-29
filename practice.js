@@ -4623,14 +4623,188 @@ __proto__: WeakSet
 
 // console.log(Symbol("uid") === Symbol("uid"));
 
-const uid = Symbol("uid");
+// const uid = Symbol("uid");
 
-const user = {
-  [uid]: "p1",
-  name: "Hamid",
-  age: 23,
-  [Symbol.toStringTag]: "User"
-};
+// const user = {
+//   [uid]: "p1",
+//   name: "Hamid",
+//   age: 23,
+//   [Symbol.toStringTag]: "User"
+// };
 
-user[uid] = "p2";
-console.log(user.toString()); // "[object User]"
+// user[uid] = "p2";
+// console.log(user.toString()); // "[object User]"
+
+// -----------------------------------------------
+
+// meta-programming - iterator
+// const company = {
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"]
+// };
+
+// const company = {
+//   currentEmployee: 0,
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   next() {
+//     if (this.currentEmployee >= this.employees.length) {
+//       return { value: this.currentEmployee, done: true };
+//     }
+//     const returnedValue = {
+//       value: this.employees[this.currentEmployee],
+//       done: false
+//     };
+//     this.currentEmployee++;
+//     return returnedValue;
+//   }
+// };
+
+// console.log(company.next()); // { value: 'Hamid', done: false }
+// console.log(company.next()); // { value: 'Hamed', done: false }
+// console.log(company.next()); // { value: 'Ali', done: false }
+// console.log(company.next()); // { value: 'Reza', done: false }
+// console.log(company.next()); // { value: 'Majid', done: false }
+// console.log(company.next()); // { value: 'Mehrdad', done: false }
+// console.log(company.next()); // { value: 'Morteza', done: false }
+// console.log(company.next()); // { value: 7, done: true }
+
+// const company = {
+//   currentEmployee: 0,
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   next() {
+//     if (this.currentEmployee >= this.employees.length) {
+//       return { value: this.currentEmployee, done: true };
+//     }
+//     const returnedValue = {
+//       value: this.employees[this.currentEmployee],
+//       done: false
+//     };
+//     this.currentEmployee++;
+//     return returnedValue;
+//   }
+// };
+
+// let employee = company.next();
+
+// while (!employee.done) {
+//   console.log(employee.value);
+//   employee = company.next();
+// }
+// /*
+// "Hamid"
+// "Hamed"
+// "Ali"
+// "Reza"
+// "Majid"
+// "Mehrdad"
+// "Morteza"
+//  */
+
+// -----------------------------------------------
+
+// meta-programming - generator
+// const company = {
+//   currentEmployee: 0,
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   next() {
+//     if (this.currentEmployee >= this.employees.length) {
+//       return { value: this.currentEmployee, done: true };
+//     }
+//     const returnedValue = {
+//       value: this.employees[this.currentEmployee],
+//       done: false
+//     };
+//     this.currentEmployee++;
+//     return returnedValue;
+//   }
+// };
+
+// let employee = company.next();
+
+// for (employee of company) {
+//   console.log(employee.value); // TypeError: company is not iterable
+// }
+
+// const company = {
+//   currentEmployee: 0,
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   next() {
+//     if (this.currentEmployee >= this.employees.length) {
+//       return { value: this.currentEmployee, done: true };
+//     }
+//     const returnedValue = {
+//       value: this.employees[this.currentEmployee],
+//       done: false
+//     };
+//     this.currentEmployee++;
+//     return returnedValue;
+//   },
+
+//   [Symbol.iterator]: function* employeeGenerator() {
+//     let employee = company.next();
+
+//     for (employee of company) {
+//       yield employee.value;
+//       console.log(employee.value);
+//     }
+//   }
+// };
+
+// const company = {
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   getEmployee: function* employeeGenerator() {
+//     let currentEmployee = 0;
+//     while (currentEmployee < this.employees.length) {
+//       yield this.employees[currentEmployee];
+//       currentEmployee++;
+//     }
+//   }
+// };
+
+// let it = company.getEmployee();
+
+// // console.log(it.next()); // { value: 'Hamid', done: false }
+// // console.log(it.next()); // { value: 'Hamed', done: false }
+// // console.log(it.next()); // { value: 'Ali', done: false }
+// // console.log(it.next()); // { value: 'Reza', done: false }
+// // console.log(it.next()); // { value: 'Majid', done: false }
+// // console.log(it.next()); // { value: 'Mehrdad', done: false }
+// // console.log(it.next()); // { value: 'Morteza', done: false }
+// // console.log(it.next()); // { value: undefined, done: true }
+
+// const company = {
+//   employees: ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"],
+//   [Symbol.iterator]: function* employeeGenerator() {
+//     let currentEmployee = 0;
+//     while (currentEmployee < this.employees.length) {
+//       yield this.employees[currentEmployee];
+//       currentEmployee++;
+//     }
+//   }
+// };
+
+// for (const employee of company) {
+//   console.log(employee);
+// }
+// /*
+// "Hamid"
+// "Hamed"
+// "Ali"
+// "Reza"
+// "Majid"
+// "Mehrdad"
+// "Morteza"
+//  */
+
+// console.log([...company]);
+// /*
+// (7) ["Hamid", "Hamed", "Ali", "Reza", "Majid", "Mehrdad", "Morteza"]
+//   0: "Hamid"
+//   1: "Hamed"
+//   2: "Ali"
+//   3: "Reza"
+//   4: "Majid"
+//   5: "Mehrdad"
+//   6: "Morteza"
+//   length: 7
+//   __proto__: Array(0)
+//  */
