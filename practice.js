@@ -4808,3 +4808,22 @@ __proto__: WeakSet
 //   length: 7
 //   __proto__: Array(0)
 //  */
+
+// -----------------------------------------------
+
+// meta-programming - Reflect API
+// const person = {
+//   name: "Hamid"
+// };
+
+// delete person.name;
+
+// console.log(person); // {}
+
+const person = {
+  name: "Hamid"
+};
+
+Reflect.deleteProperty(person, "name");
+
+console.log(person); // {}
