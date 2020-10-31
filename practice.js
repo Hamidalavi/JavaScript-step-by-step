@@ -4820,10 +4820,165 @@ __proto__: WeakSet
 
 // console.log(person); // {}
 
+// const person = {
+//   name: "Hamid"
+// };
+
+// Reflect.deleteProperty(person, "name");
+
+// console.log(person); // {}
+
+// -----------------------------------------------
+
+// meta-programming - Proxy API
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     return obj[propertyName];
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+
+// console.log(pPerson.name); // "name" "Hamid"
+
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     return "Yo guys and girls";
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+
+// console.log(pPerson.name); // "name" "Yo guys and girls"
+// console.log(person, pPerson);
+// /*
+// {name: "Hamid"}  Proxy {name: "Hamid"}
+//   name: "Hamid"
+//   __proto__: Object
+// */
+
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     return obj[propertyName] || "NOT FOUND";
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+
+// console.log(pPerson.name); // "name" "Hamid"
+// console.log(pPerson.length); // "length" "NOT FOUND"
+
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     if (propertyName === "length") {
+//       return 0;
+//     }
+//     return obj[propertyName] || "NOT FOUND";
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+
+// console.log(pPerson.name); // "name" "Hamid"
+// console.log(pPerson.length); // "length" 0
+// console.log(pPerson.rating); // "rating" "NOT FOUND"
+
+// -----------------------------------------------
+
+// meta-programming - Proxy trap
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     if (propertyName === "length") {
+//       return 0;
+//     }
+//     return obj[propertyName] || "NOT FOUND";
+//   },
+//   set(obj, propertyName, newValue) {
+//     obj[propertyName] = newValue;
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+// pPerson.rating = 5;
+
+// console.log(pPerson.rating); // "rating" 5
+
+// const person = {
+//   name: "Hamid"
+// };
+
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     if (propertyName === "length") {
+//       return 0;
+//     }
+//     return obj[propertyName] || "NOT FOUND";
+//   },
+//   set(obj, propertyName, newValue) {
+//     if (propertyName === "rating") {
+//       return;
+//     }
+//     obj[propertyName] = newValue;
+//   }
+// };
+
+// const pPerson = new Proxy(person, personHandler);
+// pPerson.rating = 5;
+
+// console.log(pPerson.rating); // "rating" "NOT FOUND"
+
 const person = {
   name: "Hamid"
 };
 
-Reflect.deleteProperty(person, "name");
+personHandler = {
+  get(obj, propertyName) {
+    console.log(propertyName);
+    if (propertyName === "length") {
+      return 0;
+    }
+    return obj[propertyName] || "NOT FOUND";
+  },
+  set(obj, propertyName, newValue) {
+    console.log("Sending data ...");
+    if (propertyName === "rating") {
+      return;
+    }
+    obj[propertyName] = newValue;
+  }
+};
 
-console.log(person); // {}
+const pPerson = new Proxy(person, personHandler);
+pPerson.rating = 5;
+
+console.log(pPerson.age);
+/*
+"Sending data ..."
+"age" "NOT FOUND"
+*/
