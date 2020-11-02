@@ -4953,32 +4953,148 @@ __proto__: WeakSet
 
 // console.log(pPerson.rating); // "rating" "NOT FOUND"
 
-const person = {
-  name: "Hamid"
-};
+// const person = {
+//   name: "Hamid"
+// };
 
-personHandler = {
-  get(obj, propertyName) {
-    console.log(propertyName);
-    if (propertyName === "length") {
-      return 0;
-    }
-    return obj[propertyName] || "NOT FOUND";
-  },
-  set(obj, propertyName, newValue) {
-    console.log("Sending data ...");
-    if (propertyName === "rating") {
-      return;
-    }
-    obj[propertyName] = newValue;
-  }
-};
+// personHandler = {
+//   get(obj, propertyName) {
+//     console.log(propertyName);
+//     if (propertyName === "length") {
+//       return 0;
+//     }
+//     return obj[propertyName] || "NOT FOUND";
+//   },
+//   set(obj, propertyName, newValue) {
+//     console.log("Sending data ...");
+//     if (propertyName === "rating") {
+//       return;
+//     }
+//     obj[propertyName] = newValue;
+//   }
+// };
 
-const pPerson = new Proxy(person, personHandler);
-pPerson.rating = 5;
+// const pPerson = new Proxy(person, personHandler);
+// pPerson.rating = 5;
 
-console.log(pPerson.age);
-/*
-"Sending data ..."
-"age" "NOT FOUND"
-*/
+// console.log(pPerson.age);
+// /*
+// "Sending data ..."
+// "age" "NOT FOUND"
+// */
+
+// -----------------------------------------------
+
+// Node.js - filesystem
+// console.log("Hamid");
+
+// document.getElementById("my-id"); // ReferenceError: document is not defined
+
+// const filesystem = require("fs");
+// // import filesystem from "fs";
+
+// filesystem.writeFile("test.md", "# Hello Hamid", (err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//       console.log("wrote to file!")
+//   }
+// });
+
+// const filesystem = require("fs");
+
+// filesystem.writeFile("test.md", "# Hello Hamid", (err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("wrote to file!");
+//   }
+// });
+
+// filesystem.readFile("test.md", (err, data) => {
+//   if (err) {
+//     console.log(err);
+//     return;
+//   }
+//   console.log(data);
+// });
+
+// -----------------------------------------------
+
+// Node.js - http
+// const http = require("http");
+// const fs = require("fs");
+
+// const readedFile = fs.readFile("test.html", "utf8", (err, data) => {
+//     if (err) throw err;
+// });
+
+// const server = http.createServer((request, response) => {
+//   fs.readFile("test.html", (err, data) => {
+//     console.log(typeof data);
+//     response.write(data + typeof data);
+//     response.end();
+//   });
+// });
+
+// server.listen(3000);
+
+// ---
+
+// const http = require("http");
+
+// const server = http.createServer((request, response) => {
+//   response.setHeader("Content-Type", "text/html");
+//   response.write("<h1>Hamid</h1>");
+//   response.end();
+// });
+
+// server.listen(3000);
+
+// const fs = require("fs");
+// const http = require("http");
+
+// const server = http.createServer((request, response) => {
+//   let body = [];
+//   request.on("data", (chunk) => {
+//     body.push(chunk);
+//   });
+//   request.on("end", () => {
+//     body = Buffer.concat(body).toString();
+//     console.log(body);
+//   });
+//   response.setHeader("Content-Type", "text/html");
+//   fs.readFile("test.html", (err, data) => {
+//     if (err) throw err;
+//     response.write(data);
+//     response.end();
+//   });
+// });
+
+// server.listen(3000);
+
+// const fs = require("fs");
+// const http = require("http");
+
+// const server = http.createServer((request, response) => {
+//   let body = [];
+//   request.on("data", (chunk) => {
+//     body.push(chunk);
+//   });
+//   request.on("end", () => {
+//     body = Buffer.concat(body).toString();
+//     let userName = "Unknown User";
+//     if (body) {
+//       userName = body.split("=")[1];
+//     }
+
+//     fs.readFile("test.html", (err, data) => {
+//       if (err) throw err;
+//       response.write(`<h1>Hello ${userName}</h1> ${data}`);
+//       response.end();
+//     });
+//   });
+//   response.setHeader("Content-Type", "text/html");
+// });
+
+// server.listen(3000);
