@@ -5098,3 +5098,27 @@ __proto__: WeakSet
 // });
 
 // server.listen(3000);
+
+// -----------------------------------------------
+
+// Node.js - Express and ejs
+// const express = require("express");
+// const bodyParser = require("body-parser");
+// const app = express();
+
+// app.set("view engine", "ejs");
+// app.set("views", "views");
+
+// app.use(bodyParser.urlencoded({ extended: false }));
+
+// app.use((request, response, next) => {
+//   response.setHeader("Content-Type", "text/html");
+//   next();
+// });
+
+// app.use((request, response, next) => {
+//   const userName = request.body.username || "KNOWN USERNAME";
+//   response.render("index", { user: userName });
+// });
+
+// app.listen(3000);
