@@ -5125,4 +5125,11 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Node.js - ...
+// Node.js - CORS
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader("Access-Control-Allow-Methods", "POST", "POST", "OPTIONS");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+//   res.setHeader("Access-Control-Max-Age", "86400");
+//   next();
+// });
