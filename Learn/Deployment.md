@@ -19,3 +19,27 @@ Speaking about **non-static host**, you could also call this **dynamic host**, y
 **Now in the sever-side**, we have a web sever which does not just return HTML, CSS and **JavaScript** files to the users. So those files are then handled locally on these user's machines; but which in addition to that, also is capable of running (**JavaScript** code) on the sever itself by simply installing **Node.js** there in the end.
 
 ## Deployment Steps
+
+What's the deployment process?
+
+1. It all starts with us **developing**, with us **writing our code**; that's what we did so far throughout the course.
+2. We also want to test our code. We want to make sure it's error free it's secure, it has no bugs; that's also what we did throughout this course.
+3. Now once we're done with all of that, we can do some optimizations; we can write fallbacks to offer a good browser support, we want to look up the browser support we need. We also use build tools like **Babel** together with **webpack** to optimize and shrink our code and add potential polyfills which we need.
+4. Then we can build for production (also with the help of **webpack** - shorten function names and so on).
+5. Once we're full happy with the result, we deploy the output; so the built and optimized code, we now take that and put it onto a sever.
+
+**Important**: These all apply to the scenario where we have **client-side JavaScript** code; So code that runs in the browser. For our server-side, our **Node.js** code, the **optimization** and build for **production** part is not that important. Because we ship it on our sever and users never will download this code, it doesn't need to be as small as possible, it can be bigger, it doesn't have to be optimized. Because it's just running on our sever which is super fast typically and we save the time where the code would need to be downloaded.
+
+Specifically, there are three major types you can differentiate:
+
+- Static Websites (just HTML + CSS + **JavaScript**)
+
+- Single-Page-Applications (SPAs, HTML + CSS + **JavaScript** with only one HTML page being served, client-side **JavaScript** is used to re-render the page dynamically)
+
+- Dynamic / Server-side rendered Web Applications: Websites where the HTML pages are created dynamically on the server (e.g. via templating engines like EJS).
+
+When deploying such websites, it's important to understand that sites with **no** server-side code (i.e. Static Websites and SPAs), required only a static host (e.g. AWS S3, Firebase Hosting).
+
+Pages where HTML is generated dynamically on the server require a host that is capable of executing the server-side code (i.e. a server that supports **Node.js**, PHP or whatever language is being used).
+
+You find a more detailed comparison here: <https://academind.com/learn/web-dev/dynamic-vs-static-vs-spa/>
