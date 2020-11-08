@@ -1,6 +1,6 @@
 # How Websites Work (From academind.com)
 
-Let's start with the most obvious way of using the internet: You visit a website like **academind.com**.
+Let's start with the most obvious way of using the Internet: You visit a website like **academind.com**.
 
 The moment you enter this address in your browser and you hit **enter**, a lot of different things happen (from academind):
 
@@ -29,7 +29,7 @@ An IP address typically looks like this: `172.56.180.5` (though there also is a 
 
 **Q**: How is the domain **academind.com** translated to its IP address?
 
-**Answer**: There's a special type of server out there in the internet - not just one, but many servers of that type; that called **name server** or **DNS server** (i.e. **D**omain **N**ame **S**ystem).
+**Answer**: There's a special type of server out there in the Internet - not just one, but many servers of that type; that called **name server** or **DNS server** (i.e. **D**omain **N**ame **S**ystem).
 
 The job of these DNS servers is to translate domains to IP addresses. You can imagine those servers as huge dictionaries that store translation tables: **Domain** => **IP address** (D to IPA).
 
@@ -125,7 +125,7 @@ These are the four steps that are always involved when you enter a page address 
 
 ## Client-side (Browser-side) vs Server-side
 
-From the four steps above, you learned that we can differentiate two core **sides** when talking about the web: **Server-side** and **Browser-side** (or: **Client-side** since we can also access the internet without a browser). If you're interested in becoming a web developer, it's important to know that you use different technologies and programming languages for these sides.
+From the four steps above, you learned that we can differentiate two core **sides** when talking about the web: **Server-side** and **Browser-side** (or: **Client-side** since we can also access the Internet without a browser). If you're interested in becoming a web developer, it's important to know that you use different technologies and programming languages for these sides.
 
 > Server-side
 
@@ -151,7 +151,7 @@ Thus far, we discussed websites. I.e. the case where you enter a URL (e.g. **aca
 
 > **Behind the Scenes** Internet
 
-Thus far, we discussed websites. I.e. the case where you enter a URL (e.g. **academind.com/learn**) into the browser and you get a website in return. But the internet is more than that. Indeed, you use it for more than just that every day.
+Thus far, we discussed websites. I.e. the case where you enter a URL (e.g. **academind.com/learn**) into the browser and you get a website in return. But the Internet is more than that. Indeed, you use it for more than just that every day.
 
 **Note**: The core idea of requests and responses is always the same. But not every response is necessarily a website. And not every request wants a website.
 
