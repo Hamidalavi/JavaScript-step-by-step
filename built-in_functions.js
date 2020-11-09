@@ -95,7 +95,7 @@ Object.keys(object); // shows all object's keys (returns an array of all enumera
 Object.setPrototypeOf(object2, object1); // the object to change its prototype (sets the prototype of an object -- one object delegates to another object)
 Object.setPrototypeOf(
   {
-    /** put value in new object */
+    /* put value in new object */
   },
   object1
 ); // one object delegates to another object
