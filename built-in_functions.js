@@ -192,3 +192,7 @@ Math.sqrt(); // returns the square root of a number
 Math.abs(number); // returns the absolute value of a number (e.g. -5 => 5)
 Math.PI; // this is the ratio of the circumference of a circle to its diameter (3.14)
 Math.E; // the mathematical constant e. This is Euler's number, the base of natural logarithms (2.718)
+
+// Popular
+Math.floor(number); // returns the greatest integer less than or equal to its numeric argument (e.g. 23.8 => 23)
+Math.ceil(number); // returns the smallest integer greater than or equal to its numeric argument (e.g. 23.8 => 24)

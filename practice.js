@@ -5134,3 +5134,23 @@ __proto__: WeakSet
 //   next();
 // });
 
+// -----------------------------------------------
+
+// Performance
+// let arr = [1, 2, 3];
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(i);
+// }
+// /*
+// result:
+// 5161.1 ops/s 6.2%
+// */
+
+// let i = [1, 2, 3];
+// for (const index of i) {
+//   console.log(index);
+// }
+// /*
+// result:
+// 4897.32 ops/s 5.54%
+// */
