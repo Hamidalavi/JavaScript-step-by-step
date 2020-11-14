@@ -5154,3 +5154,68 @@ __proto__: WeakSet
 // result:
 // 4897.32 ops/s 5.54%
 // */
+
+// -----------------------------------------------
+
+// Testing
+// const { generateText } = require("./util");
+
+// test("should output name and age", () => {
+//   const text = generateText("Hamid", 23);
+//   expect(text).toBe("Hamid Alavi (23 years old)");
+// });
+
+// test("You should click", async () => {
+//   const browser = await puppeteer.launch({
+//     headless: false,
+//     slowMo: 18,
+//     args: ["window-size=1920,1080"]
+//   });
+//   const page = await browser.newPage();
+//   await page.goto(
+//     "file:///C:/Users/ultih/OneDrive/Documents/14.%20Testing/index.html"
+//   );
+// });
+
+// ---
+
+// const { generateText } = require("./util");
+// const puppeteer = require("puppeteer");
+
+// test("should output name and age", () => {
+//   const text = generateText("Hamid Alavi", 23);
+//   expect(text).toBe("Hamid Alavi (23 years old)");
+// });
+
+// test("You should click", async () => {
+//   const browser = await puppeteer.launch({
+//     headless: true,
+//     // slowMo: 18,
+//     // args: ["window-size=1920,1080"]
+//   });
+//   const page = await browser.newPage();
+//   await page.goto(
+//     "file:///C:/Users/ultih/OneDrive/Documents/14.%20Testing/index.html"
+//   );
+//   await page.click("input#name");
+//   await page.type("input#name", "Hamid Alavi");
+//   await page.click("input#age");
+//   await page.type("input#age", "23");
+//   await page.click("#btnAddUser");
+//   const text = await page.$eval(".user-item", (el) => el.textContent);
+//   expect(text).toBe("Hamid Alavi (23 years old)");
+// });
+
+// ---
+
+// const { printTitle } = require("./util");
+// test("should be a uppercase", () => {
+//   expect(printTitle().toBe("DELECTUS AUT AUTEM"));
+// });
+
+// const { loadTitle } = require("./util");
+// test("should be a uppercase", () => {
+//   loadTitle().then((title) => {
+//     expect(title).toBe("DELECTUS AUT AUTEM");
+//   });
+// });
