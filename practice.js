@@ -5136,7 +5136,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Performance
+// performance
 // let arr = [1, 2, 3];
 // for (let i = 0; i < arr.length; i++) {
 //   console.log(i);
@@ -5157,7 +5157,7 @@ __proto__: WeakSet
 
 // -----------------------------------------------
 
-// Testing
+// testing
 // const { generateText } = require("./util");
 
 // test("should output name and age", () => {
@@ -5219,3 +5219,132 @@ __proto__: WeakSet
 //     expect(title).toBe("DELECTUS AUT AUTEM");
 //   });
 // });
+
+// -----------------------------------------------
+
+// data structure and algorithm
+// function getMin(numbers) {
+//   if (!numbers.length) {
+//     throw new Error("Should not be an empty array!");
+//   }
+//   let currentMinimum = numbers[0]; // access to first element
+
+//   /*
+//       `let i = 1;` because we defined `currentMinimum` to `0` index value,
+//       and we want start at second index (i.e. numbers[1])
+//     */
+//   for (let i = 1; i < numbers.length; i++) {
+//     if (numbers[i] < currentMinimum) {
+//       currentMinimum = numbers[i];
+//     }
+//     return currentMinimum;
+//   }
+// }
+
+// const testNumbers = [3, 1, 2];
+
+// const min = getMin(testNumbers);
+// console.log(min); // 1
+
+// -----------------------------------------------
+
+// data structure and algorithm - big o notation
+// function getMin(numbers) { // [3, 1, 2]
+//   if (!numbers.length) { // 1 execution
+//     throw new Error("Should not be an empty array!");
+//   }
+//   let currentMinimum = numbers[0]; // access to first element - 1 execution
+//   console.log("EXECUTION - INIT"); // "EXECUTION - INIT"
+
+//   for (let i = 1; i < numbers.length; i++) { // 1 execution
+//     console.log("EXECUTION - FOR"); // 2x "EXECUTION - FOR"
+//     if (numbers[i] < currentMinimum) { // 2 executions
+//       currentMinimum = numbers[i]; // 1 execution
+//     }
+//     console.log("EXECUTION - RETURN"); // "EXECUTION - RETURN"
+//     return currentMinimum; // 1 execution
+//   }
+// }
+
+// const testNumbers = [3, 1, 2];
+
+// const min = getMin(testNumbers);
+// console.log(min); // 1
+// // T = n => Linear Time Complexity => O(n)
+
+// ---
+
+// function getMin(numbers) {
+//   if (!numbers.length) {
+//     throw new Error("Should not be an empty array!");
+//   }
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     let outerElement = numbers[i]; // n times
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       let innerElement = numbers[j]; // n times
+
+//       if (outerElement > innerElement) {
+//         // swap elements
+//         numbers[i] = innerElement;
+//         numbers[j] = outerElement;
+
+//         outerElement = numbers[i];
+//         innerElement = numbers[j];
+//       }
+//     }
+//   }
+//   return numbers[0];
+// }
+
+// const testNumbers = [3, 1, 2];
+
+// const min = getMin(testNumbers);
+// console.log(min); // 1
+// // Quadratic Time Complexity = n * 2 => O(n^2)
+
+// ---
+
+// function evenOrOdd(number) {
+//   const result = number % 2;
+//   if (result === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+
+// console.log(evenOrOdd(10)); // "Even"
+// console.log(evenOrOdd(11)); // "Odd"
+
+// -----------------------------------------------
+
+// data structure
+// const age = [23, 29, 30];
+
+// // [23, 29, 30] => [23, 29, 30, _]
+// // [0, 1, 2] => [0, 1, 2, 3]
+// age.push(60); // => Constant Time Complexity: O(1)
+
+// // [23, 29, 30] => [_, 23, 29, 30]
+// // [0, 1, 2] => [0, 1, 2, 3]
+// age.unshift(10); // => Linear Time Complexity: O(n)
+
+// const myAge = age[0]; // => Constant Time Complexity: O(1)
+
+// // ---
+
+// const namePopularity = [
+//   { username: "Hamid", usages: 5 },
+//   { usename: "Hamed", usages: 3 }
+// ];
+
+// const hamedUsages = namePopularity.find((pers) => pers.usename === "Hamed")
+//   .usages;
+// // BEST CASE: Constant Time Complexity => O(1)
+// // WORST CASE: Linear Time Complexity => O(n)
+// // AVERAGE CASE: Linear Time Complexity => O(n)
+
+// const nameMap = { Hamid: 5, Hamed: 3 };
+
+// const hamedUsages2 = nameMap["Hamed"]; // Constant Time Complexity => O(1)
