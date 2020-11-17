@@ -5348,3 +5348,20 @@ __proto__: WeakSet
 // const nameMap = { Hamid: 5, Hamed: 3 };
 
 // const hamedUsages2 = nameMap["Hamed"]; // Constant Time Complexity => O(1)
+
+// -----------------------------------------------
+
+// TypeScript
+// function add(a, b) {
+//   return a + b;
+// }
+// var result = add("15", "8");
+// console.log(result); // "158"
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// const result: number = add(15, 8);
+
+// console.log(result);
