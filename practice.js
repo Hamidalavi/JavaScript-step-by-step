@@ -5365,3 +5365,209 @@ __proto__: WeakSet
 // const result: number = add(15, 8);
 
 // console.log(result);
+
+// ---
+
+// // const num1Input: HTMLInputElement = document.getElementById("num1");
+// // const num1Input = document.getElementById("num1");
+// // const num2Input = document.getElementById("num2");
+// // const num2Input = document.getElementById("num2") as HTMLInputElement;
+// // const num1Input = document.getElementById("num1") as HTMLInputElement;
+// const num1Input = <HTMLInputElement>document.getElementById("num1");
+// const num2Input = <HTMLInputElement>document.getElementById("num2");
+// const addBtn = document.querySelector("button");
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// function printResult(result) {
+//   console.log(result);
+// }
+
+// addBtn.addEventListener("click", () => {
+//   const num1 = +num1Input.value;
+//   const num2 = +num2Input.value;
+//   const result = add(num1, num2);
+//   printResult(result);
+// });
+
+// ---
+
+// const num1Input = document.getElementById("num1") as HTMLInputElement;
+// const num2Input = document.getElementById("num2") as HTMLInputElement;
+// const addBtn = document.querySelector("button");
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// function printResult(result) {
+//   console.log(result);
+// }
+
+// let results: {res: number}[] = [];
+
+// addBtn.addEventListener("click", () => {
+//   const num1 = +num1Input.value;
+//   const num2 = +num2Input.value;
+//   const result = add(num1, num2);
+//   const resultContainer: {res: number} = { res: result };
+//   results.push(resultContainer);
+//   printResult(results);
+// });
+
+// ---
+
+// const num1Input = document.getElementById("num1") as HTMLInputElement;
+// const num2Input = document.getElementById("num2") as HTMLInputElement;
+// const addBtn = document.querySelector("button");
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// function printResult(result, printMode: string) {
+//   if (printMode === "console") {
+//     console.log(result);
+//   } else if (printMode === "alert") {
+//     alert(result);
+//   }
+// }
+
+// // type Fn = { print: () => void };
+
+// addBtn.addEventListener("click", () => {
+//   const num1 = +num1Input.value;
+//   const num2 = +num2Input.value;
+//   const result = add(num1, num2);
+//   // const resultContainer: Fn = {
+//   //   print() {
+//   //     console.log(result);
+//   //   }
+//   // };
+//   // resultContainer.print();
+//   printResult(result, "console");
+//   printResult(result, "alert");
+// });
+
+// ---
+
+// const num1Input = document.getElementById("num1") as HTMLInputElement;
+// const num2Input = document.getElementById("num2") as HTMLInputElement;
+// const addBtn = document.querySelector("button");
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// type PrintMode = "console" | "alert";
+
+// function printResult(result: number | string, printMode: PrintMode) {
+//   if (printMode === "console") {
+//     console.log(result);
+//   } else if (printMode === "alert") {
+//     alert(result);
+//   }
+// }
+
+// addBtn.addEventListener("click", () => {
+//   const num1 = +num1Input.value;
+//   const num2 = +num2Input.value;
+//   const result = add(num1, num2);
+
+//   printResult(result, "console");
+//   printResult(result, "alert");
+// });
+
+// ---
+
+// const num1Input = document.getElementById("num1") as HTMLInputElement;
+// const num2Input = document.getElementById("num2") as HTMLInputElement;
+// const addBtn = document.querySelector("button");
+
+// function add(a: number, b: number) {
+//   return a + b;
+// }
+
+// enum OutputMode {CONSOLE, ALERT}
+
+// function printResult(result: number | string, printMode: OutputMode) {
+//   if (printMode === OutputMode.CONSOLE) {
+//     console.log(result);
+//   } else if (printMode === OutputMode.ALERT) {
+//     alert(result);
+//   }
+// }
+
+// addBtn.addEventListener("click", () => {
+//   const num1 = +num1Input.value;
+//   const num2 = +num2Input.value;
+//   const result = add(num1, num2);
+
+//   printResult(result, OutputMode.CONSOLE);
+//   printResult(result, OutputMode.ALERT);
+// });
+
+// ---
+
+// class User {
+//   name: string;
+//   private age: number;
+
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// interface Greetful {
+//   name: string;
+// }
+
+// interface Age {
+//   age: number;
+// }
+
+// class User implements Greetful, Age {
+//   constructor(public name: string,public age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// const user = new User("Hamid", 23);
+
+// interface CalculationResults {
+//   res: string;
+//   print(): void;
+// }
+
+// interface CalculationResults {
+//   res: string;
+//   print(): void;
+// }
+
+// ---
+
+// function logAndEcho(val: any) {
+//   console.log(val);
+//   return val;
+// }
+
+// logAndEcho("Hamid Alavi");
+
+// function logAndEcho<T>(val: T) {
+//   console.log(val);
+//   return val;
+// }
+
+// type CalculationResults = CalculationContainer[];
+
+
+// logAndEcho("Hamid Alavi").split(" ");
+
+// const result: Array<CalculationContainer> = [];
+
+// const num1Input = document.getElementById("num2")!;
+// const num2Input = document.getElementById("num2")! as HTMLInputElement;
