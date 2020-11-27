@@ -50,6 +50,9 @@
 
 // it's great for everyone :) */
 
+// let name = "Hamid \t Hamed";
+// console.log(name);
+
 // -----------------------------------------------
 
 // function
@@ -5603,3 +5606,6 @@ __proto__: WeakSet
 //     example.adEventListener("cancel", func);
 //   }
 // }
+
+const obj = {name: "hamid", age: 23, age: 25};
+console.log(obj)
