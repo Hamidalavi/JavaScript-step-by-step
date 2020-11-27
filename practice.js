@@ -5564,10 +5564,42 @@ __proto__: WeakSet
 
 // type CalculationResults = CalculationContainer[];
 
-
 // logAndEcho("Hamid Alavi").split(" ");
 
 // const result: Array<CalculationContainer> = [];
 
 // const num1Input = document.getElementById("num2")!;
 // const num2Input = document.getElementById("num2")! as HTMLInputElement;
+
+// -----------------------------------------------
+
+// web component - event
+// class Eveeent extends HTMLElement {
+//   constructor() {
+//     super();
+//   }
+
+//   cancel(event) {
+//     const cancelEvent = new Event("cancel", { bubbles: true, composed: true });
+//     event.target.dispatchEvent(cancelEvent);
+
+//     const example = document.queryselector("button");
+//     example.adEventListener("cancel", func);
+//   }
+// }
+
+// ---
+
+// class Eveeent extends HTMLElement {
+//   constructor() {
+//     super();
+//   }
+
+//   cancel() {
+//     const cancelEvent = new Event("cancel");
+//     this.dispatchEvent(cancelEvent);
+
+//     const example = document.queryselector("button");
+//     example.adEventListener("cancel", func);
+//   }
+// }
