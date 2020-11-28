@@ -5607,5 +5607,8 @@ __proto__: WeakSet
 //   }
 // }
 
-const obj = {name: "hamid", age: 23, age: 25};
-console.log(obj)
+for (let i = 0; i < 10; i++) {
+  for (let j = 1; j < 10; j++) {
+    console.log(`i: ${i}`, `j: ${j}`);
+  }
+}
