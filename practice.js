@@ -5607,8 +5607,20 @@ __proto__: WeakSet
 //   }
 // }
 
-for (let i = 0; i < 10; i++) {
-  for (let j = 1; j < 10; j++) {
-    console.log(`i: ${i}`, `j: ${j}`);
-  }
+// for (let i = 0; i < 10; i++) {
+//   for (let j = 1; j < 10; j++) {
+//     console.log(`i: ${i}`, `j: ${j}`);
+//   }
+// }
+
+// function minutesToSeconds(minute) {
+//   return minute * 60;
+// }
+
+// console.log(minutesToSeconds(2)); // 120
+
+function yearToSeconds(age) {
+  return age * 3.154e+7;
 }
+
+console.log(yearToSeconds(23)); // 725420000 seconds - approximate result
