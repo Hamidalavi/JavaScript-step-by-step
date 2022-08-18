@@ -33,6 +33,6 @@
 ![TotalDownloads](https://img.shields.io/github/downloads/Hamidalavi/CSS-step-by-step/total)
 ![License](https://img.shields.io/badge/license-EXB-orange)
 
-If you want understand completely, see **JavaScript-tips** (or this [link](https://github.com/Hamidalavi/Javascript-tips)). If you know about **JavaScript** core, you can start this course :)
+If you want to understand completely, see **JavaScript-tips** (or this [link](https://github.com/Hamidalavi/Javascript-tips)). If you know about **JavaScript** core, you can start this course :)
 
 [![Alt JavaScript](https://i.pinimg.com/originals/3e/9d/52/3e9d52bc38fa287a4cf10dcf8139076d.gif)](https://www.javascript.com/)
