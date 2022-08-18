@@ -47,4 +47,4 @@
 
 If you want to understand completely, see **JavaScript-tips** (or this [link](https://github.com/Hamidalavi/Javascript-tips)). If you know about **JavaScript** core, you can start this course :)
 
-[![Alt JavaScript](https://miro.medium.com/max/1400/0*DZVAmBK6HlZTUov1.gif)](https://www.javascript.com/)
+[![JavaScript](https://miro.medium.com/max/1400/0*DZVAmBK6HlZTUov1.gif)](https://www.javascript.com/)
