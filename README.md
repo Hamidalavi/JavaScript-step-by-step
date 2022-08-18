@@ -24,7 +24,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/examid6540)
 
 ## Stats:
-![Size](https://img.shields.io/badge/size-267kB-blue)
+![Size](https://img.shields.io/badge/size-794kB-blue)
 ![TestPass](https://shields.io/badge/test-passing-brightgreen)
 ![CheckPass](https://shields.io/badge/checks-passing-brightgreen)
 ![Pass](https://shields.io/badge/build-passing-brightgreen)
