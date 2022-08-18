@@ -35,4 +35,4 @@
 
 If you want understand completely, see **JavaScript-tips** (or this [link](https://github.com/Hamidalavi/Javascript-tips)). If you know about **JavaScript** core, you can start this course :)
 
-[![Alt JavaScript](https://i.ibb.co/BL5scGZ/0-0bpy35-Lc6r-Adviv-L.gif)](https://www.javascript.com/)
+[![Alt JavaScript](https://i.pinimg.com/originals/3e/9d/52/3e9d52bc38fa287a4cf10dcf8139076d.gif)](https://www.javascript.com/)
