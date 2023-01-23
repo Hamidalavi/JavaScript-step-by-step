@@ -43,6 +43,7 @@
 ![Twitch Stats](https://img.shields.io/twitch/status/examid6540?color=purple&style=for-the-badge)
 
 ## Repository Stats:
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=Hamidalavi.visitor-badge)
 ![Size](https://img.shields.io/badge/size-794kB-blue)
 ![TestPass](https://shields.io/badge/test-passing-brightgreen)
 ![CheckPass](https://shields.io/badge/checks-passing-brightgreen)
