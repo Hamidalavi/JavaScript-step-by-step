@@ -2,7 +2,8 @@
 
 ## Donate to our Team:
 [![DonateReymit](https://img.shields.io/badge/Donate-Reymit-purple)](https://reymit.ir/examid6540)
-[![DonatePaypal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://reymit.ir/examid6540/international-donate)
+[![DonatCreditCard](https://img.shields.io/badge/Donate-CreditCard-blue.svg)](https://reymit.ir/examid6540?int)
+[![DonateCrypto](https://img.shields.io/badge/Donate-Crypto-orange.svg)](https://reymit.ir/examid6540?crypto)
 
 ## This Tutorial contains:
 [![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://html.com/)
@@ -43,7 +44,6 @@
 ![Twitch Stats](https://img.shields.io/twitch/status/examid6540?color=purple&style=for-the-badge)
 
 ## Repository Stats:
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=Hamidalavi.visitor-badge)
 ![Size](https://img.shields.io/badge/size-797kB-blue)
 ![TestPass](https://shields.io/badge/test-passing-brightgreen)
 ![CheckPass](https://shields.io/badge/checks-passing-brightgreen)
